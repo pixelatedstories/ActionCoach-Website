@@ -28,7 +28,7 @@ export const TEAM: TeamMember[] = [
     name: 'Jason Berry',
     role: 'Business Coach',
     bio: 'Jason brings a wealth of operational expertise to the team. He specializes in management systems and team alignment, ensuring that growth is sustainable and scalable. His hands-on approach helps teams bridge the gap between strategy and execution.',
-    image: 'https://picsum.photos/id/91/800/800'
+    image: '/images/Jason Berry.jpg'
   }
 ];
 
