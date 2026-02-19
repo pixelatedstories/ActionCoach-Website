@@ -39,28 +39,28 @@ export const LOCATIONS: LocationData[] = [
     city: 'Asheville',
     state: 'NC',
     description: 'Asheville business owners benefit from a vibrant local economy and a strong community spirit.',
-    image: 'https://picsum.photos/id/122/1920/1080'
+    image: 'images/ashevillenc.jpg'
   },
   {
     id: 'charlotte-nc',
     city: 'Charlotte',
     state: 'NC',
     description: 'The business capital of the Carolinas, Charlotte offers massive opportunities for scaled growth.',
-    image: 'https://picsum.photos/id/142/1920/1080'
+    image: 'images/charlottenc.jpg'
   },
   {
     id: 'raleigh-nc',
     city: 'Raleigh',
     state: 'NC',
     description: 'Raleigh’s tech and service sectors are booming, making it an ideal place for systematic expansion.',
-    image: 'https://picsum.photos/id/164/1920/1080'
+    image: 'himages/raleighnc.jpg'
   },
   {
     id: 'greenville-sc',
     city: 'Greenville',
     state: 'SC',
     description: 'Greenville is one of the fastest-growing cities in the Southeast, perfect for ambitious entrepreneurs.',
-    image: 'https://picsum.photos/id/180/1920/1080'
+    image: 'images/greenvillesc.jpg'
   }
 ];
 
