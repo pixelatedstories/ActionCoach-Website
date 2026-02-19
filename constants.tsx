@@ -22,7 +22,7 @@ export const TEAM: TeamMember[] = [
     name: 'Bill Gilliland',
     role: 'Master Coach & Owner',
     bio: 'Bill Gilliland is an award-winning business coach and entrepreneur. With decades of experience building and selling businesses, he now focuses on helping owners in the Carolinas achieve the freedom and profitability they deserve. As a Master Coach, Bill has helped hundreds of entrepreneurs reclaim their lives.',
-    image: 'https://picsum.photos/id/64/800/800'
+    image: 'https://github.com/pixelatedstories/ActionCoach-Website/blob/2dd3bda4cf77e544bb541c84bbe4aa07bb2b12b0/public/images/Bill-Gilliland.jpg'
   },
   {
     name: 'Jason Berry',
