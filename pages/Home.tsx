@@ -11,7 +11,7 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-[#1C1C1C] via-[#1C1C1C]/90 to-transparent z-10" />
           <img 
-            src="images/businessownersolar.jpg" 
+            src="/images/businessownersolar.jpg" 
             alt="Business Background" 
             className="w-full h-full object-cover hidden md:block"
           />
