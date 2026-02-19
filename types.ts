@@ -41,6 +41,7 @@ export interface LocationData {
   state: string;
   description: string;
   image: string;
+  localImage: string;
 }
 
 export interface Testimonial {

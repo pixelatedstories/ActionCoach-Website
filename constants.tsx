@@ -39,28 +39,40 @@ export const LOCATIONS: LocationData[] = [
     city: 'Asheville',
     state: 'NC',
     description: 'Asheville business owners benefit from a vibrant local economy and a strong community spirit.',
-    image: 'https://picsum.photos/id/122/1920/1080'
+    // Blue Ridge Parkway / Asheville mountain vista
+    image: 'https://images.unsplash.com/photo-1566909305524-d7e49f3e6e88?w=1920&h=1080&fit=crop&auto=format&q=75',
+    // Asheville downtown River Arts District
+    localImage: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=800&h=600&fit=crop&auto=format&q=75',
   },
   {
     id: 'charlotte-nc',
     city: 'Charlotte',
     state: 'NC',
     description: 'The business capital of the Carolinas, Charlotte offers massive opportunities for scaled growth.',
-    image: 'https://picsum.photos/id/142/1920/1080'
+    // Uptown Charlotte skyline
+    image: 'https://images.unsplash.com/photo-1573570226870-b2de5e23e30e?w=1920&h=1080&fit=crop&auto=format&q=75',
+    // Charlotte business district street level
+    localImage: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=600&fit=crop&auto=format&q=75',
   },
   {
     id: 'raleigh-nc',
     city: 'Raleigh',
     state: 'NC',
-    description: 'Raleigh’s tech and service sectors are booming, making it an ideal place for systematic expansion.',
-    image: 'https://picsum.photos/id/164/1920/1080'
+    description: 'Raleigh\'s tech and service sectors are booming, making it an ideal place for systematic expansion.',
+    // Downtown Raleigh skyline
+    image: 'https://images.unsplash.com/photo-1570168007204-ec6d4c3e87c2?w=1920&h=1080&fit=crop&auto=format&q=75',
+    // Raleigh NC Capitol / downtown
+    localImage: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop&auto=format&q=75',
   },
   {
     id: 'greenville-sc',
     city: 'Greenville',
     state: 'SC',
     description: 'Greenville is one of the fastest-growing cities in the Southeast, perfect for ambitious entrepreneurs.',
-    image: 'https://picsum.photos/id/180/1920/1080'
+    // Greenville SC Falls Park / downtown
+    image: 'https://images.unsplash.com/photo-1600891964092-4316c288032e?w=1920&h=1080&fit=crop&auto=format&q=75',
+    // Greenville Main Street
+    localImage: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&h=600&fit=crop&auto=format&q=75',
   }
 ];
 

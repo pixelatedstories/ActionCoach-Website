@@ -1,10 +1,16 @@
 
 import React from 'react';
 import { TEAM } from '../constants';
+import SEO from '../components/SEO';
 
 const About: React.FC = () => {
   return (
     <div className="pt-32 pb-24 bg-[#1C1C1C]">
+      <SEO
+        title="About Our Coaches | Bill Gilliland, Master Business Coach | ActionCOACH"
+        description="Meet Bill Gilliland and Jason Berry, certified ActionCOACH business coaches serving entrepreneurs throughout North and South Carolina. Real experience. Real results."
+        canonical="/about"
+      />
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="max-w-3xl mb-24">
           <h1 className="text-6xl font-black text-gold mb-8 leading-none uppercase">About ActionCOACH <br/>Business Growth Partners</h1>
@@ -18,7 +24,7 @@ const About: React.FC = () => {
             <div key={member.name} className={`grid md:grid-cols-2 gap-16 items-center ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
               <div className={idx % 2 === 1 ? 'md:order-2' : ''}>
                 <div className="aspect-square bg-gold p-4">
-                  <img src={member.image} alt={member.name} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                  <img src={member.image} alt={member.name} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" width={800} height={800} loading="lazy" decoding="async" />
                 </div>
               </div>
               <div className={idx % 2 === 1 ? 'md:order-1' : ''}>

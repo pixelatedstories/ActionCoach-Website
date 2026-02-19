@@ -1,19 +1,60 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Program, FAQ, InvestmentOption } from '../types';
+import { Program, FAQ } from '../types';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
 
 interface ProgramLayoutProps {
   program: Program;
 }
 
+const programMeta: Record<string, { title: string; description: string }> = {
+  'one-to-one-freedom': {
+    title: 'One-to-One Business Coaching | Freedom Program | ActionCOACH NC & SC',
+    description:
+      'Personalized 1-on-1 business coaching with Bill Gilliland. The Freedom Program delivers profit, control & real business freedom for entrepreneurs across NC & SC.',
+  },
+  'management-program': {
+    title: '12-Week Management Training Program | ActionCOACH NC & SC',
+    description:
+      'Certify your managers in 12 weeks. ActionCOACH\'s Management Program builds confident leaders and high-performance teams throughout North and South Carolina.',
+  },
+  'leadership-program': {
+    title: '12-Week Leadership Development Program | ActionCOACH NC & SC',
+    description:
+      'Become the leader of tomorrow. ActionCOACH\'s Leadership Program develops executive presence, strategic thinking & emotional intelligence for NC & SC leaders.',
+  },
+  'business-masterclass': {
+    title: 'Business Masterclass | 6 Steps to Growth | ActionCOACH Carolinas',
+    description:
+      'Master the proven 6-step ActionCOACH framework to grow revenue, control your time & build a business that runs without you. For entrepreneurs across NC & SC.',
+  },
+  'sales-training': {
+    title: 'Sales Training for Business Owners | ActionCOACH NC & SC',
+    description:
+      'Close more deals with Sales Mastery Training. Question-based selling, objection handling & proven conversion systems for business owners in NC & SC.',
+  },
+  'strategic-planning': {
+    title: 'GrowthCLUB Quarterly Planning | 90-Day Business Roadmap | ActionCOACH',
+    description:
+      'Work ON your business, not IN it. GrowthCLUB quarterly planning sessions create focused 90-day roadmaps for entrepreneurs across North and South Carolina.',
+  },
+  speaking: {
+    title: 'Business Keynote Speaker Carolinas | Bill Gilliland | ActionCOACH',
+    description:
+      'Book Bill Gilliland for your next event. High-energy business keynotes for associations, chamber events & corporate retreats throughout the Carolinas.',
+  },
+};
+
 const FAQItem: React.FC<{ faq: FAQ }> = ({ faq }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="border-b border-white/10">
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full py-6 text-left flex justify-between items-center group"
+        aria-expanded={isOpen}
       >
         <span className="text-lg md:text-xl font-bold group-hover:text-gold transition-colors">{faq.question}</span>
         <span className={`text-gold text-2xl transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}>+</span>
@@ -27,14 +68,65 @@ const FAQItem: React.FC<{ faq: FAQ }> = ({ faq }) => {
 
 const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
   const isSpeaking = program.id === 'speaking';
-  
+  const meta = programMeta[program.id] ?? {
+    title: `${program.title} | ActionCOACH NC & SC`,
+    description: program.description,
+  };
+
+  const serviceSchema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: program.title,
+    description: program.description,
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'ActionCOACH Business Growth Partners',
+      url: 'https://billgilliland.biz',
+    },
+    areaServed: [
+      { '@type': 'State', name: 'North Carolina' },
+      { '@type': 'State', name: 'South Carolina' },
+    ],
+    ...(program.investmentOptions?.[0] && {
+      offers: {
+        '@type': 'Offer',
+        price: program.investmentOptions[0].price.replace(/[^0-9.]/g, ''),
+        priceCurrency: 'USD',
+        description: program.investmentOptions[0].description,
+      },
+    }),
+  };
+
+  const faqSchema = program.faqs?.length
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: program.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      }
+    : null;
+
   return (
     <div className="pt-32 pb-24 bg-[#1C1C1C]">
+      <SEO
+        title={meta.title}
+        description={meta.description}
+        canonical={`/programs/${program.id}`}
+      />
+      <JsonLd data={serviceSchema} />
+      {faqSchema && <JsonLd data={faqSchema} />}
+
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <Link to="/programs" className="text-gold text-xs font-black uppercase tracking-widest mb-12 inline-flex items-center group">
           <span className="mr-2 group-hover:-translate-x-1 transition-transform">←</span> Back to Programs
         </Link>
-        
+
         {/* Header Section */}
         <div className="grid lg:grid-cols-5 gap-16 mb-24">
           <div className="lg:col-span-3">
@@ -55,7 +147,7 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
                 {program.description}
               </p>
             </div>
-            
+
             <Link to="/book" className="inline-block bg-gold text-black px-8 py-5 md:px-12 md:py-6 text-sm font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white transition-all transform hover:-translate-y-1 shadow-xl max-w-sm md:max-w-none text-center">
               {program.cta}
             </Link>

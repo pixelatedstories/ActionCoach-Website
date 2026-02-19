@@ -2,6 +2,8 @@
 import React from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { LOCATIONS, CONTACT } from '../constants';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
 
 const LocationPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -9,16 +11,39 @@ const LocationPage: React.FC = () => {
 
   if (!location) return <Navigate to="/" />;
 
+  const citySchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: `ActionCOACH Business Growth Partners — ${location.city}, ${location.state}`,
+    description: `Expert business coaching in ${location.city}, ${location.state}. ActionCOACH helps ${location.city} business owners grow revenue, build championship teams, and achieve real business freedom.`,
+    url: `https://billgilliland.biz/locations/${location.id}`,
+    telephone: '+18283481787',
+    areaServed: {
+      '@type': 'City',
+      name: location.city,
+    },
+  };
+
   return (
     <div className="min-h-screen bg-[#1C1C1C]">
+      <SEO
+        title={`Business Coach ${location.city}, ${location.state} | ActionCOACH Business Growth Partners`}
+        description={`Expert business coaching in ${location.city}, ${location.state}. ActionCOACH helps ${location.city} business owners grow revenue, build championship teams & achieve real business freedom.`}
+        canonical={`/locations/${location.id}`}
+      />
+      <JsonLd data={citySchema} />
+
       {/* City Hero */}
       <section className="relative h-[60vh] flex items-center pt-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/70 z-10" />
-          <img 
-            src={location.image} 
-            alt={`${location.city} Skyline`} 
+          <img
+            src={location.image}
+            alt={`${location.city}, ${location.state} skyline`}
             className="w-full h-full object-cover grayscale"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
           />
         </div>
         <div className="relative z-20 max-w-7xl mx-auto px-4 md:px-8 text-center">
@@ -53,8 +78,26 @@ const LocationPage: React.FC = () => {
               Start Your <br className="md:hidden" /> Strategy Session
             </Link>
           </div>
-          <p className="mt-8 font-bold text-lg">Or call local: {CONTACT.PHONE}</p>
+          <p className="mt-8 font-bold text-lg">
+            Or call local:{' '}
+            <a href={`tel:${CONTACT.PHONE.replace(/\D/g, '')}`} aria-label={`Call ActionCOACH at ${CONTACT.PHONE}`} className="text-gold hover:underline">
+              {CONTACT.PHONE}
+            </a>
+          </p>
         </div>
+      </section>
+
+      {/* City image */}
+      <section className="pb-24 max-w-7xl mx-auto px-4 md:px-8">
+        <img
+          src={location.localImage}
+          alt={`${location.city} business district`}
+          className="w-full max-w-3xl mx-auto block object-cover shadow-2xl"
+          width={800}
+          height={600}
+          loading="lazy"
+          decoding="async"
+        />
       </section>
     </div>
   );

@@ -2,10 +2,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { PROGRAMS } from '../constants';
+import SEO from '../components/SEO';
 
 const ProgramsHub: React.FC = () => {
   return (
     <div className="pt-32 pb-24 bg-[#1C1C1C]">
+      <SEO
+        title="Business Coaching Programs | ActionCOACH NC & SC"
+        description="Explore ActionCOACH's proven coaching programs — One-to-One Coaching, Leadership, Management, Sales Training & Quarterly Planning for business owners across NC & SC."
+        canonical="/programs"
+      />
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="max-w-3xl mb-24">
           <h1 className="text-6xl md:text-8xl font-black mb-8 leading-none uppercase tracking-tighter">

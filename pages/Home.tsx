@@ -2,18 +2,55 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CONTACT, TESTIMONIALS, PROGRAMS } from '../constants';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://billgilliland.biz/#business',
+  name: 'ActionCOACH Business Growth Partners',
+  description:
+    'Expert business coaching for entrepreneurs across North and South Carolina. Helping owners grow revenue, build teams, and achieve business freedom.',
+  url: 'https://billgilliland.biz',
+  telephone: '+18283481787',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'P.O. Box 238',
+    addressLocality: 'Montreat',
+    addressRegion: 'NC',
+    postalCode: '28757',
+    addressCountry: 'US',
+  },
+  areaServed: [
+    { '@type': 'State', name: 'North Carolina' },
+    { '@type': 'State', name: 'South Carolina' },
+  ],
+  priceRange: '$$$',
+  founder: { '@type': 'Person', name: 'Bill Gilliland' },
+};
 
 const Home: React.FC = () => {
   return (
     <div className="overflow-x-hidden">
+      <SEO
+        title="Business Coach Asheville NC | ActionCOACH Business Growth Partners"
+        description="Transform your business with ActionCOACH. Expert business coaching for owners across North and South Carolina — grow revenue, build teams, gain true freedom."
+        canonical="/"
+      />
+      <JsonLd data={localBusinessSchema} />
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-[#1C1C1C] via-[#1C1C1C]/90 to-transparent z-10" />
-          <img 
-            src="https://picsum.photos/id/1070/1920/1080" 
-            alt="Business Background" 
+          <img
+            src="https://picsum.photos/id/1070/1920/1080"
+            alt="Business professionals in a modern office environment"
             className="w-full h-full object-cover hidden md:block"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
           />
           <div className="w-full h-full bg-[#1C1C1C] md:hidden" />
         </div>
@@ -32,7 +69,7 @@ const Home: React.FC = () => {
               <Link to="/book" className="inline-block bg-gold text-black px-6 py-5 md:px-8 md:py-6 text-sm font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white transition-all transform hover:scale-105 text-center">
                 Book Your Free <br className="sm:hidden" /> Strategy Session
               </Link>
-              <a href={`tel:${CONTACT.PHONE.replace(/\D/g,'')}`} className="inline-block border-2 border-white text-white px-6 py-5 md:px-8 md:py-6 text-sm font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white hover:text-black transition-all text-center">
+              <a href={`tel:${CONTACT.PHONE.replace(/\D/g,'')}`} aria-label={`Call ActionCOACH at ${CONTACT.PHONE}`} className="inline-block border-2 border-white text-white px-6 py-5 md:px-8 md:py-6 text-sm font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white hover:text-black transition-all text-center">
                 {CONTACT.PHONE}
               </a>
             </div>
@@ -48,7 +85,7 @@ const Home: React.FC = () => {
               Are You Working <span className="text-[#888]">IN</span> Your Business Or <span className="text-gold">ON</span> It?
             </h2>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              Most business owners are trapped in the day-to-day operations. They've built a job for themselves, not a business that works for them. 
+              Most business owners are trapped in the day-to-day operations. They've built a job for themselves, not a business that works for them.
             </p>
             <div className="space-y-4">
               {['Inconsistent Profits', 'Team Performance Issues', 'Zero Personal Time', 'Stagnant Growth'].map((item, idx) => (
