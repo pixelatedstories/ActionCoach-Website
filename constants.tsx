@@ -53,14 +53,14 @@ export const LOCATIONS: LocationData[] = [
     city: 'Raleigh',
     state: 'NC',
     description: 'Raleigh’s tech and service sectors are booming, making it an ideal place for systematic expansion.',
-    image: 'himages/raleighnc.jpg'
+    image: 'images/raleighnc.jpg'
   },
   {
     id: 'greenville-sc',
     city: 'Greenville',
     state: 'SC',
     description: 'Greenville is one of the fastest-growing cities in the Southeast, perfect for ambitious entrepreneurs.',
-    image: 'images/greenvillesc.jpg'
+    image: 'images/Greenvillesc.jpg'
   }
 ];
 
