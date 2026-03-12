@@ -93,12 +93,12 @@ const Navigation: React.FC = () => {
           <a href={`tel:${CONTACT.PHONE.replace(/\D/g,'')}`} className="text-lg font-black text-gold ml-4 group hover:scale-105 transition-transform">
             {CONTACT.PHONE}
           </a>
-          
-          <Link 
-            to="/book" 
+
+          <Link
+            to="/pricing"
             className="bg-gold text-black px-6 py-3 text-xs font-black uppercase tracking-[0.15em] hover:bg-white transition-all transform hover:-translate-y-1 shadow-lg"
           >
-            Free Strategy Session
+            Get Instant Estimate
           </Link>
         </div>
 
@@ -142,8 +142,8 @@ const Navigation: React.FC = () => {
                   <p className="text-xs font-black text-white/40 uppercase tracking-[0.3em] mb-2">Speak With Coach Bill</p>
                   <a href={`tel:${CONTACT.PHONE.replace(/\D/g,'')}`} className="block text-3xl font-black text-gold">{CONTACT.PHONE}</a>
                </div>
-               <Link to="/book" className="block bg-gold text-black text-center py-5 font-black uppercase tracking-widest text-sm shadow-xl">
-                 Book Strategy Session
+               <Link to="/pricing" className="block bg-gold text-black text-center py-5 font-black uppercase tracking-widest text-sm shadow-xl">
+                 Get Instant Estimate
                </Link>
             </div>
           </div>

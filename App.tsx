@@ -12,6 +12,10 @@ import ProgramMasterclass from './pages/ProgramMasterclass';
 import ProgramSales from './pages/ProgramSales';
 import ProgramStrategic from './pages/ProgramStrategic';
 import ProgramSpeaking from './pages/ProgramSpeaking';
+import ProgramBusinessUnlimited from './pages/ProgramBusinessUnlimited';
+import ProgramPlanningClub from './pages/ProgramPlanningClub';
+import ProgramTwelveWeekMasterclasses from './pages/ProgramTwelveWeekMasterclasses';
+import Pricing from './pages/Pricing';
 import Booking from './pages/Booking';
 import LocationPage from './pages/LocationPage';
 import { CONTACT } from './constants';
@@ -37,7 +41,7 @@ const Footer: React.FC = () => (
         <ul className="space-y-4 text-sm font-bold text-white/80">
           <li><Link to="/about" className="hover:text-gold transition-colors">About Us</Link></li>
           <li><Link to="/programs" className="hover:text-gold transition-colors">Our Programs</Link></li>
-          <li><Link to="/reviews" className="hover:text-gold transition-colors">Client Reviews</Link></li>
+          <li><Link to="/pricing" className="hover:text-gold transition-colors">Get Instant Estimate</Link></li>
           <li><Link to="/book" className="hover:text-gold transition-colors">Book Strategy Session</Link></li>
         </ul>
       </div>
@@ -62,8 +66,8 @@ const MobileStickyBar: React.FC = () => (
     <a href={`tel:${CONTACT.PHONE.replace(/\D/g,'')}`} className="flex-1 bg-[#262626] text-white flex items-center justify-center font-black uppercase text-xs tracking-tighter border-r border-white/5">
       Call Coach
     </a>
-    <Link to="/book" className="flex-[2] bg-gold text-black flex items-center justify-center font-black uppercase text-xs tracking-tighter">
-      Book Strategy Session
+    <Link to="/pricing" className="flex-[2] bg-gold text-black flex items-center justify-center font-black uppercase text-xs tracking-tighter">
+      Get Instant Estimate
     </Link>
   </div>
 );
@@ -78,19 +82,28 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/programs" element={<ProgramsHub />} />
-            
-            {/* Specific Program Pages */}
+
+            {/* Core Program Pages — new ladder */}
+            <Route path="/programs/business-unlimited" element={<ProgramBusinessUnlimited />} />
             <Route path="/programs/one-to-one-freedom" element={<ProgramFreedom />} />
+            <Route path="/programs/business-masterclass" element={<ProgramMasterclass />} />
+            <Route path="/programs/twelve-week-masterclasses" element={<ProgramTwelveWeekMasterclasses />} />
+            <Route path="/programs/planning-club" element={<ProgramPlanningClub />} />
+            <Route path="/programs/growth-club" element={<ProgramStrategic />} />
+
+            {/* Legacy sub-program pages (still accessible from 12 Week hub) */}
             <Route path="/programs/management-program" element={<ProgramManagement />} />
             <Route path="/programs/leadership-program" element={<ProgramLeadership />} />
-            <Route path="/programs/business-masterclass" element={<ProgramMasterclass />} />
             <Route path="/programs/sales-training" element={<ProgramSales />} />
+
+            {/* Legacy redirect support */}
             <Route path="/programs/strategic-planning" element={<ProgramStrategic />} />
+
             <Route path="/programs/speaking" element={<ProgramSpeaking />} />
-            
+            <Route path="/pricing" element={<Pricing />} />
             <Route path="/locations/:id" element={<LocationPage />} />
             <Route path="/book" element={<Booking />} />
-            
+
             <Route path="/events" element={<div className="pt-60 pb-40 px-8 text-center bg-[#1C1C1C]"><h1 className="text-4xl font-black uppercase tracking-tighter">Events Calendar</h1><p className="mt-4 text-white/60">Upcoming masterclasses and webinars will be listed here soon.</p></div>} />
             <Route path="/reviews" element={<div className="pt-60 pb-40 px-8 text-center bg-[#1C1C1C]"><h1 className="text-4xl font-black uppercase tracking-tighter">Success Stories</h1><p className="mt-4 text-white/60">Complete client case studies and deep-dive testimonials coming soon.</p></div>} />
           </Routes>
