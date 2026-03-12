@@ -50,8 +50,8 @@ export const LOCATIONS: LocationData[] = [
     id: 'raleigh-nc',
     city: 'Raleigh',
     state: 'NC',
-    description: ‘Raleigh\’s tech and service sectors are booming, making it an ideal place for systematic expansion.’,
-    image: ‘/images/actioncoach-growth-business-partners-business-summit-speaker.jpeg’
+    description: "Raleigh's tech and service sectors are booming, making it an ideal place for systematic expansion.",
+    image: '/images/actioncoach-growth-business-partners-business-summit-speaker.jpeg'
   },
   {
     id: 'greenville-sc',
