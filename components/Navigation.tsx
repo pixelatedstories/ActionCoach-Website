@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { CONTACT, PROGRAMS, LOCATIONS } from '@/constants';
 
@@ -28,12 +29,15 @@ const Navigation = () => {
       scrolled || pathname !== '/' ? 'bg-[#1C1C1C] shadow-2xl py-3' : 'bg-transparent py-6'
     }`}>
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
-        <Link href="/" className="flex flex-col group">
-          <div className="flex items-center">
-            <span className="text-2xl md:text-3xl font-black text-gold tracking-tighter leading-none">ACTION</span>
-            <span className="ml-1 text-2xl md:text-3xl font-bold text-white tracking-tighter leading-none">COACH</span>
-          </div>
-          <span className="text-[10px] md:text-xs font-black text-white/80 tracking-widest uppercase mt-0.5">Business Growth Partners</span>
+        <Link href="/" className="flex items-center group">
+          <Image
+            src="/images/2. Main-logo-Gradient-Icon-Yellow-White-Black Background.jpg"
+            alt="ActionCOACH Business Growth Partners"
+            width={180}
+            height={55}
+            className="object-contain"
+            priority
+          />
         </Link>
 
         <div className="hidden lg:flex items-center space-x-8">

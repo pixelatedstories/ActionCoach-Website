@@ -4,6 +4,7 @@ import { Montserrat, Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { CONTACT, LOCATIONS } from '@/constants';
 
 const montserrat = Montserrat({
@@ -33,9 +34,14 @@ function Footer() {
     <footer className="bg-black py-20 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 md:px-8 grid md:grid-cols-4 gap-12 text-left">
         <div className="col-span-2">
-          <div className="flex items-center mb-6">
-            <span className="text-2xl font-black text-gold tracking-tighter leading-none uppercase">ACTION</span>
-            <span className="ml-1 text-2xl font-bold text-white tracking-tighter leading-none uppercase">COACH</span>
+          <div className="mb-6">
+            <Image
+              src="/images/2. Main-logo-Gradient-Icon-Yellow-White-Black Background.jpg"
+              alt="ActionCOACH Business Growth Partners"
+              width={220}
+              height={70}
+              className="object-contain"
+            />
           </div>
           <p className="text-white/40 mb-8 max-w-sm text-sm">
             ActionCOACH Business Growth Partners is dedicated to the success of business owners across the Carolinas. Led by Master Coach Bill Gilliland.
