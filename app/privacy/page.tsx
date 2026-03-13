@@ -16,7 +16,7 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="text-2xl font-black uppercase text-white mb-4">Our Website</h2>
-            <p>Our website address is: <a href="https://actioncoachbgp.com" className="text-gold hover:underline">actioncoachbgp.com</a></p>
+            <p>Our website address is: <a href="https://billgilliland.biz" className="text-gold hover:underline">billgilliland.biz</a></p>
           </section>
 
           <section>
