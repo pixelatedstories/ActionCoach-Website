@@ -31,7 +31,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
         <Link href="/" className="flex items-center group">
           <Image
-            src="/images/actioncoach-logo.jpg"
+            src="/images/actioncoach-logo-transparent.png"
             alt="ActionCOACH Business Growth Partners"
             width={180}
             height={55}
