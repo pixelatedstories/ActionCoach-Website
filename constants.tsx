@@ -30,6 +30,18 @@ export const TEAM: TeamMember[] = [
     image: '/images/actioncoach-growth-business-partners-jason-berry-business-coach.jpeg'
   },
   {
+    name: 'Cyndi Madden',
+    role: 'Executive Administrative Assistant',
+    bio: 'Cyndi brings over 30 years of experience in keeping offices organized, efficient, and running smoothly. She has supported both medical practices and educational institutions in Development, Alumni, and Admissions — and now she keeps Bill Gilliland and our whole team on track! Cyndi and her husband, John, moved to Western North Carolina 20 years ago with their two daughters. These days, as happy empty nesters, they love traveling to Disney World, visiting family across the country, and spending as much time as possible at the beach (Cyndi proudly calls herself a beach bum!). Big sports fans, Cyndi and John cheer for football, fútbol, and are especially devoted fans of University of Dayton Men\'s Basketball — Go Flyers!',
+    image: '/images/cyndimadden-headshot.jpg'
+  },
+  {
+    name: 'Clifford McCrea',
+    role: 'Entrepreneur Talent Scout',
+    bio: 'Clifford McCrea is an operations and business leader with nearly a decade of experience supporting performance, scalability, and operational clarity across regulated financial services, mortgage technology, and business operations environments. He has built and enforced standard operating procedures, managed complex workflows, developed KPI and SLA reporting, and partnered with executive leadership. Clifford is known for creating structure in fast-moving or growing organizations by improving cross-functional communication, aligning teams, and driving accountability without needing formal authority. In addition to his operational leadership work, Clifford has a lifelong passion for music. As a multi-instrumental musician, he can play nearly any brass instrument and enjoys performing, creating, and exploring music as a creative outlet.',
+    image: '/images/cliff-mccrea-headshot.png'
+  },
+  {
     name: 'Jason De Los Santos',
     role: 'Marketing & Systems',
     bio: 'Jason brings a unique blend of creative and strategic expertise to ActionCOACH Asheville & Carolinas. As the founder of Pixelated Stories, Jason specializes in helping small and medium-sized businesses transform their online presence into powerful sales engines. With a focus on long-term digital solutions — including website development, SEO, CRO, email marketing, and CRM automation — Jason ensures that ActionCOACH\'s marketing systems are efficient and effective. He is passionate about empowering local businesses and understands the challenges they face, especially those overwhelmed by technology. Jason lives in Asheville, NC, with his wife and two kids.',
