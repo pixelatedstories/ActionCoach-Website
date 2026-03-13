@@ -1,9 +1,13 @@
+import type { Metadata } from 'next';
+import { CONTACT } from '@/constants';
+import CalendlyEmbed from '@/components/CalendlyEmbed';
 
-import React from 'react';
-import CalendlyEmbed from '../components/CalendlyEmbed';
-import { CONTACT } from '../constants';
+export const metadata: Metadata = {
+  title: 'Book a Free Strategy Session',
+  description: 'Schedule a free 15-minute strategy session with ActionCOACH Business Growth Partners. Identify your biggest business roadblocks and map out a path to EPIC results.',
+};
 
-const Booking: React.FC = () => {
+export default function Booking() {
   return (
     <div className="pt-32 pb-24 bg-[#1C1C1C]">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -13,7 +17,7 @@ const Booking: React.FC = () => {
             Select a time that works for you. In this 15-minute call, we will identify your biggest roadblocks and map out a path to EPIC results.
           </p>
         </div>
-        
+
         <div className="bg-[#262626] p-4 md:p-8 shadow-2xl border border-white/10">
           <CalendlyEmbed url={CONTACT.CALENDLY} />
         </div>
@@ -35,6 +39,4 @@ const Booking: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Booking;
+}
