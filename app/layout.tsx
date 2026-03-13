@@ -36,7 +36,7 @@ function Footer() {
         <div className="col-span-2">
           <div className="mb-6">
             <Image
-              src="/images/2. Main-logo-Gradient-Icon-Yellow-White-Black Background.jpg"
+              src="/images/actioncoach-logo.jpg"
               alt="ActionCOACH Business Growth Partners"
               width={220}
               height={70}
