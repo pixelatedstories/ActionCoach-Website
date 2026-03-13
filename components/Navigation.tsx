@@ -71,6 +71,7 @@ const Navigation = () => {
           <Link href="/about" className="text-xs font-black uppercase tracking-widest hover:text-gold transition-colors">About</Link>
           <Link href="/events" className="text-xs font-black uppercase tracking-widest hover:text-gold transition-colors">Events</Link>
           <Link href="/reviews" className="text-xs font-black uppercase tracking-widest hover:text-gold transition-colors">Reviews</Link>
+          <Link href="/contact" className="text-xs font-black uppercase tracking-widest hover:text-gold transition-colors">Contact</Link>
 
           <div className="relative group/loc">
             <div className="flex items-center py-2 cursor-pointer">
@@ -136,6 +137,7 @@ const Navigation = () => {
             <Link href="/about" className="block text-4xl font-black uppercase tracking-tighter">About</Link>
             <Link href="/events" className="block text-4xl font-black uppercase tracking-tighter">Events</Link>
             <Link href="/reviews" className="block text-4xl font-black uppercase tracking-tighter">Reviews</Link>
+            <Link href="/contact" className="block text-4xl font-black uppercase tracking-tighter">Contact</Link>
 
             <div className="pt-10 space-y-8 border-t border-white/10">
               <div>
