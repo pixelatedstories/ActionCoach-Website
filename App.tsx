@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -74,8 +75,9 @@ const MobileStickyBar: React.FC = () => (
 
 const App: React.FC = () => {
   return (
+    <HelmetProvider>
     <Router>
-      <div className="min-h-screen flex flex-col selection:bg-gold selection:text-black">
+      <div className="min-h-screen flex flex-col">
         <Navigation />
         <main className="flex-grow">
           <Routes>
@@ -112,6 +114,7 @@ const App: React.FC = () => {
         <MobileStickyBar />
       </div>
     </Router>
+    </HelmetProvider>
   );
 };
 

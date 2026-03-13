@@ -1,10 +1,15 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { TEAM } from '../constants';
 
 const About: React.FC = () => {
   return (
     <div className="pt-32 pb-24 bg-[#1C1C1C]">
+      <Helmet>
+        <title>About Us | ActionCOACH Business Growth Partners Asheville NC</title>
+        <meta name="description" content="Meet the ActionCOACH Business Growth Partners team. Led by Master Coach Bill Gilliland, we help small business owners across the Carolinas build profitable, self-managing businesses." />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="max-w-3xl mb-24">
           <h1 className="text-6xl font-black text-gold mb-8 leading-none uppercase">About ActionCOACH <br/>Business Growth Partners</h1>

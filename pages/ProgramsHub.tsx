@@ -1,11 +1,16 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { PROGRAMS } from '../constants';
 
 const ProgramsHub: React.FC = () => {
   return (
     <div className="pt-32 pb-24 bg-[#1C1C1C]">
+      <Helmet>
+        <title>Coaching Programs | ActionCOACH Business Growth Partners</title>
+        <meta name="description" content="Explore ActionCOACH's full suite of business coaching programs — from 1-to-1 Freedom coaching and Business Unlimited to GrowthCLUB, PlanningCLUB, and 12 Week Masterclasses." />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="max-w-3xl mb-24">
           <h1 className="text-6xl md:text-8xl font-black mb-8 leading-none uppercase tracking-tighter">

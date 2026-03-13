@@ -28,6 +28,12 @@ export const TEAM: TeamMember[] = [
     role: 'Business Coach',
     bio: 'Jason brings 25 years of small business experience to every coaching session. He specializes in management systems, team alignment, and operational execution — helping business owners bridge the gap between where they are and where they want to be.',
     image: '/images/actioncoach-growth-business-partners-jason-berry-business-coach.jpeg'
+  },
+  {
+    name: 'Jason De Los Santos',
+    role: 'Marketing & Systems',
+    bio: 'Jason brings a unique blend of creative and strategic expertise to ActionCOACH Asheville & Carolinas. As the founder of Pixelated Stories, Jason specializes in helping small and medium-sized businesses transform their online presence into powerful sales engines. With a focus on long-term digital solutions — including website development, SEO, CRO, email marketing, and CRM automation — Jason ensures that ActionCOACH\'s marketing systems are efficient and effective. He is passionate about empowering local businesses and understands the challenges they face, especially those overwhelmed by technology. Jason lives in Asheville, NC, with his wife and two kids.',
+    image: '/images/ason De Los Santos - Marketing and Systems Expert.jpg'
   }
 ];
 

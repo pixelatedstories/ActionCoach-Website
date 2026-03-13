@@ -1,10 +1,15 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Pricing: React.FC = () => {
   return (
     <div className="pt-32 pb-24 bg-[#1C1C1C] min-h-screen">
+      <Helmet>
+        <title>Business Coaching Pricing | ActionCOACH Business Growth Partners</title>
+        <meta name="description" content="Get an instant estimate for business coaching with ActionCOACH Asheville. Coaching programs range from $30k to $213k annually. Use our pricing tool to find the right fit." />
+      </Helmet>
       {/* JSON-LD for Google estimator schema */}
       <script
         id="priceguide-jsonld"

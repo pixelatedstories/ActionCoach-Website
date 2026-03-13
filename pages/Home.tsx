@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { CONTACT, TESTIMONIALS, PROGRAMS } from '../constants';
 
 const AbosStep: React.FC<{ number: string; title: string; description: string }> = ({ number, title, description }) => (
@@ -19,6 +20,11 @@ const Home: React.FC = () => {
 
   return (
     <div className="overflow-x-hidden">
+      <Helmet>
+        <title>ActionCOACH Business Growth Partners | Business Coaching Asheville NC</title>
+        <meta name="description" content="ActionCOACH Business Growth Partners helps small business owners in Asheville and the Carolinas build profitable, self-managing businesses. Led by Master Coach Bill Gilliland." />
+        <link rel="canonical" href="https://actioncoach-website.pages.dev/" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20">
         <div className="absolute inset-0 z-0">

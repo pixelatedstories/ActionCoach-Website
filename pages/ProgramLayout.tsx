@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Program, FAQ, InvestmentOption } from '../types';
 
 interface ProgramLayoutProps {
@@ -30,6 +31,10 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
   
   return (
     <div className="pt-32 pb-24 bg-[#1C1C1C]">
+      <Helmet>
+        <title>{program.title} | ActionCOACH Business Growth Partners</title>
+        <meta name="description" content={`${program.subtitle} — ${program.description.slice(0, 140)}...`} />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <Link to="/programs" className="text-gold text-xs font-black uppercase tracking-widest mb-12 inline-flex items-center group">
           <span className="mr-2 group-hover:-translate-x-1 transition-transform">←</span> Back to Programs
