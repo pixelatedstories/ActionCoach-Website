@@ -66,21 +66,16 @@ export async function GET(request: NextRequest) {
 
     const data: EventbriteResponse = await response.json();
 
-    // Log all statuses for debugging
-    console.log('All event statuses:', data.events.map(e => ({ name: e.name.text, status: e.status })));
-
-    // Filter for live events only and sort by date
-    const liveEvents = data.events
-      .filter((event) => event.status === 'live')
-      .sort(
-        (a, b) =>
-          new Date(a.start.utc).getTime() - new Date(b.start.utc).getTime()
-      );
+    // Return all events (no filter) so we can debug statuses
+    const sortedEvents = data.events.sort(
+      (a, b) =>
+        new Date(a.start.utc).getTime() - new Date(b.start.utc).getTime()
+    );
 
     return NextResponse.json({
-      events: liveEvents,
-      allEvents: data.events.map(e => ({ name: e.name.text, status: e.status })),
-      count: liveEvents.length,
+      events: sortedEvents,
+      count: sortedEvents.length,
+      statusList: sortedEvents.map(e => ({ name: e.name.text, status: e.status })),
     });
   } catch (error) {
     console.error('Error fetching Eventbrite events:', error);
