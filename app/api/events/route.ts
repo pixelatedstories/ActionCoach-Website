@@ -66,6 +66,9 @@ export async function GET(request: NextRequest) {
 
     const data: EventbriteResponse = await response.json();
 
+    // Log all statuses for debugging
+    console.log('All event statuses:', data.events.map(e => ({ name: e.name.text, status: e.status })));
+
     // Filter for live events only and sort by date
     const liveEvents = data.events
       .filter((event) => event.status === 'live')
@@ -76,6 +79,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({
       events: liveEvents,
+      allEvents: data.events.map(e => ({ name: e.name.text, status: e.status })),
       count: liveEvents.length,
     });
   } catch (error) {
