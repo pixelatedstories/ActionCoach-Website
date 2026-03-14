@@ -33,7 +33,7 @@ interface EventbriteResponse {
 export async function GET(request: NextRequest) {
   try {
     const apiKey = process.env.event_brite_api_key;
-    const orgId = process.env.EVENTBRITE_ORG_ID;
+    const orgId = process.env.eventbrite_org_id;
 
     console.log('DEBUG - API Key exists:', !!apiKey);
     console.log('DEBUG - Org ID exists:', !!orgId);
