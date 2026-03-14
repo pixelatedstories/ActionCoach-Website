@@ -35,6 +35,10 @@ export async function GET(request: NextRequest) {
     const apiKey = process.env.event_brite_api_key;
     const orgId = process.env.EVENTBRITE_ORG_ID;
 
+    console.log('DEBUG - API Key exists:', !!apiKey);
+    console.log('DEBUG - Org ID exists:', !!orgId);
+    console.log('DEBUG - Org ID value:', orgId);
+
     if (!apiKey) {
       return NextResponse.json(
         { error: 'Missing Eventbrite API key' },
@@ -65,6 +69,7 @@ export async function GET(request: NextRequest) {
     }
 
     const data: EventbriteResponse = await response.json();
+    console.log('DEBUG - Events returned from Eventbrite:', data.events.length);
 
     // Return all events (no filter) so we can debug statuses
     const sortedEvents = data.events.sort(
