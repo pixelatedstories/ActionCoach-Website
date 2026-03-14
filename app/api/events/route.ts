@@ -70,9 +70,6 @@ export async function GET(request: NextRequest) {
 
     const data: EventbriteResponse = await response.json();
 
-    // Debug: log what Eventbrite returned
-    console.log('Eventbrite response:', JSON.stringify(data, null, 2));
-
     // Sort by date (API already filtered for live events)
     const sortedEvents = data.events.sort(
       (a, b) =>
@@ -82,6 +79,10 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       events: sortedEvents,
       count: sortedEvents.length,
+      debug: {
+        eventbriteResponseCount: data.events.length,
+        paginationInfo: data.pagination,
+      }
     });
   } catch (error) {
     console.error('Error fetching Eventbrite events:', error);
