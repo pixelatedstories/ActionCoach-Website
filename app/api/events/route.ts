@@ -35,10 +35,6 @@ export async function GET(request: NextRequest) {
     const apiKey = process.env.event_brite_api_key;
     const orgId = process.env.eventbrite_org_id;
 
-    console.log('DEBUG - API Key exists:', !!apiKey);
-    console.log('DEBUG - Org ID exists:', !!orgId);
-    console.log('DEBUG - Org ID value:', orgId);
-
     if (!apiKey) {
       return NextResponse.json(
         { error: 'Missing Eventbrite API key' },
@@ -65,22 +61,30 @@ export async function GET(request: NextRequest) {
     );
 
     if (!response.ok) {
-      throw new Error(`Eventbrite API error: ${response.statusText}`);
+      const errorData = await response.text();
+      return NextResponse.json(
+        { error: `Eventbrite API error: ${response.statusText}`, details: errorData },
+        { status: response.status }
+      );
     }
 
     const data: EventbriteResponse = await response.json();
-    console.log('DEBUG - Events returned from Eventbrite:', data.events.length);
 
-    // Return all events (no filter) so we can debug statuses
-    const sortedEvents = data.events.sort(
-      (a, b) =>
-        new Date(a.start.utc).getTime() - new Date(b.start.utc).getTime()
-    );
+    // Filter for live events only and sort by date
+    const liveEvents = data.events
+      .filter((event) => event.status === 'live')
+      .sort(
+        (a, b) =>
+          new Date(a.start.utc).getTime() - new Date(b.start.utc).getTime()
+      );
 
     return NextResponse.json({
-      events: sortedEvents,
-      count: sortedEvents.length,
-      statusList: sortedEvents.map(e => ({ name: e.name.text, status: e.status })),
+      events: liveEvents,
+      count: liveEvents.length,
+      debug: {
+        totalEventsReturned: data.events.length,
+        statuses: data.events.map(e => e.status),
+      }
     });
   } catch (error) {
     console.error('Error fetching Eventbrite events:', error);
