@@ -49,9 +49,9 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // Fetch events from Eventbrite
+    // Fetch live events from Eventbrite
     const response = await fetch(
-      `https://www.eventbriteapi.com/v3/organizations/${orgId}/events/`,
+      `https://www.eventbriteapi.com/v3/organizations/${orgId}/events/?status=live`,
       {
         headers: {
           Authorization: `Bearer ${apiKey}`,
@@ -70,21 +70,15 @@ export async function GET(request: NextRequest) {
 
     const data: EventbriteResponse = await response.json();
 
-    // Filter for live events only and sort by date
-    const liveEvents = data.events
-      .filter((event) => event.status === 'live')
-      .sort(
-        (a, b) =>
-          new Date(a.start.utc).getTime() - new Date(b.start.utc).getTime()
-      );
+    // Sort by date (API already filtered for live events)
+    const sortedEvents = data.events.sort(
+      (a, b) =>
+        new Date(a.start.utc).getTime() - new Date(b.start.utc).getTime()
+    );
 
     return NextResponse.json({
-      events: liveEvents,
-      count: liveEvents.length,
-      debug: {
-        totalEventsReturned: data.events.length,
-        statuses: data.events.map(e => e.status),
-      }
+      events: sortedEvents,
+      count: sortedEvents.length,
     });
   } catch (error) {
     console.error('Error fetching Eventbrite events:', error);
