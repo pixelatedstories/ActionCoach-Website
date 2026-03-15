@@ -27,6 +27,7 @@ interface EventbriteResponse {
     page_count: number;
     page_number: number;
     page_size: number;
+    has_more_items?: boolean;
   };
 }
 
@@ -49,31 +50,49 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // Fetch live events from Eventbrite
-    const response = await fetch(
-      `https://www.eventbriteapi.com/v3/organizations/${orgId}/events/?status=live`,
-      {
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-        },
-      }
-    );
+    const headers = {
+      Authorization: `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+    };
 
-    if (!response.ok) {
-      const errorData = await response.text();
-      return NextResponse.json(
-        { error: `Eventbrite API error: ${response.statusText}`, details: errorData },
-        { status: response.status }
+    const fetchPage = async (page: number) => {
+      const response = await fetch(
+        `https://www.eventbriteapi.com/v3/organizations/${orgId}/events/?page=${page}`,
+        { headers }
       );
+
+      if (!response.ok) {
+        const errorData = await response.text();
+        return {
+          error: NextResponse.json(
+            { error: `Eventbrite API error: ${response.statusText}`, details: errorData },
+            { status: response.status }
+          ),
+        };
+      }
+
+      return { data: (await response.json()) as EventbriteResponse };
+    };
+
+    const firstPage = await fetchPage(1);
+    if (firstPage.error) {
+      return firstPage.error;
     }
 
-    const data: EventbriteResponse = await response.json();
+    const allEvents = [...firstPage.data.events];
+    const totalPages = firstPage.data.pagination.page_count;
+
+    for (let page = 2; page <= totalPages; page += 1) {
+      const nextPage = await fetchPage(page);
+      if (nextPage.error) {
+        return nextPage.error;
+      }
+      allEvents.push(...nextPage.data.events);
+    }
 
     const now = Date.now();
 
-    // Eventbrite "live" events can still include past listings, so filter by end date.
-    const upcomingEvents = data.events.filter(
+    const upcomingEvents = allEvents.filter(
       (event) => new Date(event.end.utc).getTime() >= now
     );
 
@@ -86,9 +105,9 @@ export async function GET(request: NextRequest) {
       events: sortedEvents,
       count: sortedEvents.length,
       debug: {
-        eventbriteResponseCount: data.events.length,
+        eventbriteResponseCount: allEvents.length,
         upcomingEventCount: upcomingEvents.length,
-        paginationInfo: data.pagination,
+        paginationInfo: firstPage.data.pagination,
       }
     });
   } catch (error) {
