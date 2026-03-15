@@ -70,8 +70,14 @@ export async function GET(request: NextRequest) {
 
     const data: EventbriteResponse = await response.json();
 
-    // Sort by date (API already filtered for live events)
-    const sortedEvents = data.events.sort(
+    const now = Date.now();
+
+    // Eventbrite "live" events can still include past listings, so filter by end date.
+    const upcomingEvents = data.events.filter(
+      (event) => new Date(event.end.utc).getTime() >= now
+    );
+
+    const sortedEvents = upcomingEvents.sort(
       (a, b) =>
         new Date(a.start.utc).getTime() - new Date(b.start.utc).getTime()
     );
@@ -81,6 +87,7 @@ export async function GET(request: NextRequest) {
       count: sortedEvents.length,
       debug: {
         eventbriteResponseCount: data.events.length,
+        upcomingEventCount: upcomingEvents.length,
         paginationInfo: data.pagination,
       }
     });
