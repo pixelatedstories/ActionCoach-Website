@@ -83,7 +83,7 @@ export default function Home() {
                 'You keep meaning to work on the business, then the week gets away from you.',
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start text-lg font-bold leading-snug">
-                  <span className="w-6 h-6 bg-red-500 text-white flex items-center justify-center rounded-full mr-3 text-xs mt-1">!</span>
+                  <span className="mt-3 mr-4 inline-flex h-3 w-3 flex-shrink-0 rounded-full bg-gold" />
                   <span>{item}</span>
                 </div>
               ))}
@@ -91,9 +91,7 @@ export default function Home() {
           </div>
 
           <div className="bg-[#1C1C1C] p-10 shadow-2xl">
-            <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-4">
-              The guide
-            </p>
+            <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-4">The guide</p>
             <h3 className="text-white text-2xl font-black mb-6 uppercase leading-tight">
               You need a guide who has seen this before
             </h3>
@@ -112,19 +110,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-4">
-                The plan
-              </p>
-              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight uppercase">
-                A simple path from stuck to steady
-              </h2>
+              <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-4">What this changes</p>
+              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight uppercase">Less chaos. More control.</h2>
               <p className="text-white/70 text-lg mb-8 leading-relaxed">
-                First, we help you choose the right program. Then we find the biggest bottleneck and build a clear next step. The goal is simple. Less guesswork, more progress.
+                The goal is to make the business easier to run. We focus on the things owners feel every week: time, team, money, and follow-through.
               </p>
               <div className="space-y-6">
-                <AbosStep number="1" title="Choose the right program" description="Use the program page to see which coaching path fits your current stage, your goals, and how much support you need." />
-                <AbosStep number="2" title="Identify the bottleneck" description="A session helps surface where the business is leaking time, money, or momentum so the next move is obvious." />
-                <AbosStep number="3" title="Build the next 90 days" description="Once the path is clear, the work turns into a practical plan you can actually execute without carrying everything yourself." />
+                <AbosStep number="1" title="Less owner bottleneck" description="Stop carrying every decision and every rescue mission yourself." />
+                <AbosStep number="2" title="Stronger team execution" description="Give the team more structure so progress does not depend on you being in every room." />
+                <AbosStep number="3" title="More predictable growth" description="Turn growth into a clearer operating rhythm instead of constant improvising." />
               </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-10">
                 <Link href="/programs" className="inline-block bg-gold text-black px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-white transition-all text-center">
@@ -194,17 +188,17 @@ export default function Home() {
       {/* Framework + CTA */}
       <section className="py-24 bg-[#262626] text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-4">The framework</p>
-          <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight uppercase">The operating system behind the work</h2>
+          <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-4">What changes</p>
+          <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight uppercase">Better structure. Better follow-through. Less chaos.</h2>
           <p className="text-xl md:text-2xl font-bold mb-12 opacity-80 text-balance max-w-3xl mx-auto leading-relaxed">
-            ABoS gives the whole site one clear language for time, marketing, systems, team, scale, and freedom. It helps owners see where the business is leaking and what to fix first.
+            We organize the work behind the scenes so the business feels simpler on the front end. That means fewer surprises, more follow-through, and a team that knows what to do without the owner carrying every detail.
           </p>
           <div className="grid md:grid-cols-3 gap-4 mb-12 text-left">
             {[
-              'Mastery: get control of time, money, and direction.',
-              'Marketing: create more predictable cash flow.',
-              'Systems: stop rebuilding the same process every week.',
-              'Team: help the business run with less dependence on the owner.',
+              'Time: stop letting the week run you.',
+              'Team: create more consistent execution.',
+              'Money: make growth easier to predict.',
+              'Systems: remove repeated friction points.',
               'Scale: grow with more structure and less chaos.',
               'Freedom: step back without everything falling apart.',
             ].map((item) => (

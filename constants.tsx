@@ -131,6 +131,12 @@ export const PROGRAMS: Program[] = [
     description: 'Business Unlimited is a 12 to 24 month enterprise-level partnership designed to rebuild your business into a scalable, self-sustaining company.',
     features: ['Company-Wide Growth Strategy', 'Leadership Capability Across the Team', 'Revenue Systems That Drive Predictable Growth', 'Execution Rhythms That Make Results Happen'],
     cta: 'Talk About Business Unlimited',
+    problem: [
+      'Growth has outgrown the way the business is currently run.',
+      'The owner is still too involved in daily decisions.',
+      'Profit and execution feel harder to predict than they should.',
+      'The team needs more leadership, structure, and follow-through.',
+    ],
     isForYou: [
       'You are already successful, but you know there is another level.',
       'You want to remove yourself from daily operations.',
@@ -143,6 +149,11 @@ export const PROGRAMS: Program[] = [
       'Revenue systems that drive predictable growth.',
       'Execution rhythms that keep work moving.',
       'A business that feels like an asset, not a job.',
+    ],
+    howItWorks: [
+      '1. Map the current business structure and the bottlenecks holding it back.',
+      '2. Build the leadership, systems, and execution rhythm the company needs.',
+      '3. Install the plan across the business and keep it moving over time.',
     ],
     journeyIncludes: [
       'Strategic planning tied to the company vision',
@@ -174,6 +185,7 @@ export const PROGRAMS: Program[] = [
         answer: 'This is an enterprise-level engagement that touches the full business, not a small coaching add-on.',
       },
     ],
+    result: 'A business that runs with more structure, more leadership, and less dependence on the owner.',
   },
   {
     id: 'one-to-one-freedom',
@@ -182,6 +194,12 @@ export const PROGRAMS: Program[] = [
     description: 'Private Coaching is a one-on-one partnership focused on accelerating your growth, increasing profitability, and building a business that works without you.',
     features: ['Weekly or Bi-Weekly Coaching Sessions', '90-Day Execution Planning', 'KPI Tracking and Accountability', 'Strategy Across Time, Team, and Money'],
     cta: 'Book Private Coaching',
+    problem: [
+      'You are doing $1M+ and still want the next level of clarity.',
+      'You need someone to challenge your thinking and sharpen execution.',
+      'The business is moving, but not at the pace you want.',
+      'You want accountability that stays focused on outcomes.',
+    ],
     isForYou: [
       'You are doing $1M+ and pushing for the next level.',
       'You want clarity, accountability, and strategic guidance.',
@@ -194,6 +212,11 @@ export const PROGRAMS: Program[] = [
       'Increased profit and control.',
       'A business that scales without constant oversight.',
       'A coach who keeps the focus on execution.',
+    ],
+    howItWorks: [
+      '1. Review the current numbers, priorities, and pressure points.',
+      '2. Build the next 90-day execution plan together.',
+      '3. Track the work weekly or bi-weekly so progress stays real.',
     ],
     journeyIncludes: [
       'Weekly or bi-weekly coaching sessions',
@@ -225,6 +248,7 @@ export const PROGRAMS: Program[] = [
         answer: 'Clearer decisions, better profit, and a business that does not need constant oversight.',
       },
     ],
+    result: 'Sharper execution, stronger profit, and a business that can grow without constant owner oversight.',
   },
   {
     id: 'business-masterclass',
@@ -233,6 +257,11 @@ export const PROGRAMS: Program[] = [
     description: 'ActionCLUB is a high-impact group coaching program designed to help you implement proven strategies alongside other driven business owners.',
     features: ['Time Management and Focus', 'Marketing and Sales', 'Profit and Cash Flow', 'Team and Leadership'],
     cta: 'Join ActionCLUB',
+    problem: [
+      'You need structure, but private coaching is not the right next step yet.',
+      'Momentum is slipping because there is no consistent operating rhythm.',
+      'The business needs more clarity around time, cash flow, and leadership.',
+    ],
     isForYou: [
       'You want structure, clarity, and momentum.',
       'You are not ready for private coaching yet.',
@@ -243,6 +272,11 @@ export const PROGRAMS: Program[] = [
       'Better decision-making.',
       'Immediate improvements in performance.',
       'Support while you implement.',
+    ],
+    howItWorks: [
+      '1. Join the group and get clear on the biggest priority.',
+      '2. Work through practical coaching sessions with built-in accountability.',
+      '3. Implement changes between sessions and keep momentum moving.',
     ],
     journeyIncludes: [
       'Group coaching sessions with practical implementation',
@@ -270,14 +304,21 @@ export const PROGRAMS: Program[] = [
         answer: 'No. It is a group coaching format for owners who want a lower entry point and shared momentum.',
       },
     ],
+    result: 'A stronger operating foundation with more clarity, accountability, and forward motion.',
   },
   {
-    id: 'twelve-week-masterclasses',
+    id: 'business-operating-system',
     title: 'Business Operating System (ABoS)',
     subtitle: 'Turn Your Business Into a Machine',
     description: 'The ActionCOACH Business Operating System installs the systems your business needs to scale consistently.',
     features: ['Predictable Marketing and Lead Flow', 'Sales Systems That Convert', 'Operational Systems That Scale', 'A Team That Executes Without Constant Oversight'],
     cta: 'Install ABoS',
+    problem: [
+      'The business depends on the owner for too many decisions.',
+      'Results are inconsistent because the structure is inconsistent.',
+      'Leads, sales, and delivery do not run from the same playbook.',
+      'The team needs a clearer operating rhythm.',
+    ],
     isForYou: [
       'You feel stuck in the day-to-day.',
       'You struggle with inconsistent results.',
@@ -288,6 +329,11 @@ export const PROGRAMS: Program[] = [
       'Systems replace guesswork.',
       'Your business runs like a well-oiled machine.',
       'A clearer path to scale.',
+    ],
+    howItWorks: [
+      '1. Find the biggest leaks in the current operating rhythm.',
+      '2. Build the systems for marketing, sales, delivery, and team execution.',
+      '3. Install the process so the business becomes easier to run.',
     ],
     journeyIncludes: [
       'System mapping across the business',
@@ -315,6 +361,8 @@ export const PROGRAMS: Program[] = [
         answer: 'Yes. It can be installed as part of coaching or as a standalone engagement.',
       },
     ],
+    pricingNotes: 'Included within coaching or implemented as a standalone engagement depending on scope.',
+    result: 'Consistency replaces chaos, systems replace guesswork, and the business becomes easier to scale.',
   },
   {
     id: 'planning-club',
@@ -323,6 +371,11 @@ export const PROGRAMS: Program[] = [
     description: 'In this interactive planning experience, you will build a clear, executable 90-day growth plan tied directly to your financial goals.',
     features: ['90-Day Action Plan', 'Revenue, Profit, and Cash Flow Projections', 'A System to Track and Adjust Performance', 'Clear Execution Priorities'],
     cta: 'Reserve Your Planning Spot',
+    problem: [
+      'You do not have a real plan, only good intentions.',
+      'The business needs a clearer next quarter.',
+      'Goals and execution are not tied tightly enough together.',
+    ],
     isForYou: [
       'You need clarity on what to do next.',
       'You want goals tied to execution.',
@@ -333,6 +386,11 @@ export const PROGRAMS: Program[] = [
       'Revenue, profit, and cash flow projections.',
       'A system to track and adjust performance.',
       'A clear answer to what to do, when to do it, and how to measure success.',
+    ],
+    howItWorks: [
+      '1. Define the goals and financial targets for the next 90 days.',
+      '2. Map the actions, metrics, and owners behind each goal.',
+      '3. Leave with a plan that can be tracked and adjusted.',
     ],
     journeyIncludes: [
       'Goal setting tied to financial targets',
@@ -360,6 +418,7 @@ export const PROGRAMS: Program[] = [
         answer: 'Owners who need clarity before they move into deeper coaching or larger-scale transformation.',
       },
     ],
+    result: 'A clear 90-day plan tied to financial goals, priorities, and execution.',
   },
   {
     id: 'growth-club',

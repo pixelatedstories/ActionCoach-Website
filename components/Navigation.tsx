@@ -92,7 +92,7 @@ const Navigation = () => {
             </div>
           </div>
 
-          <a href={`tel:${CONTACT.PHONE.replace(/\D/g, '')}`} className="text-lg font-black text-gold ml-4 group hover:scale-105 transition-transform">
+          <a href={`tel:${CONTACT.PHONE.replace(/\D/g, '')}`} className="ml-4 inline-flex items-center rounded-full border border-gold/25 bg-gold/10 px-4 py-2 text-sm xl:text-base 2xl:text-lg font-black text-gold whitespace-nowrap leading-none shrink-0 hover:bg-gold hover:text-black transition-all">
             {CONTACT.PHONE}
           </a>
 

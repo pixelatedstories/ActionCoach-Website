@@ -28,6 +28,8 @@ interface ProgramLayoutProps {
 
 const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
   const isSpeaking = program.id === 'speaking';
+  const problemBullets = program.problem ?? program.isForYou ?? [];
+  const howItWorksBullets = program.howItWorks ?? program.journeyIncludes ?? [];
 
   return (
     <div className="pt-32 pb-24 bg-[#1C1C1C]">
@@ -36,8 +38,74 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
           <span className="mr-2 group-hover:-translate-x-1 transition-transform">←</span> Back to Programs
         </Link>
 
+        {/* Program Summary */}
+        <section className="py-20 border-t border-white/5">
+          <div className="grid lg:grid-cols-2 gap-14 items-start">
+            <div>
+              <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-4">What this program is</p>
+              <h2 className="text-4xl font-black uppercase mb-6 leading-tight">
+                {program.subtitle}
+              </h2>
+              <p className="text-white/75 text-lg leading-relaxed mb-6">
+                {program.description}
+              </p>
+              <p className="text-white/70 leading-relaxed">
+                This is designed for owners who want a clearer path, stronger execution, and a business that does not depend on them for every decision. The point is to make the next step easier to see and easier to move on.
+              </p>
+            </div>
+            <div className="bg-[#262626] p-10 border border-white/5">
+              <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-4">Why owners choose it</p>
+              <div className="space-y-5 text-white/80 leading-relaxed">
+                <p>
+                  When the right support is in place, the business starts to feel lighter. Decisions move faster. The team knows the plan. The owner spends less time putting out fires and more time leading.
+                </p>
+                <p>
+                  That is what StoryBrand and They Ask, You Answer both point toward: clarity, trust, and a clear path forward. The page should answer the common questions, show the next step, and make the fit obvious.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Problem / Promise */}
+        <section className="py-24 border-t border-white/5">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-4">The problem</p>
+              <h2 className="text-4xl font-black uppercase mb-6 leading-tight">
+                What this fixes
+              </h2>
+              <p className="text-white/70 text-lg leading-relaxed mb-8">
+                {program.result ?? 'This is where we turn the biggest bottleneck into a clearer path forward.'}
+              </p>
+              <div className="space-y-4">
+                {problemBullets.map((item, i) => (
+                  <div key={i} className="flex items-start gap-3 bg-white/5 p-4 border-l-4 border-gold">
+                    <span className="text-gold font-black mt-0.5">•</span>
+                    <p className="font-bold text-white/90 leading-snug">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-gold text-black p-12">
+              <p className="font-black uppercase tracking-[0.2em] text-xs mb-4">The result</p>
+              <h3 className="text-3xl font-black uppercase leading-tight mb-6">
+                {program.result ?? 'A clearer business that is easier to lead.'}
+              </h3>
+              <div className="space-y-5">
+                {program.whatYoullGain?.map((gain, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <span className="text-2xl leading-none">•</span>
+                    <p className="font-bold leading-snug">{gain}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Header Section */}
-        <div className="grid lg:grid-cols-5 gap-16 mb-24">
+        <div className="grid lg:grid-cols-5 gap-16 mb-24 border-t border-white/5 pt-24">
           <div className="lg:col-span-3">
             <h1 className="text-4xl md:text-7xl font-black mb-8 leading-[0.95] uppercase tracking-tighter max-w-2xl">
               {program.title.split(':').map((part, i) => (
@@ -104,7 +172,7 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
                 <div className="space-y-4">
                   {program.isForYou.map((q, i) => (
                     <div key={i} className="flex items-center space-x-4 bg-white/5 p-4 border-l-4 border-gold">
-                      <span className="text-gold font-bold">{isSpeaking ? '•' : '?'}</span>
+                      <span className="text-gold font-bold">{isSpeaking ? '•' : '✓'}</span>
                       <p className="font-bold text-white/90">{q}</p>
                     </div>
                   ))}
@@ -127,11 +195,35 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
           </section>
         )}
 
+        {/* How It Works */}
+        {howItWorksBullets.length > 0 && (
+          <section className="py-24 border-t border-white/5">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-4xl font-black uppercase mb-8 text-center">
+                How It Works
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                {howItWorksBullets.map((item, i) => (
+                  <div key={i} className="bg-[#262626] p-6 border border-white/5 hover:border-gold/50 transition-colors">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-3 h-3 bg-gold rounded-full mt-2 shrink-0"></div>
+                      <div>
+                        <p className="text-lg font-black uppercase tracking-tight mb-2">{i + 1}. {item.split(':')[0]}</p>
+                        <p className="text-white/70 leading-relaxed">{item.includes(':') ? item.split(':').slice(1).join(':').trim() : item}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Journey Includes */}
         {program.journeyIncludes && (
           <section className="py-24 border-t border-white/5">
             <h2 className="text-4xl font-black uppercase mb-16 text-center">
-              {isSpeaking ? 'Ideal Speaking Venues' : 'The 12-Week Roadmap Includes:'}
+              {isSpeaking ? 'Ideal Speaking Venues' : 'What’s Included'}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {program.journeyIncludes.map((item, i) => (
@@ -151,7 +243,8 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
           <section className="py-24 border-t border-white/5">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-6xl font-black uppercase mb-4">Investment Options</h2>
-              <p className="text-xl text-white/60">Choose the path that best fits your goals and commitment.</p>
+              <p className="text-xl text-white/60">Choose the path that best fits your goals, stage, and level of support.</p>
+              {program.pricingNotes && <p className="text-white/45 mt-4 max-w-3xl mx-auto">{program.pricingNotes}</p>}
             </div>
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {program.investmentOptions.map((opt, i) => (
@@ -173,7 +266,7 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
                     ))}
                   </ul>
                   <Link href="/book" className={`block w-full text-center py-5 font-black uppercase tracking-widest transition-all ${i === 1 ? 'bg-gold text-black hover:bg-white' : 'border-2 border-white text-white hover:bg-white hover:text-black'}`}>
-                    Subscribe &amp; Enroll
+                    Book a Session
                   </Link>
                 </div>
               ))}

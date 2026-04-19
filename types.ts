@@ -28,11 +28,15 @@ export interface Program {
   features: string[];
   cta: string;
   // Extended Fields for Deep-Dive Pages
+  problem?: string[];
   isForYou?: string[];
   whatYoullGain?: string[];
+  howItWorks?: string[];
   journeyIncludes?: string[];
   investmentOptions?: InvestmentOption[];
   faqs?: FAQ[];
+  pricingNotes?: string;
+  result?: string;
 }
 
 export interface LocationData {
