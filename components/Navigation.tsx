@@ -11,6 +11,7 @@ const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showProgramsMobile, setShowProgramsMobile] = useState(false);
   const pathname = usePathname();
+  const visiblePrograms = PROGRAMS.filter(p => !['growth-club', 'speaking'].includes(p.id));
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -54,7 +55,7 @@ const Navigation = () => {
                   <Link href="/programs" className="block px-4 py-3 text-[10px] font-black uppercase tracking-widest text-gold border-b border-white/5 mb-1 hover:bg-gold hover:text-black transition-all">
                     All Programs Overview
                   </Link>
-                  {PROGRAMS.map(p => (
+                  {visiblePrograms.map(p => (
                     <Link
                       key={p.id}
                       href={`/programs/${p.id}`}
@@ -96,10 +97,17 @@ const Navigation = () => {
           </a>
 
           <Link
-            href="/pricing"
+            href="/book"
+            className="text-xs font-black uppercase tracking-widest hover:text-gold transition-colors"
+          >
+            Book a Session
+          </Link>
+
+          <Link
+            href="/programs"
             className="bg-gold text-black px-6 py-3 text-xs font-black uppercase tracking-[0.15em] hover:bg-white transition-all transform hover:-translate-y-1 shadow-lg"
           >
-            Get Instant Estimate
+            See Coaching Options
           </Link>
         </div>
 
@@ -126,7 +134,7 @@ const Navigation = () => {
               </button>
               <div className={`mt-4 space-y-4 overflow-hidden transition-all duration-500 ${showProgramsMobile ? 'max-h-[800px] opacity-100 mb-8' : 'max-h-0 opacity-0'}`}>
                 <Link href="/programs" className="block text-gold text-lg font-black uppercase tracking-widest border-b border-gold/20 pb-2">View All Hub</Link>
-                {PROGRAMS.map(p => (
+                {visiblePrograms.map(p => (
                   <Link key={p.id} href={`/programs/${p.id}`} className="block text-white/70 text-base font-bold uppercase tracking-tight pl-4 border-l-2 border-gold/30 hover:border-gold hover:text-white transition-all">
                     {p.title}
                   </Link>
@@ -144,9 +152,14 @@ const Navigation = () => {
                 <p className="text-xs font-black text-white/40 uppercase tracking-[0.3em] mb-2">Speak With Coach Bill</p>
                 <a href={`tel:${CONTACT.PHONE.replace(/\D/g, '')}`} className="block text-3xl font-black text-gold">{CONTACT.PHONE}</a>
               </div>
-              <Link href="/pricing" className="block bg-gold text-black text-center py-5 font-black uppercase tracking-widest text-sm shadow-xl">
-                Get Instant Estimate
-              </Link>
+              <div className="space-y-3">
+                <Link href="/programs" className="block bg-gold text-black text-center py-5 font-black uppercase tracking-widest text-sm shadow-xl">
+                  See Coaching Options
+                </Link>
+                <Link href="/book" className="block border-2 border-white/20 text-white text-center py-5 font-black uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all">
+                  Book a Session
+                </Link>
+              </div>
             </div>
           </div>
         </div>

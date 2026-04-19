@@ -49,6 +49,14 @@ function Footer() {
           <p className="text-white/40 mb-6 max-w-sm text-sm">
             ActionCOACH Business Growth Partners helps small business owners across the Carolinas build profitable, self-managing businesses. Led by Master Coach Bill Gilliland.
           </p>
+          <div className="flex flex-wrap gap-3 mb-6">
+            <Link href="/programs" className="inline-flex items-center justify-center bg-gold text-black px-5 py-3 text-xs font-black uppercase tracking-widest hover:bg-white transition-all">
+              See Coaching Options
+            </Link>
+            <Link href="/book" className="inline-flex items-center justify-center border border-white/20 text-white px-5 py-3 text-xs font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+              Book a Session
+            </Link>
+          </div>
           <div className="text-white/60 text-xs space-y-2 uppercase tracking-widest font-bold mb-6">
             <p>{CONTACT.ADDRESS}</p>
             <p>{CONTACT.PHONE}</p>
@@ -77,8 +85,9 @@ function Footer() {
             <li><Link href="/events" className="hover:text-gold transition-colors">Events</Link></li>
             <li><Link href="/reviews" className="hover:text-gold transition-colors">Success Stories</Link></li>
             <li><Link href="/contact" className="hover:text-gold transition-colors">Contact</Link></li>
+            <li><Link href="/programs" className="hover:text-gold transition-colors">See Coaching Options</Link></li>
+            <li><Link href="/book" className="hover:text-gold transition-colors">Book a Session</Link></li>
             <li><Link href="/pricing" className="hover:text-gold transition-colors">Get Instant Estimate</Link></li>
-            <li><Link href="/book" className="hover:text-gold transition-colors">Book Strategy Session</Link></li>
           </ul>
         </div>
         <div>
@@ -107,15 +116,18 @@ function Footer() {
 
 function MobileStickyBar() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden flex h-16 shadow-[0_-10px_30px_rgba(0,0,0,0.5)] border-t border-white/5">
+    <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden grid grid-cols-3 h-16 shadow-[0_-10px_30px_rgba(0,0,0,0.5)] border-t border-white/5">
       <a
         href={`tel:${CONTACT.PHONE.replace(/\D/g, '')}`}
-        className="flex-1 bg-[#262626] text-white flex items-center justify-center font-black uppercase text-xs tracking-tighter border-r border-white/5"
+        className="bg-[#262626] text-white flex items-center justify-center font-black uppercase text-[10px] tracking-[0.18em] border-r border-white/5"
       >
-        Call Coach
+        Call
       </a>
-      <Link href="/pricing" className="flex-[2] bg-gold text-black flex items-center justify-center font-black uppercase text-xs tracking-tighter">
-        Get Instant Estimate
+      <Link href="/programs" className="bg-gold text-black flex items-center justify-center font-black uppercase text-[10px] tracking-[0.18em] border-r border-black/10">
+        Programs
+      </Link>
+      <Link href="/book" className="bg-white text-black flex items-center justify-center font-black uppercase text-[10px] tracking-[0.18em]">
+        Book a Session
       </Link>
     </div>
   );

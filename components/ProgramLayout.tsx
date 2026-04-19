@@ -56,9 +56,14 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
                 {program.description}
               </p>
             </div>
-            <Link href="/book" className="inline-block bg-gold text-black px-8 py-5 md:px-12 md:py-6 text-sm font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white transition-all transform hover:-translate-y-1 shadow-xl max-w-sm md:max-w-none text-center">
-              {program.cta}
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/book" className="inline-block bg-gold text-black px-8 py-5 md:px-12 md:py-6 text-sm font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white transition-all transform hover:-translate-y-1 shadow-xl max-w-sm md:max-w-none text-center">
+                {program.cta}
+              </Link>
+              <Link href="/book" className="inline-block border-2 border-white text-white px-8 py-5 md:px-12 md:py-6 text-sm font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white hover:text-black transition-all max-w-sm md:max-w-none text-center">
+                Book a Session
+              </Link>
+            </div>
           </div>
 
           <div className="lg:col-span-2">
@@ -192,9 +197,9 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
 
         {/* Bottom CTA */}
         <div className="mt-24 p-12 bg-white text-black text-center">
-          <h2 className="text-3xl md:text-5xl font-black uppercase mb-8 leading-tight">Ready to Take <br />Massive Action?</h2>
+          <h2 className="text-3xl md:text-5xl font-black uppercase mb-8 leading-tight">Ready to take the next step?</h2>
           <Link href="/book" className="inline-block bg-black text-white px-12 py-6 text-lg font-black uppercase tracking-widest hover:bg-gold hover:text-black transition-all shadow-2xl">
-            Book a Free Strategy Session
+            Book a Session
           </Link>
         </div>
       </div>

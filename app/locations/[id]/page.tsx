@@ -61,7 +61,7 @@ export default async function LocationPage({ params }: { params: Promise<{ id: s
           <p className="mb-10 text-white/70">Join the ranks of successful entrepreneurs in {location.state} who have transformed their businesses with Bill Gilliland.</p>
           <div className="flex justify-center">
             <Link href="/book" className="inline-block bg-gold text-black px-8 py-5 md:px-12 md:py-6 font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white transition-all text-center max-w-xs md:max-w-none">
-              Start Your Strategy Session
+              Book a Session
             </Link>
           </div>
           <p className="mt-8 font-bold text-lg">Or call local: {CONTACT.PHONE}</p>
