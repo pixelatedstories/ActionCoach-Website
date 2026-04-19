@@ -42,7 +42,7 @@ export default function Home() {
             <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-5">
               Business coaching for owners who want their time back
             </p>
-            <h1 className="hero-h1 text-5xl md:text-7xl font-black mb-6 leading-[0.95]">
+            <h1 className="hero-h1 text-5xl md:text-7xl font-black mb-6 leading-[0.95] uppercase">
               Build a business that works
               <br />
               without pulling you back in.
@@ -69,7 +69,7 @@ export default function Home() {
             <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-4">
               The problem
             </p>
-            <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight text-balance">
+            <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight text-balance uppercase">
               When the business keeps pulling you back in
             </h2>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
