@@ -72,7 +72,6 @@ const Navigation = () => {
           </div>
 
           <Link href="/about" className="text-xs font-black uppercase tracking-widest hover:text-gold transition-colors">About</Link>
-          <Link href="/events" className="text-xs font-black uppercase tracking-widest hover:text-gold transition-colors">Events</Link>
 
           <div className="relative group/resources">
             <div className="flex items-center py-2 cursor-pointer group">
@@ -84,6 +83,7 @@ const Navigation = () => {
             <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover/resources:opacity-100 group-hover/resources:visible transition-all duration-300 transform translate-y-2 group-hover/resources:translate-y-0">
               <div className="w-52 bg-[#262626] border border-white/10 shadow-2xl overflow-hidden">
                 <div className="p-2 grid gap-1">
+                  <Link href="/events" className="block px-4 py-3 text-[11px] font-bold uppercase tracking-wider text-white/80 hover:bg-gold hover:text-black hover:pl-6 transition-all duration-200">Events</Link>
                   <Link href="/resources/articles" className="block px-4 py-3 text-[11px] font-bold uppercase tracking-wider text-white/80 hover:bg-gold hover:text-black hover:pl-6 transition-all duration-200">Articles</Link>
                   <Link href="/resources/podcast" className="block px-4 py-3 text-[11px] font-bold uppercase tracking-wider text-white/80 hover:bg-gold hover:text-black hover:pl-6 transition-all duration-200">Podcast</Link>
                   <Link href="/coaching-videos" className="block px-4 py-3 text-[11px] font-bold uppercase tracking-wider text-white/80 hover:bg-gold hover:text-black hover:pl-6 transition-all duration-200">Coaching Videos</Link>
@@ -164,7 +164,6 @@ const Navigation = () => {
             </div>
 
             <Link href="/about" className="block text-4xl font-black uppercase tracking-tighter">About</Link>
-            <Link href="/events" className="block text-4xl font-black uppercase tracking-tighter">Events</Link>
 
             <div>
               <button
@@ -175,6 +174,7 @@ const Navigation = () => {
                 <span className={`text-2xl text-gold transition-transform duration-300 ${showResourcesMobile ? 'rotate-180' : ''}`}>▼</span>
               </button>
               <div className={`mt-4 space-y-4 overflow-hidden transition-all duration-500 ${showResourcesMobile ? 'max-h-96 opacity-100 mb-8' : 'max-h-0 opacity-0'}`}>
+                <Link href="/events" className="block text-white/70 text-base font-bold uppercase tracking-tight pl-4 border-l-2 border-gold/30 hover:border-gold hover:text-white transition-all">Events</Link>
                 <Link href="/resources/articles" className="block text-white/70 text-base font-bold uppercase tracking-tight pl-4 border-l-2 border-gold/30 hover:border-gold hover:text-white transition-all">Articles</Link>
                 <Link href="/resources/podcast" className="block text-white/70 text-base font-bold uppercase tracking-tight pl-4 border-l-2 border-gold/30 hover:border-gold hover:text-white transition-all">Podcast</Link>
                 <Link href="/coaching-videos" className="block text-white/70 text-base font-bold uppercase tracking-tight pl-4 border-l-2 border-gold/30 hover:border-gold hover:text-white transition-all">Coaching Videos</Link>
