@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Success Stories',
-  description: 'Read success stories and client reviews from ActionCOACH Business Growth Partners. Real results from real business owners across the Carolinas.',
+  title: 'Success Stories | Business Coaching Results Asheville NC',
+  description: 'Real results from real business owners. See how ActionCOACH Business Growth Partners helped WNC entrepreneurs build profitable, self-managing businesses.',
 };
 
 export default function Reviews() {

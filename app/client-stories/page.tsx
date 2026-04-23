@@ -4,7 +4,7 @@ import { FEATURED_VIDEOS } from '@/constants';
 
 export const metadata: Metadata = {
   title: 'Client Stories | ActionCOACH Business Growth Partners',
-  description: 'Watch real business owners share how ActionCOACH helped them break free from the day-to-day grind, build better systems, and grow with clarity.',
+  description: 'Watch WNC business owners share how ActionCOACH Business Growth Partners helped them escape the day-to-day grind and build businesses that run without them.',
 };
 
 export default function ClientStoriesPage() {

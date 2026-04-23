@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const program = PROGRAMS.find(p => p.id === slug);
   if (!program) return {};
   return {
-    title: program.title,
-    description: `${program.subtitle} — ${program.description.slice(0, 140)}...`,
+    title: `${program.title} | Business Coaching Asheville & Carolinas`,
+    description: `${program.subtitle} — ActionCOACH Business Growth Partners serves Asheville, Charlotte, Raleigh, and Greenville NC. ${program.description.slice(0, 110)}`,
   };
 }
 
@@ -21,5 +21,23 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const program = PROGRAMS.find(p => p.id === slug);
   if (!program) notFound();
-  return <ProgramLayout program={program} />;
+
+  const faqSchema = program.faqs ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: program.faqs.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  } : null;
+
+  return (
+    <>
+      {faqSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      )}
+      <ProgramLayout program={program} />
+    </>
+  );
 }

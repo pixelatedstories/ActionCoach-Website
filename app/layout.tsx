@@ -27,6 +27,13 @@ export const metadata: Metadata = {
     template: '%s | ActionCOACH Business Growth Partners',
   },
   description: 'ActionCOACH Business Growth Partners helps small business owners in Asheville and the Carolinas build profitable, self-managing businesses. Led by Master Coach Bill Gilliland.',
+  openGraph: {
+    type: 'website',
+    siteName: 'ActionCOACH Business Growth Partners',
+    locale: 'en_US',
+    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630, alt: 'ActionCOACH Business Growth Partners' }],
+  },
+  twitter: { card: 'summary_large_image' },
 };
 
 function Footer() {
@@ -134,8 +141,37 @@ function MobileStickyBar() {
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const orgSchema = {
+    '@context': 'https://schema.org',
+    '@type': ['Organization', 'LocalBusiness'],
+    name: 'ActionCOACH Business Growth Partners',
+    url: 'https://billgilliland.biz',
+    logo: 'https://billgilliland.biz/images/actioncoach-logo-transparent.png',
+    telephone: '(828) 348-1787',
+    priceRange: '$$',
+    openingHours: 'Mo-Fr 09:00-17:00',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'P.O. Box 238',
+      addressLocality: 'Montreat',
+      addressRegion: 'NC',
+      postalCode: '28757',
+      addressCountry: 'US',
+    },
+    areaServed: ['Asheville, NC', 'Charlotte, NC', 'Raleigh, NC', 'Greenville, SC'],
+    sameAs: [
+      'https://www.instagram.com/actioncoach_carolinas/',
+      'https://www.facebook.com/ActionCOACHBusinessGrowthPartners',
+      'https://www.linkedin.com/in/billgilliland/',
+      'https://www.youtube.com/@coachbillgilliland',
+    ],
+  };
+
   return (
     <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
+      <head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+      </head>
       <body>
         <div className="min-h-screen flex flex-col">
           <Navigation />

@@ -1,42 +1,10 @@
-'use client';
-
 import type { Metadata } from 'next';
-import { useEffect } from 'react';
+import GHLContactForm from '@/components/GHLContactForm';
 
-// Note: metadata export doesn't work in 'use client' components.
-// Move metadata to a separate layout or use generateMetadata pattern if needed.
-
-function GHLContactForm() {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://go.cfastr.com/js/form_embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
-  return (
-    <iframe
-      src="https://go.cfastr.com/widget/form/dPJyqcdhgeKO5fBMvFye"
-      style={{ width: '100%', height: '548px', border: 'none', borderRadius: 0 }}
-      id="inline-dPJyqcdhgeKO5fBMvFye"
-      data-layout="{'id':'INLINE'}"
-      data-trigger-type="alwaysShow"
-      data-trigger-value=""
-      data-activation-type="alwaysActivated"
-      data-activation-value=""
-      data-deactivation-type="neverDeactivate"
-      data-deactivation-value=""
-      data-form-name="Contact Form-prebuilt"
-      data-height="548"
-      data-layout-iframe-id="inline-dPJyqcdhgeKO5fBMvFye"
-      data-form-id="dPJyqcdhgeKO5fBMvFye"
-      title="Contact Form-prebuilt"
-    />
-  );
-}
+export const metadata: Metadata = {
+  title: 'Contact Us',
+  description: 'Reach ActionCOACH Business Growth Partners in Asheville, NC. Call (828) 348-1787 or send a message to schedule a free business coaching session.',
+};
 
 export default function ContactPage() {
   return (

@@ -22,7 +22,26 @@ export default async function LocationPage({ params }: { params: Promise<{ id: s
   const location = LOCATIONS.find(l => l.id === id);
   if (!location) redirect('/');
 
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: `ActionCOACH Business Growth Partners — ${location.city}`,
+    telephone: CONTACT.PHONE,
+    url: `https://billgilliland.biz/locations/${location.id}`,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: location.city,
+      addressRegion: location.state,
+      addressCountry: 'US',
+    },
+    areaServed: `${location.city}, ${location.state}`,
+    priceRange: '$$',
+    openingHours: 'Mo-Fr 09:00-17:00',
+  };
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
     <div className="min-h-screen bg-[#1C1C1C]">
       <section className="relative h-[60vh] flex items-center pt-20">
         <div className="absolute inset-0 z-0">
@@ -68,5 +87,6 @@ export default async function LocationPage({ params }: { params: Promise<{ id: s
         </div>
       </section>
     </div>
+    </>
   );
 }

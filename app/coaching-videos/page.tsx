@@ -10,8 +10,29 @@ export const metadata: Metadata = {
 export default function CoachingVideosPage() {
   const featured = FEATURED_VIDEOS.slice(0, 3);
   const remaining = FEATURED_VIDEOS.slice(3, 9);
+  const allVideos = [...featured, ...remaining];
+
+  const videoSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Business Coaching Videos — Coach Bill Gilliland',
+    itemListElement: allVideos.map((video, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'VideoObject',
+        name: video.title,
+        embedUrl: `https://www.youtube.com/embed/${video.videoId}`,
+        thumbnailUrl: `https://i.ytimg.com/vi/${video.videoId}/maxresdefault.jpg`,
+        uploadDate: '2026-01-01',
+        description: video.title,
+      },
+    })),
+  };
 
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
     <div className="pt-32 pb-24 bg-[#1C1C1C]">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="mb-16 border-t border-white/5 pt-12">
@@ -79,5 +100,6 @@ export default function CoachingVideosPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

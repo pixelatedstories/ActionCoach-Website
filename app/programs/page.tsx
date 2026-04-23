@@ -4,7 +4,7 @@ import { PROGRAMS } from '@/constants';
 
 export const metadata: Metadata = {
   title: 'Coaching Programs | ActionCOACH Business Growth Partners',
-  description: 'See the ActionCOACH coaching options for owners who want a business that works, scales, and gives them freedom.',
+  description: 'Business coaching programs for WNC owners ready to scale. ActionCOACH Business Growth Partners serves Asheville, Charlotte, Raleigh, and Greenville NC.',
 };
 
 export default function ProgramsHub() {
