@@ -249,6 +249,12 @@ export const PROGRAMS: Program[] = [
       },
     ],
     result: 'Sharper execution, stronger profit, and a business that can grow without constant owner oversight.',
+    testimonialVideos: [
+      {
+        videoId: 'HVhs_6tyLak',
+        title: 'He Was Burned Out on Business Until This Changed',
+      },
+    ],
   },
   {
     id: 'business-masterclass',
@@ -363,6 +369,12 @@ export const PROGRAMS: Program[] = [
     ],
     pricingNotes: 'Included within coaching or implemented as a standalone engagement depending on scope.',
     result: 'Consistency replaces chaos, systems replace guesswork, and the business becomes easier to scale.',
+    testimonialVideos: [
+      {
+        videoId: 'FmLZRaIHVwc',
+        title: 'He Got Out of the Grind and Finally Saw the Bigger Picture',
+      },
+    ],
   },
   {
     id: 'planning-club',
@@ -419,6 +431,12 @@ export const PROGRAMS: Program[] = [
       },
     ],
     result: 'A clear 90-day plan tied to financial goals, priorities, and execution.',
+    testimonialVideos: [
+      {
+        videoId: 'c_jMNtvlKZM',
+        title: 'When You Are So Deep in the Day to Day You Cannot See a Way Out',
+      },
+    ],
   },
   {
     id: 'growth-club',

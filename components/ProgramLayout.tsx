@@ -219,6 +219,32 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
           </section>
         )}
 
+        {/* Testimonial Videos */}
+        {program.testimonialVideos && program.testimonialVideos.length > 0 && (
+          <section className="py-24 border-t border-white/5">
+            <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-4 text-center">Real Clients. Real Results.</p>
+            <h2 className="text-4xl font-black uppercase mb-16 text-center">Hear From Business Owners Like You</h2>
+            <div className={`grid gap-8 ${program.testimonialVideos.length === 1 ? 'max-w-3xl mx-auto' : 'md:grid-cols-2 max-w-5xl mx-auto'}`}>
+              {program.testimonialVideos.map((video, i) => (
+                <div key={i} className="bg-[#262626] border border-white/5">
+                  <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                    <iframe
+                      src={`https://www.youtube.com/embed/${video.videoId}`}
+                      title={video.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  </div>
+                  {video.clientName && (
+                    <p className="px-6 py-4 text-sm font-black uppercase tracking-widest text-gold border-t border-white/5">{video.clientName}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Journey Includes */}
         {program.journeyIncludes && (
           <section className="py-24 border-t border-white/5">

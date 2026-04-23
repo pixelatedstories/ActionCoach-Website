@@ -37,6 +37,11 @@ export interface Program {
   faqs?: FAQ[];
   pricingNotes?: string;
   result?: string;
+  testimonialVideos?: {
+    videoId: string;
+    title: string;
+    clientName?: string;
+  }[];
 }
 
 export interface LocationData {
