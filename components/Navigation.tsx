@@ -73,6 +73,7 @@ const Navigation = () => {
 
           <Link href="/about" className="text-xs font-black uppercase tracking-widest hover:text-gold transition-colors">About</Link>
           <Link href="/events" className="text-xs font-black uppercase tracking-widest hover:text-gold transition-colors">Events</Link>
+          <Link href="/client-stories" className="text-xs font-black uppercase tracking-widest hover:text-gold transition-colors">Client Stories</Link>
 
           <div className="relative group/resources">
             <div className="flex items-center py-2 cursor-pointer group">
@@ -164,6 +165,7 @@ const Navigation = () => {
 
             <Link href="/about" className="block text-4xl font-black uppercase tracking-tighter">About</Link>
             <Link href="/events" className="block text-4xl font-black uppercase tracking-tighter">Events</Link>
+            <Link href="/client-stories" className="block text-4xl font-black uppercase tracking-tighter">Client Stories</Link>
 
             <div>
               <button
