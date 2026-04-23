@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         destination: '/programs/growth-club',
         permanent: true,
       },
+      {
+        source: '/resources/videos',
+        destination: '/client-stories',
+        permanent: true,
+      },
     ];
   },
 };

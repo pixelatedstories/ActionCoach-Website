@@ -6,6 +6,12 @@ export const FEATURED_VIDEOS = [
   { videoId: 'FmLZRaIHVwc', title: 'He Got Out of the Grind and Finally Saw the Bigger Picture' },
   { videoId: 'c_jMNtvlKZM', title: 'When You Are So Deep in the Day to Day You Cannot See a Way Out' },
   // Add more videos below as they are published — first 3 show large, rest show smaller
+  { videoId: 'JuMmZHQuWvk', title: 'Is Business Coaching Worth It? The Real Cost vs. ROI' },
+  { videoId: '31SVS1HoXJU', title: 'Test Drive Employees Before You Hire Them' },
+  { videoId: '_kV4jm1NuKc', title: 'Fish With A Net Not A Hook — Hiring Philosophy' },
+  { videoId: 'fcJDHjsYbmc', title: 'The ASCC Method: Stop Hiring The Wrong People' },
+  { videoId: 'qTzIj5Ji1rQ', title: 'Building a Team That Actually Gets Results' },
+  { videoId: 'aBfcghFq1Sg', title: 'The Secret to Saving Time in Your Trades Business' },
 ];
 
 // Update PODCAST_EPISODES when new episodes are published.
