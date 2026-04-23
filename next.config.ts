@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/resources/videos',
-        destination: '/client-stories',
+        destination: '/coaching-videos',
         permanent: true,
       },
     ];

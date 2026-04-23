@@ -8,8 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function ClientStoriesPage() {
-  const featured = FEATURED_VIDEOS.slice(0, 3);
-  const remaining = FEATURED_VIDEOS.slice(3, 9);
+  const testimonials = FEATURED_VIDEOS.slice(0, 3);
 
   return (
     <div className="pt-32 pb-24 bg-[#1C1C1C]">
@@ -24,9 +23,8 @@ export default function ClientStoriesPage() {
           </p>
         </div>
 
-        {/* Featured videos — large */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {featured.map((video, i) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((video, i) => (
             <div key={i} className="bg-[#262626] border border-white/5">
               <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                 <iframe
@@ -43,33 +41,6 @@ export default function ClientStoriesPage() {
             </div>
           ))}
         </div>
-
-        {/* More videos — smaller grid */}
-        {remaining.length > 0 && (
-          <>
-            <div className="border-t border-white/5 pt-12 mb-8">
-              <p className="text-gold font-black uppercase tracking-[0.2em] text-xs">More from Bill</p>
-            </div>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {remaining.map((video, i) => (
-                <div key={i} className="bg-[#262626] border border-white/5">
-                  <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                    <iframe
-                      src={`https://www.youtube.com/embed/${video.videoId}`}
-                      title={video.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="absolute inset-0 w-full h-full"
-                    />
-                  </div>
-                  <p className="px-4 py-3 text-xs font-black uppercase tracking-tight text-white/70 border-t border-white/5 leading-snug">
-                    {video.title}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </>
-        )}
 
         <div className="mt-24 p-12 bg-white text-black text-center">
           <h2 className="text-3xl font-black uppercase mb-4 leading-tight">Ready to write your own story?</h2>
