@@ -44,6 +44,16 @@ export interface Program {
   }[];
 }
 
+export interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  category: string;
+  podcastEpisode?: string;
+  youtubeId?: string;
+}
+
 export interface LocationData {
   id: string;
   city: string;

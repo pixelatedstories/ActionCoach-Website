@@ -1,6 +1,12 @@
 
 import { Program, LocationData, TeamMember, Testimonial } from './types';
 
+export const FEATURED_VIDEOS = [
+  { videoId: 'HVhs_6tyLak', title: 'He Was Burned Out on Business Until This Changed' },
+  { videoId: 'FmLZRaIHVwc', title: 'He Got Out of the Grind and Finally Saw the Bigger Picture' },
+  { videoId: 'c_jMNtvlKZM', title: 'When You Are So Deep in the Day to Day You Cannot See a Way Out' },
+];
+
 export const COLORS = {
   GOLD: '#FFD100',
   CHARCOAL: '#1C1C1C',
