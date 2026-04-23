@@ -22,7 +22,7 @@ const sections = [
   {
     href: '/resources/videos',
     label: 'Client Stories',
-    description: 'Short video testimonials from business owners who have been through the coaching process. Real people, real results.',
+    description: 'Short videos from business owners who have been through the coaching process — in their own words, on camera.',
     cta: 'Watch Videos',
   },
 ];

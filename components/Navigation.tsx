@@ -87,7 +87,6 @@ const Navigation = () => {
                   <Link href="/resources/articles" className="block px-4 py-3 text-[11px] font-bold uppercase tracking-wider text-white/80 hover:bg-gold hover:text-black hover:pl-6 transition-all duration-200">Articles</Link>
                   <Link href="/resources/podcast" className="block px-4 py-3 text-[11px] font-bold uppercase tracking-wider text-white/80 hover:bg-gold hover:text-black hover:pl-6 transition-all duration-200">Podcast</Link>
                   <Link href="/resources/videos" className="block px-4 py-3 text-[11px] font-bold uppercase tracking-wider text-white/80 hover:bg-gold hover:text-black hover:pl-6 transition-all duration-200">Client Stories</Link>
-                  <Link href="/reviews" className="block px-4 py-3 text-[11px] font-bold uppercase tracking-wider text-white/80 hover:bg-gold hover:text-black hover:pl-6 transition-all duration-200">Success Stories</Link>
                 </div>
               </div>
             </div>
@@ -178,7 +177,6 @@ const Navigation = () => {
                 <Link href="/resources/articles" className="block text-white/70 text-base font-bold uppercase tracking-tight pl-4 border-l-2 border-gold/30 hover:border-gold hover:text-white transition-all">Articles</Link>
                 <Link href="/resources/podcast" className="block text-white/70 text-base font-bold uppercase tracking-tight pl-4 border-l-2 border-gold/30 hover:border-gold hover:text-white transition-all">Podcast</Link>
                 <Link href="/resources/videos" className="block text-white/70 text-base font-bold uppercase tracking-tight pl-4 border-l-2 border-gold/30 hover:border-gold hover:text-white transition-all">Client Stories</Link>
-                <Link href="/reviews" className="block text-white/70 text-base font-bold uppercase tracking-tight pl-4 border-l-2 border-gold/30 hover:border-gold hover:text-white transition-all">Success Stories</Link>
               </div>
             </div>
 

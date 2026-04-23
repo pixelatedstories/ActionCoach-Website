@@ -5,6 +5,33 @@ export const FEATURED_VIDEOS = [
   { videoId: 'HVhs_6tyLak', title: 'He Was Burned Out on Business Until This Changed' },
   { videoId: 'FmLZRaIHVwc', title: 'He Got Out of the Grind and Finally Saw the Bigger Picture' },
   { videoId: 'c_jMNtvlKZM', title: 'When You Are So Deep in the Day to Day You Cannot See a Way Out' },
+  // Add more videos below as they are published — first 3 show large, rest show smaller
+];
+
+// Update PODCAST_EPISODES when new episodes are published.
+// spotifyEpisodeId: found in the Spotify episode URL after /episode/
+export const PODCAST_EPISODES = [
+  {
+    title: 'Add Most Recent Episode Title Here',
+    description: 'Brief summary of what this episode covers.',
+    date: '2026-04-01',
+    spotifyEpisodeId: '', // e.g. '4pZSVpWbkeusqb1VwhnRAo'
+    spotifyUrl: 'https://open.spotify.com/show/4pZSVpWbkeusqb1VwhnRAo',
+  },
+  {
+    title: 'Previous Episode Title',
+    description: 'Brief summary of what this episode covers.',
+    date: '2026-03-18',
+    spotifyEpisodeId: '',
+    spotifyUrl: 'https://open.spotify.com/show/4pZSVpWbkeusqb1VwhnRAo',
+  },
+  {
+    title: 'Previous Episode Title',
+    description: 'Brief summary of what this episode covers.',
+    date: '2026-03-04',
+    spotifyEpisodeId: '',
+    spotifyUrl: 'https://open.spotify.com/show/4pZSVpWbkeusqb1VwhnRAo',
+  },
 ];
 
 export const COLORS = {

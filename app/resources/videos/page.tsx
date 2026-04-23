@@ -4,10 +4,13 @@ import { FEATURED_VIDEOS } from '@/constants';
 
 export const metadata: Metadata = {
   title: 'Client Stories | ActionCOACH Business Growth Partners',
-  description: 'Watch real client testimonials from business owners who have worked with ActionCOACH Business Growth Partners. Hear how coaching helped them get out of the grind and build a business that works.',
+  description: 'Watch real client testimonials from business owners who have worked with ActionCOACH Business Growth Partners.',
 };
 
 export default function VideosPage() {
+  const featured = FEATURED_VIDEOS.slice(0, 3);
+  const remaining = FEATURED_VIDEOS.slice(3);
+
   return (
     <div className="pt-32 pb-24 bg-[#1C1C1C]">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -21,12 +24,13 @@ export default function VideosPage() {
             Real Owners.<br />Real Results.
           </h1>
           <p className="text-xl text-white/60 max-w-2xl leading-relaxed">
-            Short videos from business owners who have been through the coaching process. Not testimonials written by a marketing team — their words, on camera.
+            Business owners in their own words — on what changed and how they got there.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {FEATURED_VIDEOS.map((video, i) => (
+        {/* Featured videos — large */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {featured.map((video, i) => (
             <div key={i} className="bg-[#262626] border border-white/5">
               <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                 <iframe
@@ -43,6 +47,33 @@ export default function VideosPage() {
             </div>
           ))}
         </div>
+
+        {/* Additional videos — smaller grid */}
+        {remaining.length > 0 && (
+          <>
+            <div className="border-t border-white/5 pt-12 mb-8">
+              <p className="text-gold font-black uppercase tracking-[0.2em] text-xs">More Stories</p>
+            </div>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {remaining.map((video, i) => (
+                <div key={i} className="bg-[#262626] border border-white/5">
+                  <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                    <iframe
+                      src={`https://www.youtube.com/embed/${video.videoId}`}
+                      title={video.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  </div>
+                  <p className="px-4 py-3 text-xs font-black uppercase tracking-tight text-white/70 border-t border-white/5 leading-snug">
+                    {video.title}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
 
         <div className="mt-24 p-12 bg-white text-black text-center">
           <h2 className="text-3xl font-black uppercase mb-4 leading-tight">Ready to write your own story?</h2>
