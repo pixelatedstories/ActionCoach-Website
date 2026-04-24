@@ -12,7 +12,7 @@ function AbosStep({ number, title, description }: { number: string; title: strin
     <div className="flex gap-6 group">
       <div className="flex-shrink-0 w-12 h-12 bg-gold text-black flex items-center justify-center font-black text-lg">{number}</div>
       <div>
-        <h4 className="font-black text-lg uppercase tracking-tight text-gold mb-1">{title}</h4>
+        <h3 className="font-black text-lg uppercase tracking-tight text-gold mb-1">{title}</h3>
         <p className="text-white/70 text-sm leading-relaxed">{description}</p>
       </div>
     </div>
@@ -172,7 +172,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 text-center">
           <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-4">Proof</p>
           <h2 className="text-4xl font-black mb-4 uppercase tracking-tight">Real owners. Real progress.</h2>
-          <p className="text-white/50 mb-16 text-lg">These are the kinds of outcomes business owners want to see before they make the next move.</p>
+          <p className="text-white/70 mb-16 text-lg">These are the kinds of outcomes business owners want to see before they make the next move.</p>
           <div className="grid md:grid-cols-2 gap-10 text-left">
             {testimonials.map((t, i) => (
               <div key={i} className="bg-[#262626] p-8 border border-white/5 hover:border-gold/30 transition-all">

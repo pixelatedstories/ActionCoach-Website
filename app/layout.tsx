@@ -85,7 +85,7 @@ function Footer() {
           </div>
         </div>
         <div>
-          <h4 className="text-gold font-black uppercase tracking-widest text-xs mb-8">Navigation</h4>
+          <p className="text-gold font-black uppercase tracking-widest text-xs mb-8">Navigation</p>
           <ul className="space-y-4 text-sm font-bold text-white/80">
             <li><Link href="/about" className="hover:text-gold transition-colors">About Us</Link></li>
             <li><Link href="/programs" className="hover:text-gold transition-colors">Our Programs</Link></li>
@@ -98,7 +98,7 @@ function Footer() {
           </ul>
         </div>
         <div>
-          <h4 className="text-gold font-black uppercase tracking-widest text-xs mb-8">Locations</h4>
+          <p className="text-gold font-black uppercase tracking-widest text-xs mb-8">Locations</p>
           <ul className="space-y-4 text-sm font-bold text-white/80">
             {LOCATIONS.map(l => (
               <li key={l.id}>
@@ -110,7 +110,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 md:px-8 mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] text-white/20 uppercase tracking-[0.3em] font-black">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] text-white/50 uppercase tracking-[0.3em] font-black">
         <span>&copy; {new Date().getFullYear()} ActionCOACH Business Growth Partners. All Rights Reserved.</span>
         <div className="flex space-x-6">
           <Link href="/privacy" className="hover:text-gold transition-colors">Privacy Policy</Link>

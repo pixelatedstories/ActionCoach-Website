@@ -132,7 +132,7 @@ const Navigation = () => {
           </Link>
         </div>
 
-        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-white p-2 relative z-50">
+        <button onClick={() => setIsOpen(!isOpen)} aria-label={isOpen ? 'Close menu' : 'Open menu'} className="lg:hidden text-white p-2 relative z-50">
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {isOpen
               ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
@@ -148,6 +148,7 @@ const Navigation = () => {
             <div>
               <button
                 onClick={() => setShowProgramsMobile(!showProgramsMobile)}
+                aria-expanded={showProgramsMobile}
                 className="w-full text-left flex items-center justify-between group"
               >
                 <span className="text-4xl font-black uppercase tracking-tighter">Programs</span>
@@ -168,6 +169,7 @@ const Navigation = () => {
             <div>
               <button
                 onClick={() => setShowResourcesMobile(!showResourcesMobile)}
+                aria-expanded={showResourcesMobile}
                 className="w-full text-left flex items-center justify-between group"
               >
                 <span className="text-4xl font-black uppercase tracking-tighter">Resources</span>
