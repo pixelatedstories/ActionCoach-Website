@@ -132,7 +132,7 @@ export default function Home() {
 
             <div className="space-y-8">
               <div className="bg-white text-black p-8">
-                <p className="text-xs font-black uppercase tracking-[0.2em] text-[#666] mb-4">They ask, you answer</p>
+                <p className="text-xs font-black uppercase tracking-[0.2em] text-[#666] mb-4">Common questions</p>
                 <h3 className="text-2xl font-black uppercase mb-4">What owners usually want to know first</h3>
                 <div className="space-y-5 text-lg leading-relaxed">
                   <div>

@@ -60,7 +60,7 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
                   When the right support is in place, the business starts to feel lighter. Decisions move faster. The team knows the plan. The owner spends less time putting out fires and more time leading.
                 </p>
                 <p>
-                  That is what StoryBrand and They Ask, You Answer both point toward: clarity, trust, and a clear path forward. The page should answer the common questions, show the next step, and make the fit obvious.
+                  When the business has the right structure, the owner stops being the bottleneck. That is the goal — a clearer path forward and a team that can execute without constant direction.
                 </p>
               </div>
             </div>
@@ -208,8 +208,8 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
                     <div className="flex items-start space-x-4">
                       <div className="w-3 h-3 bg-gold rounded-full mt-2 shrink-0"></div>
                       <div>
-                        <p className="text-lg font-black uppercase tracking-tight mb-2">{i + 1}. {item.split(':')[0]}</p>
-                        <p className="text-white/70 leading-relaxed">{item.includes(':') ? item.split(':').slice(1).join(':').trim() : item}</p>
+                        <p className="text-lg font-black uppercase tracking-tight mb-2">{i + 1}. {item.replace(/^\d+\.\s*/, '').split(':')[0]}</p>
+                        <p className="text-white/70 leading-relaxed">{item.includes(':') ? item.split(':').slice(1).join(':').trim() : item.replace(/^\d+\.\s*/, '')}</p>
                       </div>
                     </div>
                   </div>

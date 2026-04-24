@@ -227,6 +227,70 @@ export const PROGRAMS: Program[] = [
     result: 'A business that runs with more structure, more leadership, and less dependence on the owner.',
   },
   {
+    id: 'business-operating-system',
+    title: 'Business Operating System (ABoS)',
+    subtitle: 'Turn Your Business Into a Machine',
+    description: 'The ActionCOACH Business Operating System installs the systems your business needs to scale consistently.',
+    features: ['Predictable Marketing and Lead Flow', 'Sales Systems That Convert', 'Operational Systems That Scale', 'A Team That Executes Without Constant Oversight'],
+    cta: 'Install ABoS',
+    problem: [
+      'The business depends on the owner for too many decisions.',
+      'Results are inconsistent because the structure is inconsistent.',
+      'Leads, sales, and delivery do not run from the same playbook.',
+      'The team needs a clearer operating rhythm.',
+    ],
+    isForYou: [
+      'You feel stuck in the day-to-day.',
+      'You struggle with inconsistent results.',
+      'You know you need better systems and structure.',
+    ],
+    whatYoullGain: [
+      'Consistency replaces chaos.',
+      'Systems replace guesswork.',
+      'Your business runs like a well-oiled machine.',
+      'A clearer path to scale.',
+    ],
+    howItWorks: [
+      '1. Find the biggest leaks in the current operating rhythm.',
+      '2. Build the systems for marketing, sales, delivery, and team execution.',
+      '3. Install the process so the business becomes easier to run.',
+    ],
+    journeyIncludes: [
+      'System mapping across the business',
+      'Lead flow and sales process design',
+      'Operational rhythm and accountability',
+      'Team execution support',
+    ],
+    investmentOptions: [
+      {
+        name: 'ABoS Installation',
+        price: '$10,000 - $25,000',
+        period: 'depending on scope',
+        description: 'Standalone system installation for owners who need structure without starting from scratch.',
+        bestFor: 'Businesses that need stronger systems',
+        features: ['Predictable systems', 'Operational structure', 'Execution support'],
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is ABoS?',
+        answer: 'It is the ActionCOACH Business Operating System, the framework that helps the business scale consistently.',
+      },
+      {
+        question: 'Can this be standalone?',
+        answer: 'Yes. It can be installed as part of coaching or as a standalone engagement.',
+      },
+    ],
+    pricingNotes: 'Included within coaching or implemented as a standalone engagement depending on scope.',
+    result: 'Consistency replaces chaos, systems replace guesswork, and the business becomes easier to scale.',
+    testimonialVideos: [
+      {
+        videoId: 'FmLZRaIHVwc',
+        title: 'He Got Out of the Grind and Finally Saw the Bigger Picture',
+      },
+    ],
+  },
+  {
     id: 'one-to-one-freedom',
     title: 'Private Coaching',
     subtitle: 'Your Strategic Growth Partner',
@@ -350,70 +414,6 @@ export const PROGRAMS: Program[] = [
       },
     ],
     result: 'A stronger operating foundation with more clarity, accountability, and forward motion.',
-  },
-  {
-    id: 'business-operating-system',
-    title: 'Business Operating System (ABoS)',
-    subtitle: 'Turn Your Business Into a Machine',
-    description: 'The ActionCOACH Business Operating System installs the systems your business needs to scale consistently.',
-    features: ['Predictable Marketing and Lead Flow', 'Sales Systems That Convert', 'Operational Systems That Scale', 'A Team That Executes Without Constant Oversight'],
-    cta: 'Install ABoS',
-    problem: [
-      'The business depends on the owner for too many decisions.',
-      'Results are inconsistent because the structure is inconsistent.',
-      'Leads, sales, and delivery do not run from the same playbook.',
-      'The team needs a clearer operating rhythm.',
-    ],
-    isForYou: [
-      'You feel stuck in the day-to-day.',
-      'You struggle with inconsistent results.',
-      'You know you need better systems and structure.',
-    ],
-    whatYoullGain: [
-      'Consistency replaces chaos.',
-      'Systems replace guesswork.',
-      'Your business runs like a well-oiled machine.',
-      'A clearer path to scale.',
-    ],
-    howItWorks: [
-      '1. Find the biggest leaks in the current operating rhythm.',
-      '2. Build the systems for marketing, sales, delivery, and team execution.',
-      '3. Install the process so the business becomes easier to run.',
-    ],
-    journeyIncludes: [
-      'System mapping across the business',
-      'Lead flow and sales process design',
-      'Operational rhythm and accountability',
-      'Team execution support',
-    ],
-    investmentOptions: [
-      {
-        name: 'ABoS Installation',
-        price: '$10,000 - $25,000',
-        period: 'depending on scope',
-        description: 'Standalone system installation for owners who need structure without starting from scratch.',
-        bestFor: 'Businesses that need stronger systems',
-        features: ['Predictable systems', 'Operational structure', 'Execution support'],
-      },
-    ],
-    faqs: [
-      {
-        question: 'What is ABoS?',
-        answer: 'It is the ActionCOACH Business Operating System, the framework that helps the business scale consistently.',
-      },
-      {
-        question: 'Can this be standalone?',
-        answer: 'Yes. It can be installed as part of coaching or as a standalone engagement.',
-      },
-    ],
-    pricingNotes: 'Included within coaching or implemented as a standalone engagement depending on scope.',
-    result: 'Consistency replaces chaos, systems replace guesswork, and the business becomes easier to scale.',
-    testimonialVideos: [
-      {
-        videoId: 'FmLZRaIHVwc',
-        title: 'He Got Out of the Grind and Finally Saw the Bigger Picture',
-      },
-    ],
   },
   {
     id: 'planning-club',
