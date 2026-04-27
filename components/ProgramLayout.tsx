@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Program, FAQ } from '@/types';
+import { getCaseStudiesForProgram } from '@/case-studies';
 
 const FAQItem: React.FC<{ faq: FAQ }> = ({ faq }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,6 +31,7 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
   const isSpeaking = program.id === 'speaking';
   const problemBullets = program.problem ?? program.isForYou ?? [];
   const howItWorksBullets = program.howItWorks ?? program.journeyIncludes ?? [];
+  const relatedStories = getCaseStudiesForProgram(program.id);
 
   return (
     <div className="pt-32 pb-24 bg-[#1C1C1C]">
@@ -190,6 +192,37 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Client Proof */}
+        {relatedStories.length > 0 && (
+          <section className="py-24 border-t border-white/5">
+            <div className="grid lg:grid-cols-3 gap-10 items-start">
+              <div>
+                <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-4">Client proof</p>
+                <h2 className="text-4xl font-black uppercase leading-tight mb-6">What this work looks like in real businesses</h2>
+                <p className="text-white/70 leading-relaxed mb-8">
+                  These client stories show owners using coaching to get control of team, money, systems, and execution.
+                </p>
+                <Link href="/client-stories" className="inline-flex justify-center bg-gold text-black px-6 py-4 text-xs font-black uppercase tracking-widest hover:bg-white transition-all">
+                  View Client Stories
+                </Link>
+              </div>
+              <div className="lg:col-span-2 grid md:grid-cols-3 gap-4">
+                {relatedStories.map((story) => {
+                  const primaryResult = story.results[0];
+                  return (
+                    <Link key={story.slug} href={`/client-stories/${story.slug}`} className="group bg-[#262626] border border-white/5 p-6 hover:border-gold/50 transition-colors">
+                      <p className="text-gold text-3xl font-black leading-none mb-3">{primaryResult.value}</p>
+                      <p className="text-white/45 text-xs font-black uppercase tracking-widest mb-5">{primaryResult.label}</p>
+                      <h3 className="font-black uppercase leading-tight mb-3 group-hover:text-gold transition-colors">{story.business}</h3>
+                      <p className="text-white/65 text-sm leading-relaxed">{story.headline}</p>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </section>

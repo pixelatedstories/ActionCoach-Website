@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { TESTIMONIALS, PROGRAMS } from '@/constants';
+import { CASE_STUDIES } from '@/case-studies';
 
 export const metadata: Metadata = {
   title: 'ActionCOACH Business Growth Partners | Business Coaching Asheville NC',
@@ -22,6 +23,7 @@ function AbosStep({ number, title, description }: { number: string; title: strin
 export default function Home() {
   const featuredPrograms = PROGRAMS.filter(p => !['growth-club', 'speaking'].includes(p.id)).slice(0, 3);
   const testimonials = TESTIMONIALS.slice(0, 4);
+  const clientResults = CASE_STUDIES.slice(0, 4);
 
   return (
     <div className="overflow-x-hidden">
@@ -163,6 +165,40 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Client Results */}
+      <section className="py-24 bg-white text-black">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-end mb-12">
+            <div>
+              <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-4">Client results</p>
+              <h2 className="text-4xl md:text-5xl font-black uppercase leading-tight mb-6">Real owners. Measurable progress.</h2>
+              <p className="text-lg md:text-xl text-black/70 leading-relaxed">
+                These stories show what changes when owners get control of their numbers, teams, systems, and weekly execution.
+              </p>
+            </div>
+            <div className="lg:text-right">
+              <Link href="/client-stories" className="inline-flex justify-center bg-black text-white px-8 py-5 text-sm font-black uppercase tracking-widest hover:bg-gold hover:text-black transition-all">
+                Read Client Stories
+              </Link>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {clientResults.map((study) => {
+              const primaryResult = study.results[0];
+              return (
+                <Link key={study.slug} href={`/client-stories/${study.slug}`} className="group border border-black/10 p-6 hover:bg-[#1C1C1C] hover:text-white transition-all">
+                  <p className="text-gold text-4xl font-black leading-none mb-4">{primaryResult.value}</p>
+                  <p className="text-xs font-black uppercase tracking-widest text-black/50 group-hover:text-white/45 mb-4">{primaryResult.label}</p>
+                  <h3 className="font-black uppercase leading-tight mb-3">{study.business}</h3>
+                  <p className="text-sm text-black/65 group-hover:text-white/65 leading-relaxed">{study.headline}</p>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { PROGRAMS, LOCATIONS } from '@/constants';
+import { CASE_STUDIES } from '@/case-studies';
 import fs from 'fs';
 import path from 'path';
 
@@ -27,7 +28,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/contact`, priority: 0.8, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/events`, priority: 0.7, changeFrequency: 'weekly' },
     { url: `${BASE_URL}/book`, priority: 0.9, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/reviews`, priority: 0.7, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/client-stories`, priority: 0.7, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/coaching-videos`, priority: 0.7, changeFrequency: 'weekly' },
     { url: `${BASE_URL}/resources`, priority: 0.6, changeFrequency: 'monthly' },
@@ -55,5 +55,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
   }));
 
-  return [...staticRoutes, ...programRoutes, ...locationRoutes, ...articleRoutes];
+  const clientStoryRoutes: MetadataRoute.Sitemap = CASE_STUDIES.map(study => ({
+    url: `${BASE_URL}/client-stories/${study.slug}`,
+    priority: 0.6,
+    changeFrequency: 'monthly' as const,
+  }));
+
+  return [...staticRoutes, ...programRoutes, ...locationRoutes, ...articleRoutes, ...clientStoryRoutes];
 }

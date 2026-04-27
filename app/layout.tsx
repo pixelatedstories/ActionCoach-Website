@@ -90,7 +90,7 @@ function Footer() {
             <li><Link href="/about" className="hover:text-gold transition-colors">About Us</Link></li>
             <li><Link href="/programs" className="hover:text-gold transition-colors">Our Programs</Link></li>
             <li><Link href="/events" className="hover:text-gold transition-colors">Events</Link></li>
-            <li><Link href="/reviews" className="hover:text-gold transition-colors">Success Stories</Link></li>
+            <li><Link href="/client-stories" className="hover:text-gold transition-colors">Client Stories</Link></li>
             <li><Link href="/contact" className="hover:text-gold transition-colors">Contact</Link></li>
             <li><Link href="/programs" className="hover:text-gold transition-colors">See Coaching Options</Link></li>
             <li><Link href="/book" className="hover:text-gold transition-colors">Book a Session</Link></li>

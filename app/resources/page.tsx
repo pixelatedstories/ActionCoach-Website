@@ -21,9 +21,15 @@ const sections = [
   },
   {
     href: '/resources/videos',
-    label: 'Client Stories',
-    description: 'Short videos from business owners who have been through the coaching process — in their own words, on camera.',
+    label: 'Coaching Videos',
+    description: 'Short videos with practical guidance for owners who want stronger systems, leadership, planning, and growth.',
     cta: 'Watch Videos',
+  },
+  {
+    href: '/client-stories',
+    label: 'Client Stories',
+    description: 'Detailed case studies from business owners who used coaching to improve profit, team, systems, and freedom.',
+    cta: 'See Results',
   },
 ];
 
@@ -41,7 +47,7 @@ export default function ResourcesPage() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 border-t border-white/5 pt-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 border-t border-white/5 pt-16">
           {sections.map((s) => (
             <div key={s.href} className="bg-[#262626] border border-white/5 hover:border-gold/40 transition-colors flex flex-col">
               <div className="p-10 flex-1">

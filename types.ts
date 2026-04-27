@@ -68,3 +68,26 @@ export interface Testimonial {
   company?: string;
   location?: string;
 }
+
+export interface CaseStudyStat {
+  value: string;
+  label: string;
+}
+
+export interface CaseStudy {
+  slug: string;
+  business: string;
+  industry: string;
+  headline: string;
+  summary: string;
+  challenge: string[];
+  emotionalStakes: string;
+  coachingFocus: string[];
+  results: CaseStudyStat[];
+  differenceNow: string;
+  quote: string;
+  quoteAuthor: string;
+  pdf: string;
+  image: string;
+  relatedPrograms: string[];
+}
