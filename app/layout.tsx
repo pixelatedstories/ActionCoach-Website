@@ -6,6 +6,7 @@ import Navigation from '@/components/Navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { CONTACT, LOCATIONS } from '@/constants';
+import { Analytics } from '@vercel/analytics/next';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -179,6 +180,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Footer />
           <MobileStickyBar />
         </div>
+        <Analytics />
       </body>
     </html>
   );
