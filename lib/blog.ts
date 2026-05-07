@@ -20,6 +20,7 @@ export function getAllPosts(): BlogPost[] {
       category: data.category ?? 'General',
       podcastEpisode: data.podcastEpisode,
       youtubeId: data.youtubeId,
+      authorSlug: data.author,
     } as BlogPost;
   });
   return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
@@ -39,7 +40,12 @@ export function getPostBySlug(slug: string): { post: BlogPost; content: string }
       category: data.category ?? 'General',
       podcastEpisode: data.podcastEpisode,
       youtubeId: data.youtubeId,
+      authorSlug: data.author,
     },
     content,
   };
+}
+
+export function getPostsByAuthor(authorSlug: string): BlogPost[] {
+  return getAllPosts().filter(p => p.authorSlug === authorSlug);
 }

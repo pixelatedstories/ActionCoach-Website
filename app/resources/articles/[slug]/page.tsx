@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getAllPosts, getPostBySlug } from '@/lib/blog';
+import { getAuthorBySlug } from '@/lib/authors';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -28,6 +30,7 @@ export default async function ArticlePage({ params }: Props) {
   if (!result) notFound();
 
   const { post, content } = result;
+  const author = post.authorSlug ? getAuthorBySlug(post.authorSlug) : null;
 
   return (
     <div className="pt-32 pb-24 bg-[#1C1C1C]">
@@ -85,6 +88,42 @@ export default async function ArticlePage({ params }: Props) {
               >
                 Open on Spotify →
               </a>
+            </div>
+          )}
+
+          {author && (
+            <div className="mt-16 pt-10 border-t border-white/10 flex gap-6 items-start">
+              <div className="relative w-16 h-16 shrink-0">
+                <Image
+                  src={author.image}
+                  alt={author.name}
+                  fill
+                  className="object-cover grayscale"
+                />
+              </div>
+              <div>
+                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gold mb-1">Written by</p>
+                <Link
+                  href={`/resources/articles/author/${author.slug}`}
+                  className="text-white font-black uppercase tracking-tight text-lg hover:text-gold transition-colors"
+                >
+                  {author.name}
+                </Link>
+                <p className="text-white/40 text-xs font-bold uppercase tracking-wide mt-0.5">
+                  {author.role} · {author.company}
+                </p>
+                <p className="text-white/60 text-sm leading-relaxed mt-3">{author.bio}</p>
+                {author.calendly && (
+                  <a
+                    href={author.calendly}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 text-xs font-black uppercase tracking-widest text-gold border border-gold/40 px-4 py-2 hover:bg-gold hover:text-black transition-all"
+                  >
+                    Book a Call with {author.name.split(' ')[0]} →
+                  </a>
+                )}
+              </div>
             </div>
           )}
         </div>

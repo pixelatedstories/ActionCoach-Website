@@ -52,6 +52,17 @@ export interface BlogPost {
   category: string;
   podcastEpisode?: string;
   youtubeId?: string;
+  authorSlug?: string;
+}
+
+export interface Author {
+  slug: string;
+  name: string;
+  role: string;
+  company: string;
+  bio: string;
+  image: string;
+  calendly?: string;
 }
 
 export interface LocationData {
