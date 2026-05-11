@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { Montserrat, Inter } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { CONTACT, LOCATIONS } from '@/constants';
+
+const GA_MEASUREMENT_ID = 'G-G35NCBL61G';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -170,6 +173,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
       <head>
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       </head>
       <body>
