@@ -1,36 +1,17 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Enroll — 12-Week Masterclass',
+  title: 'Enroll — 12-Week Masterclasses',
   robots: { index: false, follow: false },
 };
 
 const masterclasses = [
-  {
-    id: 'marketing',
-    title: '12-Week Marketing Masterclass',
-    formUrl: 'https://go.cfastr.com/widget/form/7pZBtShYULHEPSkGvXtM',
-  },
-  {
-    id: 'management',
-    title: '12-Week Management Masterclass',
-    formUrl: 'https://go.cfastr.com/widget/form/bJtOPfm9dvmXQzCbXGqV',
-  },
-  {
-    id: 'sales',
-    title: '12-Week Sales Masterclass',
-    formUrl: 'https://go.cfastr.com/widget/form/M5lS6BWzzuQyozZVNIZn',
-  },
-  {
-    id: 'leadership',
-    title: '12-Week Leadership Masterclass',
-    formUrl: 'https://go.cfastr.com/widget/form/heP9t49QADoYqG5X9hyo',
-  },
-  {
-    id: 'business',
-    title: '12-Week Business Masterclass',
-    formUrl: 'https://go.cfastr.com/widget/form/WUSOXTpZDg2BBP7yB7qn',
-  },
+  { id: 'marketing',   title: '12-Week Marketing Masterclass' },
+  { id: 'management',  title: '12-Week Management Masterclass' },
+  { id: 'sales',       title: '12-Week Sales Masterclass' },
+  { id: 'leadership',  title: '12-Week Leadership Masterclass' },
+  { id: 'business',    title: '12-Week Business Masterclass' },
 ];
 
 export default function EnrollPage() {
@@ -43,24 +24,25 @@ export default function EnrollPage() {
             12-Week Masterclasses
           </h1>
           <p className="text-white/60 text-lg">
-            Select the class below and complete the enrollment form to reserve your seat.
+            Select a class below to enroll and complete your purchase.
           </p>
         </div>
 
-        <div className="space-y-20">
+        <div className="grid md:grid-cols-2 gap-6">
           {masterclasses.map((mc) => (
-            <div key={mc.id} id={mc.id}>
-              <div className="h-1 w-10 bg-gold mb-6" />
-              <h2 className="text-2xl font-black uppercase tracking-tight mb-8">{mc.title}</h2>
-              <iframe
-                src={mc.formUrl}
-                title={mc.title}
-                className="w-full border-0"
-                style={{ minHeight: '560px' }}
-                scrolling="no"
-                loading="lazy"
-              />
-            </div>
+            <Link
+              key={mc.id}
+              href={`/enroll/${mc.id}`}
+              className="group bg-[#262626] border border-white/5 p-8 hover:border-gold transition-all duration-300 flex flex-col"
+            >
+              <div className="h-1 w-10 bg-gold mb-5 group-hover:w-full transition-all duration-500" />
+              <h2 className="text-lg font-black uppercase tracking-wide group-hover:text-gold transition-colors">
+                {mc.title}
+              </h2>
+              <p className="mt-4 text-xs font-black uppercase tracking-widest text-gold opacity-0 group-hover:opacity-100 transition-opacity">
+                Enroll →
+              </p>
+            </Link>
           ))}
         </div>
       </div>
