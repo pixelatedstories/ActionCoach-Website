@@ -116,6 +116,13 @@ export const LOCATIONS: LocationData[] = [
     state: 'SC',
     description: 'Greenville is one of the fastest-growing cities in the Southeast, perfect for ambitious entrepreneurs.',
     image: '/images/actioncoach-growth-business-partners-networking-event-group.jpeg'
+  },
+  {
+    id: 'high-point-nc',
+    city: 'High Point',
+    state: 'NC',
+    description: 'High Point is the furniture capital of the world and a hub for manufacturing, trade, and entrepreneurship.',
+    image: '/images/high-point-nc.jpg'
   }
 ];
 
@@ -264,11 +271,11 @@ export const PROGRAMS: Program[] = [
     investmentOptions: [
       {
         name: 'ABoS Installation',
-        price: '$10,000 - $25,000',
-        period: 'depending on scope',
-        description: 'Standalone system installation for owners who need structure without starting from scratch.',
+        price: '$30,000 - $60,000',
+        period: 'includes private coaching',
+        description: 'System installation with private coaching included. Designed for owners who need structure and accountability.',
         bestFor: 'Businesses that need stronger systems',
-        features: ['Predictable systems', 'Operational structure', 'Execution support'],
+        features: ['Predictable systems', 'Operational structure', 'Private coaching included'],
       },
     ],
     faqs: [
@@ -330,8 +337,8 @@ export const PROGRAMS: Program[] = [
     investmentOptions: [
       {
         name: 'Private Coaching',
-        price: '$2,500 - $3,500',
-        period: 'per month',
+        price: '$30,000 - $48,000',
+        period: 'annual investment',
         description: 'Ongoing one-on-one coaching for owners who want sharper execution and better growth.',
         bestFor: 'Owners ready for strategic accountability',
         features: ['1-on-1 partnership', 'Execution focus', 'Strategic guidance'],
@@ -417,7 +424,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     id: 'planning-club',
-    title: '90-Day Planning Experience',
+    title: 'Business Planning',
     subtitle: 'Get Clear. Get Focused. Get Results.',
     description: 'In this interactive planning experience, you will build a clear, executable 90-day growth plan tied directly to your financial goals.',
     features: ['90-Day Action Plan', 'Revenue, Profit, and Cash Flow Projections', 'A System to Track and Adjust Performance', 'Clear Execution Priorities'],
@@ -451,12 +458,12 @@ export const PROGRAMS: Program[] = [
     ],
     investmentOptions: [
       {
-        name: 'Planning Experience',
-        price: '$495 - $995',
-        period: 'per workshop',
-        description: 'A focused planning workshop for owners who want clarity now.',
+        name: 'Business Planning',
+        price: '$495 - $5,000',
+        period: 'per engagement',
+        description: 'A focused planning engagement for owners who want clarity now.',
         bestFor: 'Owners who want immediate direction',
-        features: ['90-day planning', 'Financial clarity', 'Execution roadmap'],
+        features: ['Business planning', 'Financial clarity', 'Execution roadmap'],
       },
     ],
     faqs: [

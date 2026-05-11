@@ -10,8 +10,8 @@ const pricingItems = [
   },
   {
     name: 'Private Coaching',
-    price: '$2,500 - $3,500',
-    period: 'per month',
+    price: '$30,000 - $48,000',
+    period: 'annual investment',
     description: 'One-on-one strategic coaching for owners who want higher-level accountability and execution.',
   },
   {
@@ -22,15 +22,15 @@ const pricingItems = [
   },
   {
     name: 'Business Operating System (ABoS)',
-    price: '$10,000 - $25,000',
-    period: 'depending on scope',
-    description: 'Standalone system installation for businesses that need structure and consistency.',
+    price: '$30,000 - $60,000',
+    period: 'includes private coaching',
+    description: 'System installation with private coaching included. For businesses that need structure and accountability.',
   },
   {
-    name: '90-Day Planning Experience',
-    price: '$495 - $995',
-    period: 'per workshop',
-    description: 'An interactive planning experience for owners who want clarity, direction, and a 90-day plan.',
+    name: 'Business Planning',
+    price: '$495 - $5,000',
+    period: 'per engagement',
+    description: 'A focused planning engagement for owners who want clarity, direction, and a path forward.',
   },
 ];
 
