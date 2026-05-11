@@ -118,6 +118,7 @@ function Footer() {
         <div className="flex space-x-6">
           <Link href="/privacy" className="hover:text-gold transition-colors">Privacy Policy</Link>
           <Link href="/terms" className="hover:text-gold transition-colors">Terms of Service</Link>
+          <Link href="/enroll" className="hover:text-gold transition-colors">Enroll</Link>
         </div>
       </div>
     </footer>
