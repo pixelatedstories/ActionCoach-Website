@@ -93,37 +93,139 @@ export const LOCATIONS: LocationData[] = [
     id: 'asheville-nc',
     city: 'Asheville',
     state: 'NC',
-    description: 'Asheville business owners benefit from a vibrant local economy and a strong community spirit.',
-    image: '/images/Asheville-Business-Summit-6-Large.jpeg'
+    description: 'Asheville business owners benefit from a strong independent business culture and a growing local economy.',
+    image: '/images/Asheville-Business-Summit-6-Large.jpeg',
+    headline: 'Local Business Coaching for Asheville and Western NC',
+    intro: 'Bill Gilliland is based in Montreat, NC — minutes from Asheville — and has coached business owners across Western North Carolina for decades. He knows this market, the industries that drive it, and the specific pressures that come with running a business here.',
+    marketDetail: 'Asheville runs on independent businesses. The tourism economy drives significant revenue, but it also creates real challenges — seasonal cash flow swings, labor that is hard to retain, and the constant pressure of being the owner who has to be there for everything. The trades and construction market has grown sharply with WNC\'s population boom. Hospitality, outdoor recreation, health and wellness, and creative services businesses form a wide and active community of owners who are ready to build something that lasts.',
+    whoWeWork: [
+      'Restaurants & Hospitality',
+      'Contractors & Trades',
+      'Retail & Boutique',
+      'Health & Wellness',
+      'Professional Services',
+      'Outdoor Recreation & Tourism',
+    ],
+    localChallenges: [
+      {
+        title: 'Seasonal revenue swings',
+        body: 'Tourism peaks and dips hit cash flow hard. We help owners build systems that keep the business stable year-round, not just during high season.',
+      },
+      {
+        title: 'Labor retention',
+        body: 'Asheville\'s rising cost of living makes it harder to hold good people. We help you build a team structure and culture that people want to stay in.',
+      },
+      {
+        title: 'Owner dependency',
+        body: 'Most WNC businesses still run because the owner shows up every day. Getting the owner out of daily execution is usually the first thing we fix.',
+      },
+      {
+        title: 'Growing past the current model',
+        body: 'Demand is strong in WNC, but scaling without systems creates chaos. We install the operating structure your business needs to grow without breaking.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Is there a business coach based near Asheville, NC?',
+        answer: 'Yes. Bill Gilliland is based in Montreat, NC, just outside Black Mountain and minutes from Asheville. He has coached Western NC business owners for decades and knows this market well.',
+      },
+      {
+        question: 'What types of businesses do you coach in Asheville?',
+        answer: 'We work with restaurants, contractors, trades businesses, retail shops, health and wellness operators, and professional service firms across Western NC. If you own a business in the Asheville area and feel stuck, we can help.',
+      },
+      {
+        question: 'Can coaching help with seasonal cash flow?',
+        answer: 'Seasonal cash flow is one of the most common challenges for Asheville-area businesses. We work directly on cash flow planning, pricing strategy, and building consistent revenue systems so the off-season does not gut the business.',
+      },
+      {
+        question: 'Do you work with trades and contractor businesses in WNC?',
+        answer: 'Yes. Trades businesses are a strong fit for coaching. The challenges of managing crews, winning better jobs, and building a business that does not depend entirely on the owner are exactly what we address.',
+      },
+      {
+        question: 'How is coaching different from hiring a consultant?',
+        answer: 'A consultant delivers a plan and leaves. A coach stays in it with you — meeting weekly or bi-weekly — keeping execution moving and adjusting the plan as the business changes. You implement with accountability, not alone.',
+      },
+    ],
   },
   {
     id: 'charlotte-nc',
     city: 'Charlotte',
     state: 'NC',
-    description: 'The business capital of the Carolinas, Charlotte offers massive opportunities for scaled growth.',
-    image: '/images/actioncoach-growth-business-partners-networking-event-group.jpeg'
+    description: 'The business capital of the Carolinas, Charlotte offers strong opportunities for owners ready to scale.',
+    image: '/images/actioncoach-growth-business-partners-networking-event-group.jpeg',
   },
   {
     id: 'raleigh-nc',
     city: 'Raleigh',
     state: 'NC',
-    description: "Raleigh's tech and service sectors are booming, making it an ideal place for systematic expansion.",
-    image: '/images/actioncoach-growth-business-partners-business-summit-speaker.jpeg'
+    description: "Raleigh's growing tech and service sectors create strong demand for structured, scalable business coaching.",
+    image: '/images/actioncoach-growth-business-partners-business-summit-speaker.jpeg',
   },
   {
     id: 'greenville-sc',
     city: 'Greenville',
     state: 'SC',
-    description: 'Greenville is one of the fastest-growing cities in the Southeast, perfect for ambitious entrepreneurs.',
-    image: '/images/actioncoach-growth-business-partners-networking-event-group.jpeg'
+    description: 'Greenville is one of the fastest-growing cities in the Southeast, with a strong base of entrepreneurs ready to scale.',
+    image: '/images/actioncoach-growth-business-partners-networking-event-group.jpeg',
   },
   {
     id: 'high-point-nc',
     city: 'High Point',
     state: 'NC',
-    description: 'High Point is the furniture capital of the world and a hub for manufacturing, trade, and entrepreneurship.',
-    image: '/images/high-point-nc.jpg'
-  }
+    description: 'High Point is the furniture capital of the world and home to a strong community of manufacturers, trades businesses, and service operators.',
+    image: '/images/high-point-nc.jpg',
+    headline: 'Business Coaching for High Point and the Piedmont Triad',
+    intro: 'ActionCOACH Business Growth Partners serves business owners in High Point and across the Piedmont Triad. We work with manufacturers, wholesale operators, trades businesses, and service companies who are ready to build something more scalable.',
+    marketDetail: 'High Point has been the furniture capital of the world for over a century. The High Point Market — the world\'s largest home furnishings trade show — draws nearly 75,000 buyers and exhibitors from more than 100 countries twice a year. That kind of commercial activity creates a rich ecosystem of manufacturers, distributors, logistics operators, and service businesses. But the business community here runs far deeper than furniture. Trades, construction, professional services, and distribution businesses form a strong backbone across the Piedmont Triad. The owners we work with are driven and capable — and they have usually outgrown the way the business is currently structured.',
+    whoWeWork: [
+      'Manufacturing & Production',
+      'Wholesale & Distribution',
+      'Home Furnishings & Design',
+      'Contractors & Trades',
+      'Logistics & Operations',
+      'Service Businesses',
+    ],
+    localChallenges: [
+      {
+        title: 'Scaling beyond the founder',
+        body: 'High Point\'s strongest businesses are founder-run. Getting the owner out of daily execution — so the business can grow without them in every decision — is usually the first priority.',
+      },
+      {
+        title: 'B2B sales cycles and account management',
+        body: 'Wholesale and manufacturing businesses deal with longer sales cycles, larger accounts, and more relationship management. We build the sales systems and processes to keep that pipeline moving.',
+      },
+      {
+        title: 'Inconsistent delivery or production',
+        body: 'When operating systems are not documented, quality and capacity become inconsistent. We install the operating rhythm that keeps output predictable.',
+      },
+      {
+        title: 'Team accountability',
+        body: 'Getting a team to perform without constant owner oversight is the challenge we hear most from High Point manufacturers and service operators. We build the management systems that make it happen.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Does ActionCOACH serve High Point, NC?',
+        answer: 'Yes. ActionCOACH Business Growth Partners serves business owners in High Point and across the Piedmont Triad, including Greensboro and Winston-Salem. We work with manufacturers, trades businesses, wholesale operators, and service companies.',
+      },
+      {
+        question: 'Do you work with furniture or home furnishings businesses?',
+        answer: 'Yes. High Point is the furniture capital of the world, and we understand the B2B dynamics, the Market cycles, and the operational challenges that come with selling in that industry.',
+      },
+      {
+        question: 'What if my business is in manufacturing or production?',
+        answer: 'Manufacturing businesses are a strong fit for coaching. The challenges — labor management, production systems, quality, and scaling — are exactly what the ActionCOACH framework addresses.',
+      },
+      {
+        question: 'Do you work with wholesale or distribution businesses?',
+        answer: 'Yes. Wholesale and distribution businesses have specific challenges around account management, cash flow, and operational consistency. Those are areas we work on directly.',
+      },
+      {
+        question: 'How is coaching different from hiring a consultant?',
+        answer: 'A consultant delivers a plan and leaves. A coach stays with you — meeting weekly or bi-weekly — keeping execution on track and adjusting the plan as the business changes. You build the capability to run the business better, not just get a report.',
+      },
+    ],
+  },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [

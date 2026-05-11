@@ -71,6 +71,13 @@ export interface LocationData {
   state: string;
   description: string;
   image: string;
+  // Extended fields for rich location pages
+  headline?: string;
+  intro?: string;
+  marketDetail?: string;
+  whoWeWork?: string[];
+  localChallenges?: { title: string; body: string }[];
+  faqs?: FAQ[];
 }
 
 export interface Testimonial {

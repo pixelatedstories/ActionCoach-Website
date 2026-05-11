@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { CONTACT, PROGRAMS, LOCATIONS } from '@/constants';
+import { CONTACT, PROGRAMS } from '@/constants';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -105,24 +105,6 @@ const Navigation = () => {
           </div>
 
           <Link href="/contact" className="text-xs font-black uppercase tracking-widest hover:text-gold transition-colors">Contact</Link>
-
-          <div className="relative group/loc">
-            <div className="flex items-center py-2 cursor-pointer">
-              <span className="text-xs font-black uppercase tracking-widest hover:text-gold transition-colors">Locations</span>
-              <span className="ml-1.5 text-[8px] opacity-40 group-hover/loc:rotate-180 transition-transform duration-300">▼</span>
-            </div>
-            <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover/loc:opacity-100 group-hover/loc:visible transition-all duration-300 transform translate-y-2 group-hover/loc:translate-y-0">
-              <div className="w-56 bg-[#262626] border border-white/10 shadow-2xl overflow-hidden">
-                <div className="p-2 grid gap-1">
-                  {LOCATIONS.map(l => (
-                    <Link key={l.id} href={`/locations/${l.id}`} className="block px-4 py-3 text-[11px] font-black uppercase tracking-wider hover:bg-gold hover:text-black transition-all">
-                      {l.city}, {l.state}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
 
           <a href={`tel:${CONTACT.PHONE.replace(/\D/g, '')}`} className="ml-4 inline-flex items-center rounded-full border border-gold/25 bg-gold/10 px-4 py-2 text-sm xl:text-base 2xl:text-lg font-black text-gold whitespace-nowrap leading-none shrink-0 hover:bg-gold hover:text-black transition-all">
             {CONTACT.PHONE}
