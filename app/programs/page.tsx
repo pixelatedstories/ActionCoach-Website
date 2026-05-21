@@ -93,11 +93,11 @@ export default function ProgramsHub() {
             <div className="space-y-6 text-lg leading-relaxed">
               <div>
                 <p className="font-black mb-1">How do I know which program fits?</p>
-                <p className="text-black/70">Start with planning if you need clarity. Move into ActionCLUB if you want momentum. Choose Private Coaching when you want a higher level of accountability. Use Business Unlimited when the business needs full-scale transformation.</p>
+                <p className="text-black/70">Start with 2 Weeks Free to see how coaching works. Move into Business Masterclass or ProfitClub for group accountability. Choose Private Coaching when you want a higher level of support. Use Business Unlimited when the business needs full-scale transformation.</p>
               </div>
               <div>
                 <p className="font-black mb-1">What if I am not ready for private coaching?</p>
-                <p className="text-black/70">That is common. Most clients grow into the bigger programs by starting with planning or group coaching first.</p>
+                <p className="text-black/70">That is common. Most clients start with 2 Weeks Free or Business Masterclass and grow into private coaching when they are ready.</p>
               </div>
               <div>
                 <p className="font-black mb-1">What happens on the first call?</p>
@@ -112,12 +112,12 @@ export default function ProgramsHub() {
               Most clients do not start at the top.
             </h2>
             <p className="text-white/75 text-lg leading-relaxed mb-8">
-              The fastest path usually looks like this: start with planning or ActionCLUB, move into Private Coaching, then scale into Business Unlimited.
+              The fastest path usually looks like this: start with 2 Weeks Free or Business Masterclass, move into ProfitClub or Private Coaching, then scale into Business Unlimited.
             </p>
             <div className="space-y-4 mb-10">
               {[
-                'Start with Planning or ActionCLUB',
-                'Move into Private Coaching',
+                'Start with 2 Weeks Free or Business Masterclass',
+                'Move into ProfitClub or Private Coaching',
                 'Scale into Business Unlimited',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3 text-white/85 font-bold">

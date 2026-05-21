@@ -296,6 +296,7 @@ export const PROGRAMS: Program[] = [
       'Leadership capability across your team.',
       'Revenue systems that drive predictable growth.',
       'Execution rhythms that keep work moving.',
+      'Full ABoS implementation across the business.',
       'A business that feels like an asset, not a job.',
     ],
     howItWorks: [
@@ -308,6 +309,7 @@ export const PROGRAMS: Program[] = [
       'Leadership development for owners and managers',
       'Systems for marketing, sales, and delivery',
       'Execution support that keeps the plan moving',
+      'ActionCOACH Business Operating System (ABoS)',
     ],
     investmentOptions: [
       {
@@ -336,70 +338,6 @@ export const PROGRAMS: Program[] = [
     result: 'A business that runs with more structure, more leadership, and less dependence on the owner.',
   },
   {
-    id: 'business-operating-system',
-    title: 'Business Operating System (ABoS)',
-    subtitle: 'Turn Your Business Into a Machine',
-    description: 'The ActionCOACH Business Operating System installs the systems your business needs to scale consistently.',
-    features: ['Predictable Marketing and Lead Flow', 'Sales Systems That Convert', 'Operational Systems That Scale', 'A Team That Executes Without Constant Oversight'],
-    cta: 'Install ABoS',
-    problem: [
-      'The business depends on the owner for too many decisions.',
-      'Results are inconsistent because the structure is inconsistent.',
-      'Leads, sales, and delivery do not run from the same playbook.',
-      'The team needs a clearer operating rhythm.',
-    ],
-    isForYou: [
-      'You feel stuck in the day-to-day.',
-      'You struggle with inconsistent results.',
-      'You know you need better systems and structure.',
-    ],
-    whatYoullGain: [
-      'Consistency replaces chaos.',
-      'Systems replace guesswork.',
-      'Your business runs like a well-oiled machine.',
-      'A clearer path to scale.',
-    ],
-    howItWorks: [
-      '1. Find the biggest leaks in the current operating rhythm.',
-      '2. Build the systems for marketing, sales, delivery, and team execution.',
-      '3. Install the process so the business becomes easier to run.',
-    ],
-    journeyIncludes: [
-      'System mapping across the business',
-      'Lead flow and sales process design',
-      'Operational rhythm and accountability',
-      'Team execution support',
-    ],
-    investmentOptions: [
-      {
-        name: 'ABoS Installation',
-        price: '$30,000 - $60,000',
-        period: 'includes private coaching',
-        description: 'System installation with private coaching included. Designed for owners who need structure and accountability.',
-        bestFor: 'Businesses that need stronger systems',
-        features: ['Predictable systems', 'Operational structure', 'Private coaching included'],
-      },
-    ],
-    faqs: [
-      {
-        question: 'What is ABoS?',
-        answer: 'It is the ActionCOACH Business Operating System, the framework that helps the business scale consistently.',
-      },
-      {
-        question: 'Can this be standalone?',
-        answer: 'Yes. It can be installed as part of coaching or as a standalone engagement.',
-      },
-    ],
-    pricingNotes: 'Included within coaching or implemented as a standalone engagement depending on scope.',
-    result: 'Consistency replaces chaos, systems replace guesswork, and the business becomes easier to scale.',
-    testimonialVideos: [
-      {
-        videoId: 'FmLZRaIHVwc',
-        title: 'He Got Out of the Grind and Finally Saw the Bigger Picture',
-      },
-    ],
-  },
-  {
     id: 'one-to-one-freedom',
     title: 'Private Coaching',
     subtitle: 'Your Strategic Growth Partner',
@@ -424,6 +362,7 @@ export const PROGRAMS: Program[] = [
       'Increased profit and control.',
       'A business that scales without constant oversight.',
       'A coach who keeps the focus on execution.',
+      'Access to the ActionCOACH Business Operating System (ABoS).',
     ],
     howItWorks: [
       '1. Review the current numbers, priorities, and pressure points.',
@@ -435,6 +374,7 @@ export const PROGRAMS: Program[] = [
       '90-day execution planning',
       'KPI tracking and accountability',
       'Strategy across time, team, and money',
+      'ActionCOACH Business Operating System (ABoS)',
     ],
     investmentOptions: [
       {
@@ -469,12 +409,145 @@ export const PROGRAMS: Program[] = [
     ],
   },
   {
+    id: 'profit-club',
+    title: 'ProfitClub',
+    subtitle: 'Group Coaching for Owners Who Want to Build and Grow',
+    description: 'ProfitClub is a bi-weekly group coaching program that uses the ActionCOACH framework to help business owners build more profitable, systemized companies alongside growth-minded peers.',
+    features: ['Bi-Weekly Strategy Sessions', 'Peer Advisory Group', 'KPI Tracking and Accountability', 'ActionCOACH Business Framework'],
+    cta: 'Join ProfitClub',
+    problem: [
+      'Revenue is inconsistent and hard to predict.',
+      'Marketing is not producing a reliable lead flow.',
+      'The team relies too heavily on you.',
+      'Systems and processes are incomplete.',
+      'Strategic thinking keeps getting pushed aside.',
+      'You are solving the same problems repeatedly.',
+    ],
+    isForYou: [
+      'You want structure, accountability, and a room full of serious business owners.',
+      'You run a trades, construction, or professional service business.',
+      'You are tired of solving every problem alone.',
+      'You want a built-in board of advisors without the cost of building one.',
+    ],
+    whatYoullGain: [
+      'Practical tools and strategies you can apply immediately.',
+      'Peer accountability that drives consistent implementation.',
+      'Outside perspective and honest feedback on your business.',
+      'A network of growth-minded owners who push you forward.',
+      'Measurable progress through a proven coaching framework.',
+    ],
+    howItWorks: [
+      '1. Attend a session: Experience the environment and see if the group is the right fit.',
+      '2. Learn proven strategies: Each session covers lead generation, sales, pricing, cash flow, leadership, systems, and team development — built around the ActionCOACH 6 Steps framework.',
+      '3. Implement with accountability: Leave every session with action items, peer accountability, and strategic feedback.',
+    ],
+    journeyIncludes: [
+      'Bi-weekly 60-90 minute coaching sessions',
+      'KPI worksheets and tracking tools',
+      'Marketing plans and cash flow planning',
+      'ActionPLAN software access',
+      'Coaching resources and strategic templates',
+      'Peer advisory community',
+    ],
+    investmentOptions: [
+      {
+        name: 'ProfitClub',
+        price: '$500',
+        period: 'per month (or $5,500/year)',
+        description: 'Group coaching with peer accountability, bi-weekly sessions, and the full ActionCOACH framework.',
+        bestFor: 'Growth-focused business owners',
+        features: ['Bi-weekly sessions', 'Peer accountability', 'ActionCOACH framework'],
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is ProfitClub?',
+        answer: 'A bi-weekly group coaching program that uses the ActionCOACH framework to help business owners build more profitable, systemized companies alongside a community of serious peers.',
+      },
+      {
+        question: 'How is ProfitClub different from private coaching?',
+        answer: 'ProfitClub is a group format built around peer accountability and shared strategy. Private Coaching is one-on-one with a higher level of personalized attention and investment.',
+      },
+      {
+        question: 'Who is ProfitClub for?',
+        answer: 'Trades, construction, professional services, and growth-focused businesses. If you want structure, accountability, and a room of business owners who push you to execute, you belong here.',
+      },
+      {
+        question: 'Is there a guarantee?',
+        answer: 'ActionCOACH stands behind the system. Follow the strategies, implement the process, and the program is built to generate more gross profit than your investment.',
+      },
+    ],
+    result: 'A more profitable, better-systemized business built alongside peers who push you to execute.',
+  },
+  {
+    id: 'two-weeks-coaching',
+    title: '2 Weeks Free Coaching',
+    subtitle: 'See What Business Coaching Can Do for Your Business',
+    description: 'A risk-free two-week coaching experience designed to give you immediate clarity, an executable 90-day plan, and a real look at what working with an ActionCOACH business coach looks like.',
+    features: ['Two Dedicated Coaching Sessions', 'Business Analysis and Priority Mapping', '90-Day Growth Plan', 'No Obligation'],
+    cta: 'Start 2 Weeks Free',
+    problem: [
+      'You are curious about coaching but not ready to commit.',
+      'You want to see real results before making a larger investment.',
+      'You need immediate clarity on where to focus.',
+      'You have questions about whether coaching is the right fit.',
+    ],
+    isForYou: [
+      'You want to experience coaching before committing.',
+      'You are running a business but feel stuck or unclear on the next step.',
+      'You prefer to see value first.',
+      'You want a practical, low-risk way to evaluate the ActionCOACH framework.',
+    ],
+    whatYoullGain: [
+      'Two coaching sessions with Bill Gilliland.',
+      'A clear picture of where the business is stuck.',
+      'A 90-day action plan you can use immediately.',
+      'An honest conversation about whether the next step makes sense.',
+    ],
+    howItWorks: [
+      '1. Book a discovery call: Talk through where the business is and what you want to change.',
+      '2. Complete two coaching sessions: Work through your biggest priorities with Bill.',
+      '3. Leave with a plan: Take a 90-day execution plan and decide what comes next.',
+    ],
+    journeyIncludes: [
+      'Two one-on-one coaching sessions',
+      'Business analysis and priority mapping',
+      '90-day growth plan',
+      'No obligation or commitment',
+    ],
+    investmentOptions: [
+      {
+        name: '2 Weeks Free',
+        price: 'Free',
+        period: 'no obligation',
+        description: 'Two coaching sessions designed to give you immediate clarity and an executable plan — at no cost.',
+        bestFor: 'Owners exploring business coaching',
+        features: ['Two coaching sessions', '90-day plan', 'No commitment required'],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Is there really no cost?',
+        answer: 'Correct. The 2 Weeks Free Coaching program gives you two sessions at no charge. There is no obligation to continue after.',
+      },
+      {
+        question: 'What happens after the two weeks?',
+        answer: 'We will talk through what made sense, what could move faster with ongoing coaching, and which program — if any — is the right fit. The decision is yours.',
+      },
+      {
+        question: 'Who is this for?',
+        answer: 'Business owners who are curious about coaching but want to see how it works before making a larger commitment.',
+      },
+    ],
+    result: 'Immediate clarity on what to fix first, a 90-day plan in hand, and a clear answer on whether coaching is the right next step.',
+  },
+  {
     id: 'business-masterclass',
-    title: 'ActionCLUB',
+    title: 'Business Masterclass',
     subtitle: 'Structured Growth. Built-In Accountability.',
-    description: 'ActionCLUB is a high-impact group coaching program designed to help you implement proven strategies alongside other driven business owners.',
+    description: 'Business Masterclass is a high-impact group coaching program designed to help you implement proven strategies alongside other driven business owners.',
     features: ['Time Management and Focus', 'Marketing and Sales', 'Profit and Cash Flow', 'Team and Leadership'],
-    cta: 'Join ActionCLUB',
+    cta: 'Join Business Masterclass',
     problem: [
       'You need structure, but private coaching is not the right next step yet.',
       'Momentum is slipping because there is no consistent operating rhythm.',
@@ -514,7 +587,7 @@ export const PROGRAMS: Program[] = [
     ],
     faqs: [
       {
-        question: 'What makes ActionCLUB different?',
+        question: 'What makes Business Masterclass different?',
         answer: 'You implement as you go, with structure and accountability built in.',
       },
       {
