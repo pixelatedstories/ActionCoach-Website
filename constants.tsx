@@ -480,68 +480,6 @@ export const PROGRAMS: Program[] = [
     result: 'A more profitable, better-systemized business built alongside peers who push you to execute.',
   },
   {
-    id: 'two-weeks-coaching',
-    title: '2 Weeks Free Coaching',
-    subtitle: 'See What Business Coaching Can Do for Your Business',
-    description: 'A risk-free two-week coaching experience designed to give you immediate clarity, an executable 90-day plan, and a real look at what working with an ActionCOACH business coach looks like.',
-    features: ['Two Dedicated Coaching Sessions', 'Business Analysis and Priority Mapping', '90-Day Growth Plan', 'No Obligation'],
-    cta: 'Start 2 Weeks Free',
-    problem: [
-      'You are curious about coaching but not ready to commit.',
-      'You want to see real results before making a larger investment.',
-      'You need immediate clarity on where to focus.',
-      'You have questions about whether coaching is the right fit.',
-    ],
-    isForYou: [
-      'You want to experience coaching before committing.',
-      'You are running a business but feel stuck or unclear on the next step.',
-      'You prefer to see value first.',
-      'You want a practical, low-risk way to evaluate the ActionCOACH framework.',
-    ],
-    whatYoullGain: [
-      'Two coaching sessions with Bill Gilliland.',
-      'A clear picture of where the business is stuck.',
-      'A 90-day action plan you can use immediately.',
-      'An honest conversation about whether the next step makes sense.',
-    ],
-    howItWorks: [
-      '1. Book a discovery call: Talk through where the business is and what you want to change.',
-      '2. Complete two coaching sessions: Work through your biggest priorities with Bill.',
-      '3. Leave with a plan: Take a 90-day execution plan and decide what comes next.',
-    ],
-    journeyIncludes: [
-      'Two one-on-one coaching sessions',
-      'Business analysis and priority mapping',
-      '90-day growth plan',
-      'No obligation or commitment',
-    ],
-    investmentOptions: [
-      {
-        name: '2 Weeks Free',
-        price: 'Free',
-        period: 'no obligation',
-        description: 'Two coaching sessions designed to give you immediate clarity and an executable plan — at no cost.',
-        bestFor: 'Owners exploring business coaching',
-        features: ['Two coaching sessions', '90-day plan', 'No commitment required'],
-      },
-    ],
-    faqs: [
-      {
-        question: 'Is there really no cost?',
-        answer: 'Correct. The 2 Weeks Free Coaching program gives you two sessions at no charge. There is no obligation to continue after.',
-      },
-      {
-        question: 'What happens after the two weeks?',
-        answer: 'We will talk through what made sense, what could move faster with ongoing coaching, and which program — if any — is the right fit. The decision is yours.',
-      },
-      {
-        question: 'Who is this for?',
-        answer: 'Business owners who are curious about coaching but want to see how it works before making a larger commitment.',
-      },
-    ],
-    result: 'Immediate clarity on what to fix first, a 90-day plan in hand, and a clear answer on whether coaching is the right next step.',
-  },
-  {
     id: 'business-masterclass',
     title: 'Business Masterclass',
     subtitle: 'Structured Growth. Built-In Accountability.',
@@ -658,6 +596,68 @@ export const PROGRAMS: Program[] = [
         title: 'When You Are So Deep in the Day to Day You Cannot See a Way Out',
       },
     ],
+  },
+  {
+    id: 'two-weeks-coaching',
+    title: '2 Weeks Free Coaching',
+    subtitle: 'See What Business Coaching Can Do for Your Business',
+    description: 'A risk-free two-week coaching experience designed to give you immediate clarity, an executable 90-day plan, and a real look at what working with an ActionCOACH business coach looks like.',
+    features: ['Two Dedicated Coaching Sessions', 'Business Analysis and Priority Mapping', '90-Day Growth Plan', 'No Obligation'],
+    cta: 'Start 2 Weeks Free',
+    problem: [
+      'You are curious about coaching but not ready to commit.',
+      'You want to see real results before making a larger investment.',
+      'You need immediate clarity on where to focus.',
+      'You have questions about whether coaching is the right fit.',
+    ],
+    isForYou: [
+      'You want to experience coaching before committing.',
+      'You are running a business but feel stuck or unclear on the next step.',
+      'You prefer to see value first.',
+      'You want a practical, low-risk way to evaluate the ActionCOACH framework.',
+    ],
+    whatYoullGain: [
+      'Two coaching sessions with Bill Gilliland.',
+      'A clear picture of where the business is stuck.',
+      'A 90-day action plan you can use immediately.',
+      'An honest conversation about whether the next step makes sense.',
+    ],
+    howItWorks: [
+      '1. Book a discovery call: Talk through where the business is and what you want to change.',
+      '2. Complete two coaching sessions: Work through your biggest priorities with Bill.',
+      '3. Leave with a plan: Take a 90-day execution plan and decide what comes next.',
+    ],
+    journeyIncludes: [
+      'Two one-on-one coaching sessions',
+      'Business analysis and priority mapping',
+      '90-day growth plan',
+      'No obligation or commitment',
+    ],
+    investmentOptions: [
+      {
+        name: '2 Weeks Free',
+        price: 'Free',
+        period: 'no obligation',
+        description: 'Two coaching sessions designed to give you immediate clarity and an executable plan — at no cost.',
+        bestFor: 'Owners exploring business coaching',
+        features: ['Two coaching sessions', '90-day plan', 'No commitment required'],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Is there really no cost?',
+        answer: 'Correct. The 2 Weeks Free Coaching program gives you two sessions at no charge. There is no obligation to continue after.',
+      },
+      {
+        question: 'What happens after the two weeks?',
+        answer: 'We will talk through what made sense, what could move faster with ongoing coaching, and which program — if any — is the right fit. The decision is yours.',
+      },
+      {
+        question: 'Who is this for?',
+        answer: 'Business owners who are curious about coaching but want to see how it works before making a larger commitment.',
+      },
+    ],
+    result: 'Immediate clarity on what to fix first, a 90-day plan in hand, and a clear answer on whether coaching is the right next step.',
   },
   {
     id: 'growth-club',
