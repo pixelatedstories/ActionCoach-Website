@@ -183,6 +183,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
+        <Script
+          src="https://go.cfastr.com/js/external-tracking.js"
+          data-tracking-id="tk_4ae17bfeafb24a27869e633f7cc78dfe"
+          strategy="afterInteractive"
+        />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       </head>
       <body>
