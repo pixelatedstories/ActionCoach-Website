@@ -81,13 +81,13 @@ export function BookPopup() {
         </button>
 
         {/* Book image panel */}
-        <div className="flex-shrink-0 flex items-center justify-center p-8 sm:p-10 bg-[#0a0a14] sm:w-52">
+        <div className="flex-shrink-0 flex items-center justify-center px-10 py-10 bg-[#0a0a14] sm:w-72">
           <Image
             src="/images/coach-approach-book.png"
             alt="The Coach Approach by Bill Gilliland"
-            width={160}
-            height={220}
-            className="drop-shadow-2xl object-contain w-32 sm:w-40"
+            width={240}
+            height={330}
+            className="drop-shadow-2xl object-contain w-48 sm:w-56"
           />
         </div>
 
