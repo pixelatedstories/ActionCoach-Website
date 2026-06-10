@@ -4,6 +4,8 @@ import { Montserrat, Inter } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 import Navigation from '@/components/Navigation';
+import { BookPopup } from '@/components/BookPopup';
+import { BookFooterBar } from '@/components/BookFooterBar';
 import Link from 'next/link';
 import Image from 'next/image';
 import { CONTACT, LOCATIONS } from '@/constants';
@@ -188,14 +190,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           data-tracking-id="tk_4ae17bfeafb24a27869e633f7cc78dfe"
           strategy="afterInteractive"
         />
+        <Script src="https://go.cfastr.com/js/form_embed.js" strategy="afterInteractive" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       </head>
       <body>
         <div className="min-h-screen flex flex-col">
           <Navigation />
           <main className="flex-grow">{children}</main>
+          <BookFooterBar />
           <Footer />
           <MobileStickyBar />
+          <BookPopup />
         </div>
       </body>
     </html>
