@@ -5,7 +5,8 @@ import Image from 'next/image';
 
 const STORAGE_KEY = 'coach-approach-popup-dismissed';
 const SUPPRESS_DAYS = 7;
-const SCROLL_THRESHOLD = 600;
+const SCROLL_PERCENT = 0.35; // fires after 35% of page scrolled
+const TIME_DELAY_MS = 5000;  // minimum 5s on page before eligible
 
 function isSuppressed(): boolean {
   if (typeof window === 'undefined') return false;
@@ -31,14 +32,26 @@ export function BookPopup() {
 
   useEffect(() => {
     if (isSuppressed()) return;
-    const onScroll = () => {
-      if (window.scrollY >= SCROLL_THRESHOLD) {
-        setOpen(true);
-        window.removeEventListener('scroll', onScroll);
-      }
+
+    let removeScroll: (() => void) | null = null;
+
+    const timer = setTimeout(() => {
+      const onScroll = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = scrollable > 0 ? window.scrollY / scrollable : 0;
+        if (pct >= SCROLL_PERCENT) {
+          setOpen(true);
+          window.removeEventListener('scroll', onScroll);
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      removeScroll = () => window.removeEventListener('scroll', onScroll);
+    }, TIME_DELAY_MS);
+
+    return () => {
+      clearTimeout(timer);
+      removeScroll?.();
     };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   useEffect(() => {
@@ -56,7 +69,7 @@ export function BookPopup() {
       onClick={(e) => e.target === e.currentTarget && dismiss()}
     >
       <div
-        className="relative w-full max-w-2xl rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row"
+        className="relative w-full max-w-2xl rounded-xl overflow-hidden shadow-2xl flex flex-col sm:flex-row"
         style={{ backgroundColor: '#111111' }}
       >
         <button
@@ -66,16 +79,20 @@ export function BookPopup() {
         >
           ×
         </button>
-        <div className="flex-shrink-0 flex items-end justify-center px-10 pt-10 pb-0 bg-[#0a0a14]">
+
+        {/* Book image panel */}
+        <div className="flex-shrink-0 flex items-center justify-center p-8 sm:p-10 bg-[#0a0a14] sm:w-52">
           <Image
             src="/images/coach-approach-book.png"
             alt="The Coach Approach by Bill Gilliland"
             width={160}
             height={220}
-            className="drop-shadow-2xl object-contain"
+            className="drop-shadow-2xl object-contain w-32 sm:w-40"
           />
         </div>
-        <div className="flex flex-col justify-center p-8 flex-1">
+
+        {/* Copy + form panel */}
+        <div className="flex flex-col justify-center p-8 flex-1 min-w-0">
           <p className="text-[10px] font-black uppercase tracking-[0.25em] mb-2" style={{ color: '#FFD100' }}>
             Free Book — Get Your Copy
           </p>
