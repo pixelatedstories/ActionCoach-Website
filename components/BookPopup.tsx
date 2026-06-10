@@ -5,8 +5,9 @@ import Image from 'next/image';
 
 const STORAGE_KEY = 'coach-approach-popup-dismissed';
 const SUPPRESS_DAYS = 7;
-const SCROLL_PERCENT = 0.35;
-const TIME_DELAY_MS = 5000;
+const SCROLL_PERCENT = 0.25; // 25% scroll fires it
+const TIME_DELAY_MS = 4000;  // wait 4s before scroll listener registers
+const FALLBACK_MS = 20000;   // fire after 20s on page regardless of scroll
 
 function isSuppressed(): boolean {
   if (typeof window === 'undefined') return false;
@@ -32,22 +33,34 @@ export function BookPopup() {
 
   useEffect(() => {
     if (isSuppressed()) return;
-    let removeScroll: (() => void) | null = null;
-    const timer = setTimeout(() => {
-      const onScroll = () => {
+
+    let fired = false;
+    let onScroll: (() => void) | null = null;
+
+    const fire = () => {
+      if (fired) return;
+      fired = true;
+      setOpen(true);
+      if (onScroll) window.removeEventListener('scroll', onScroll);
+    };
+
+    // Scroll trigger — registers after TIME_DELAY_MS
+    const scrollTimer = setTimeout(() => {
+      onScroll = () => {
         const scrollable = document.documentElement.scrollHeight - window.innerHeight;
         const pct = scrollable > 0 ? window.scrollY / scrollable : 0;
-        if (pct >= SCROLL_PERCENT) {
-          setOpen(true);
-          window.removeEventListener('scroll', onScroll);
-        }
+        if (pct >= SCROLL_PERCENT || window.scrollY >= 500) fire();
       };
       window.addEventListener('scroll', onScroll, { passive: true });
-      removeScroll = () => window.removeEventListener('scroll', onScroll);
     }, TIME_DELAY_MS);
+
+    // Fallback — fires even if the user never scrolls enough
+    const fallbackTimer = setTimeout(fire, FALLBACK_MS);
+
     return () => {
-      clearTimeout(timer);
-      removeScroll?.();
+      clearTimeout(scrollTimer);
+      clearTimeout(fallbackTimer);
+      if (onScroll) window.removeEventListener('scroll', onScroll);
     };
   }, []);
 
