@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
 const STORAGE_KEY = 'coach-approach-popup-dismissed';
@@ -25,6 +26,7 @@ export function openBookPopup() {
 
 export function BookPopup() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   const dismiss = useCallback(() => {
     localStorage.setItem(STORAGE_KEY, String(Date.now()));
@@ -35,6 +37,8 @@ export function BookPopup() {
     if (isSuppressed()) return;
 
     let fired = false;
+    let scrollTimer: ReturnType<typeof setTimeout> | null = null;
+    let fallbackTimer: ReturnType<typeof setTimeout> | null = null;
     let onScroll: (() => void) | null = null;
 
     const fire = () => {
@@ -44,25 +48,29 @@ export function BookPopup() {
       if (onScroll) window.removeEventListener('scroll', onScroll);
     };
 
-    // Scroll trigger — registers after TIME_DELAY_MS
-    const scrollTimer = setTimeout(() => {
-      onScroll = () => {
-        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-        const pct = scrollable > 0 ? window.scrollY / scrollable : 0;
-        if (pct >= SCROLL_PERCENT || window.scrollY >= 500) fire();
-      };
-      window.addEventListener('scroll', onScroll, { passive: true });
-    }, TIME_DELAY_MS);
+    // Small settling delay so the new page's scroll height is accurate
+    const initTimer = setTimeout(() => {
+      // Scroll trigger — registers after TIME_DELAY_MS from page settle
+      scrollTimer = setTimeout(() => {
+        onScroll = () => {
+          const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+          const pct = scrollable > 0 ? window.scrollY / scrollable : 0;
+          if (pct >= SCROLL_PERCENT) fire();
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+      }, TIME_DELAY_MS);
 
-    // Fallback — fires even if the user never scrolls enough
-    const fallbackTimer = setTimeout(fire, FALLBACK_MS);
+      // Fallback — fires even if the user never scrolls enough
+      fallbackTimer = setTimeout(fire, FALLBACK_MS);
+    }, 200);
 
     return () => {
-      clearTimeout(scrollTimer);
-      clearTimeout(fallbackTimer);
+      clearTimeout(initTimer);
+      if (scrollTimer) clearTimeout(scrollTimer);
+      if (fallbackTimer) clearTimeout(fallbackTimer);
       if (onScroll) window.removeEventListener('scroll', onScroll);
     };
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     const handler = () => setOpen(true);
