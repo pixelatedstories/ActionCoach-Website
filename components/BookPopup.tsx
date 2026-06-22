@@ -78,6 +78,7 @@ export function BookPopup() {
         backgroundColor: open ? 'rgba(0,0,0,0.85)' : 'transparent',
         opacity: open ? 1 : 0,
         pointerEvents: open ? 'auto' : 'none',
+        visibility: open ? 'visible' : 'hidden',
       }}
       onClick={(e) => e.target === e.currentTarget && dismiss()}
     >

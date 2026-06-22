@@ -116,7 +116,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 md:px-8 mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] text-white/50 uppercase tracking-[0.3em] font-black">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 mt-20 pt-10 pb-20 lg:pb-0 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] text-white/50 uppercase tracking-[0.3em] font-black">
         <span>&copy; {new Date().getFullYear()} ActionCOACH Business Growth Partners. All Rights Reserved.</span>
         <div className="flex space-x-6">
           <Link href="/privacy" className="hover:text-gold transition-colors">Privacy Policy</Link>
