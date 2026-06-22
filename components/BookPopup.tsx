@@ -4,10 +4,10 @@ import { useEffect, useState, useCallback } from 'react';
 import Image from 'next/image';
 
 const STORAGE_KEY = 'coach-approach-popup-dismissed';
-const SUPPRESS_DAYS = 1;
-const SCROLL_PERCENT = 0.25; // 25% scroll fires it
-const TIME_DELAY_MS = 4000;  // wait 4s before scroll listener registers
-const FALLBACK_MS = 20000;   // fire after 20s on page regardless of scroll
+const SUPPRESS_DAYS = 7;
+const SCROLL_PERCENT = 0.75; // 75% scroll fires it
+const TIME_DELAY_MS = 10000; // wait 10s before scroll listener registers
+const FALLBACK_MS = 90000;   // fire after 90s on page regardless of scroll
 
 function isSuppressed(): boolean {
   if (typeof window === 'undefined') return false;
