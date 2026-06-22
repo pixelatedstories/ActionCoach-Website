@@ -162,16 +162,7 @@ export function BookPopup() {
               src="https://go.cfastr.com/widget/form/A2rj9ut4no0SKgrhJtpY"
               style={{ width: '100%', height: '280px', border: 'none', borderRadius: '6px', display: 'block' }}
               id="inline-A2rj9ut4no0SKgrhJtpY"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="showOnScrolling"
-              data-trigger-value="15"
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
               data-form-name="Coach Approach Book"
-              data-height="402"
-              data-layout-iframe-id="inline-A2rj9ut4no0SKgrhJtpY"
               data-form-id="A2rj9ut4no0SKgrhJtpY"
               title="Coach Approach Book"
             />
