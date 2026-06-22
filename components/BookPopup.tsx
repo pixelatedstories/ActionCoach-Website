@@ -160,7 +160,7 @@ export function BookPopup() {
 
             <iframe
               src="https://go.cfastr.com/widget/form/A2rj9ut4no0SKgrhJtpY"
-              style={{ width: '100%', height: '280px', border: 'none', borderRadius: '6px', display: 'block' }}
+              style={{ width: '100%', height: '420px', border: 'none', borderRadius: '6px', display: 'block' }}
               id="inline-A2rj9ut4no0SKgrhJtpY"
               data-form-name="Coach Approach Book"
               data-form-id="A2rj9ut4no0SKgrhJtpY"
