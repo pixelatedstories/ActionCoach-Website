@@ -100,6 +100,7 @@ function Footer() {
             <li><Link href="/programs" className="hover:text-gold transition-colors">See Coaching Options</Link></li>
             <li><Link href="/book" className="hover:text-gold transition-colors">Book a Session</Link></li>
             <li><Link href="/pricing" className="hover:text-gold transition-colors">Get Instant Estimate</Link></li>
+            <li><Link href="/epic-retreat-2027" className="hover:text-gold transition-colors">EPIC Retreat 2027</Link></li>
           </ul>
         </div>
         <div>
