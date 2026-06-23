@@ -8,48 +8,39 @@ export const metadata: Metadata = {
 
 export default function FreeBookPage() {
   return (
-    <div className="pt-32 pb-24 bg-[#1C1C1C]">
+    <div className="pt-24 md:pt-28 pb-16 md:pb-20 bg-[#1C1C1C]">
       <div className="max-w-5xl mx-auto px-4 md:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <p className="text-[11px] font-black uppercase tracking-[0.3em] text-gold mb-4">
-            Free Book
-          </p>
-          <h1 className="text-4xl md:text-6xl font-black uppercase mb-6">
-            The Coach Approach
-          </h1>
-          <p className="text-lg md:text-xl text-white/70">
-            Get the framework Bill Gilliland uses to help owners build a more profitable business, develop a stronger team, and create more time outside the day-to-day.
-          </p>
-        </div>
-
         <div className="bg-[#111111] border border-white/10 shadow-2xl overflow-hidden rounded-2xl">
           <div className="grid lg:grid-cols-[320px_minmax(0,1fr)]">
-            <div className="bg-[#0a0a14] px-8 py-10 flex flex-col items-center justify-center text-center border-b lg:border-b-0 lg:border-r border-white/10">
+            <div className="order-2 lg:order-1 bg-[#0a0a14] px-6 py-8 md:px-8 md:py-10 flex flex-col items-center justify-center text-center border-t lg:border-t-0 lg:border-r border-white/10">
               <Image
                 src="/images/coach-approach-book.png"
                 alt="The Coach Approach by Bill Gilliland"
-                width={220}
-                height={300}
-                className="drop-shadow-2xl object-contain mb-6"
+                width={180}
+                height={245}
+                className="drop-shadow-2xl object-contain mb-5"
               />
+              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-gold mb-3">
+                Free Book
+              </p>
+              <h1 className="text-2xl md:text-3xl font-black uppercase mb-3">
+                The Coach Approach
+              </h1>
               <p className="text-white/50 text-sm uppercase tracking-[0.2em]">
                 5 Principles to Build an E.P.I.C. Business
               </p>
             </div>
 
-            <div className="px-6 py-8 md:px-10 md:py-10">
-              <h2 className="text-2xl font-black uppercase text-white mb-4">
+            <div className="order-1 lg:order-2 px-5 py-6 md:px-8 md:py-8">
+              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-gold mb-3 lg:hidden">
+                Free Book
+              </p>
+              <h2 className="text-2xl md:text-3xl font-black uppercase text-white mb-3">
                 Get your free copy
               </h2>
-              <p className="text-white/70 leading-relaxed mb-6">
+              <p className="text-white/70 leading-relaxed mb-5">
                 Most owners are the biggest bottleneck in their own business. This short book gives you a practical framework to improve profit, build a team that performs, and stop carrying everything yourself.
               </p>
-
-              <div className="grid sm:grid-cols-3 gap-3 text-sm text-white/65 mb-8">
-                <div className="border border-white/10 rounded-xl px-4 py-3">More profit</div>
-                <div className="border border-white/10 rounded-xl px-4 py-3">Stronger team</div>
-                <div className="border border-white/10 rounded-xl px-4 py-3">More time back</div>
-              </div>
 
               <iframe
                 src="https://go.cfastr.com/widget/form/A2rj9ut4no0SKgrhJtpY"
@@ -68,6 +59,12 @@ export default function FreeBookPage() {
                 data-form-id="A2rj9ut4no0SKgrhJtpY"
                 title="Coach Approach Book"
               />
+
+              <div className="grid sm:grid-cols-3 gap-3 text-sm text-white/65 mt-5">
+                <div className="border border-white/10 rounded-xl px-4 py-3">More profit</div>
+                <div className="border border-white/10 rounded-xl px-4 py-3">Stronger team</div>
+                <div className="border border-white/10 rounded-xl px-4 py-3">More time back</div>
+              </div>
             </div>
           </div>
         </div>
