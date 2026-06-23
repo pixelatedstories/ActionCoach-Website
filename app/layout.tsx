@@ -4,7 +4,6 @@ import { Montserrat, Inter } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 import Navigation from '@/components/Navigation';
-import { BookPopup } from '@/components/BookPopup';
 import { BookFooterBar } from '@/components/BookFooterBar';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -200,7 +199,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <BookFooterBar />
           <Footer />
           <MobileStickyBar />
-          <BookPopup />
         </div>
       </body>
     </html>

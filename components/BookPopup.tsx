@@ -53,6 +53,13 @@ export function BookPopup() {
       // Scroll trigger — registers after TIME_DELAY_MS from page settle
       scrollTimer = setTimeout(() => {
         onScroll = () => {
+          const footer = document.querySelector('footer');
+          const footerVisible = footer
+            ? footer.getBoundingClientRect().top < window.innerHeight
+            : false;
+
+          if (footerVisible) return;
+
           const scrollable = document.documentElement.scrollHeight - window.innerHeight;
           const pct = scrollable > 0 ? window.scrollY / scrollable : 0;
           if (pct >= SCROLL_PERCENT) fire();

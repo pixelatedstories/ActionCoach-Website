@@ -1,6 +1,4 @@
-'use client';
-
-import { openBookPopup } from './BookPopup';
+import Link from 'next/link';
 
 export function BookFooterBar() {
   return (
@@ -11,13 +9,13 @@ export function BookFooterBar() {
       <span className="text-white/60 text-sm">
         Want a proven framework for building a business that doesn&apos;t depend on you?
       </span>
-      <button
-        onClick={openBookPopup}
+      <Link
+        href="/free-book"
         className="text-sm font-black uppercase tracking-widest transition-colors whitespace-nowrap"
         style={{ color: '#FFD100' }}
       >
         Get the free book →
-      </button>
+      </Link>
     </div>
   );
 }
