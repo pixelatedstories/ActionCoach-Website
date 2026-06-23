@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
@@ -69,21 +68,6 @@ export default function FreeBookPage() {
                 data-form-id="A2rj9ut4no0SKgrhJtpY"
                 title="Coach Approach Book"
               />
-
-              <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                <Link
-                  href="/book"
-                  className="inline-flex items-center justify-center bg-gold text-black px-6 py-3 text-xs font-black uppercase tracking-[0.18em] hover:bg-white transition-all"
-                >
-                  Book a Session
-                </Link>
-                <Link
-                  href="/programs"
-                  className="inline-flex items-center justify-center border border-white/20 text-white px-6 py-3 text-xs font-black uppercase tracking-[0.18em] hover:bg-white hover:text-black transition-all"
-                >
-                  See Coaching Options
-                </Link>
-              </div>
             </div>
           </div>
         </div>
