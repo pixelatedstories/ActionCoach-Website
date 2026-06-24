@@ -157,6 +157,27 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
           </div>
         </div>
 
+        {/* Intro Video */}
+        {program.introVideo && (
+          <section className="py-24 border-t border-white/5">
+            <div className="max-w-4xl mx-auto">
+              <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-4 text-center">Hear From Bill</p>
+              <h2 className="text-4xl font-black uppercase mb-12 text-center leading-tight">What Is Private Coaching?</h2>
+              <div className="bg-[#262626] border border-white/5">
+                <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                  <iframe
+                    src={`https://www.youtube.com/embed/${program.introVideo.videoId}`}
+                    title={program.introVideo.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Is This For You? */}
         {program.isForYou && (
           <section className="py-24 border-t border-white/5">

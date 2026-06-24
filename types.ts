@@ -37,6 +37,10 @@ export interface Program {
   faqs?: FAQ[];
   pricingNotes?: string;
   result?: string;
+  introVideo?: {
+    videoId: string;
+    title: string;
+  };
   testimonialVideos?: {
     videoId: string;
     title: string;
