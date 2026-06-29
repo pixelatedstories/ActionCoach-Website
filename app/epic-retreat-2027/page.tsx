@@ -272,12 +272,12 @@ export default function EPICRetreatPage() {
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src="/images/epic-retreat-group-isle-of-palms.jpg"
-                alt="ActionCOACH EPIC Retreat group — Isle of Palms"
+                alt="ActionCOACH EPIC Retreat group — Aruba 2026"
                 fill
                 className="object-cover object-center"
               />
               <div className="absolute bottom-0 left-0 bg-black/70 px-4 py-2">
-                <p className="text-white/60 font-black uppercase tracking-widest text-[10px]">Isle of Palms</p>
+                <p className="text-white/60 font-black uppercase tracking-widest text-[10px]">Aruba 2026</p>
               </div>
             </div>
           </div>
