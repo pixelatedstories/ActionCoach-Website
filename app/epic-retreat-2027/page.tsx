@@ -40,28 +40,18 @@ const pastDestinations = ['Isle of Palms', 'Curaçao', 'Aruba'];
 
 const gallery = [
   {
-    src: '/images/epic-retreat-st-croix-resort-1.jpg',
-    alt: 'The Buccaneer Resort beachfront, St. Croix',
+    src: '/images/epic-retreat-st-croix-aerial.jpeg',
+    alt: 'Aerial view of The Buccaneer Resort and turquoise waters, St. Croix',
     wide: true,
   },
   {
-    src: '/images/epic-retreat-st-croix-resort-2.jpg',
-    alt: 'Aerial view of The Buccaneer Resort, St. Croix',
+    src: '/images/epic-retreat-st-croix-golf.jpeg',
+    alt: 'Golf course at The Buccaneer Resort overlooking the ocean, St. Croix',
     wide: false,
   },
   {
-    src: '/images/epic-retreat-st-croix-resort-3.jpg',
-    alt: 'Pool area at The Buccaneer Resort',
-    wide: false,
-  },
-  {
-    src: '/images/epic-retreat-st-croix-resort-4.jpg',
-    alt: 'Dining at The Buccaneer Resort',
-    wide: false,
-  },
-  {
-    src: '/images/epic-retreat-st-croix-resort-5.jpg',
-    alt: 'The Buccaneer Resort beach and water views',
+    src: '/images/epic-retreat-st-croix-pool.jpeg',
+    alt: 'Pool area at The Buccaneer Resort, St. Croix',
     wide: false,
   },
 ];
@@ -142,8 +132,8 @@ export default function EPICRetreatPage() {
       <section className="relative min-h-screen flex items-end pb-24 pt-40">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
-            src="/images/epic-retreat-st-croix-hero.jpg"
-            alt="Aerial view of St. Croix, U.S. Virgin Islands"
+            src="/images/epic-retreat-st-croix-aerial.jpeg"
+            alt="Aerial view of The Buccaneer Resort, St. Croix"
             fill
             className="object-cover object-center"
             priority
@@ -191,8 +181,8 @@ export default function EPICRetreatPage() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden">
             <Image
-              src="/images/epic-retreat-st-croix-resort-beach.jpg"
-              alt="The Buccaneer Resort, St. Croix"
+              src="/images/epic-retreat-st-croix-pool.jpeg"
+              alt="The Buccaneer Resort pool and beach, St. Croix"
               fill
               className="object-cover"
             />
@@ -215,7 +205,7 @@ export default function EPICRetreatPage() {
           </p>
           <div className="relative w-full aspect-[16/7] overflow-hidden">
             <Image
-              src="/images/epic-retreat-st-croix-map.jpg"
+              src="/images/epic-retreat-st-croix-map.png"
               alt="Map showing St. Croix location in the Caribbean"
               fill
               className="object-cover object-center"
@@ -231,13 +221,13 @@ export default function EPICRetreatPage() {
           <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-14">
             A setting worth the trip.
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            <div className="col-span-2 relative aspect-[16/9] overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div className="md:col-span-3 relative aspect-[21/9] overflow-hidden">
               <Image
                 src={gallery[0].src}
                 alt={gallery[0].alt}
                 fill
-                className="object-cover hover:scale-105 transition-transform duration-700"
+                className="object-cover object-center hover:scale-105 transition-transform duration-700"
               />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
@@ -248,26 +238,10 @@ export default function EPICRetreatPage() {
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
-            <div className="relative aspect-[4/3] overflow-hidden">
+            <div className="md:col-span-2 relative aspect-[4/3] overflow-hidden">
               <Image
                 src={gallery[2].src}
                 alt={gallery[2].alt}
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-700"
-              />
-            </div>
-            <div className="relative aspect-[4/3] overflow-hidden">
-              <Image
-                src={gallery[3].src}
-                alt={gallery[3].alt}
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-700"
-              />
-            </div>
-            <div className="relative aspect-[4/3] overflow-hidden">
-              <Image
-                src={gallery[4].src}
-                alt={gallery[4].alt}
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -277,22 +251,37 @@ export default function EPICRetreatPage() {
       </section>
 
       {/* You'll be in good company */}
-      <section className="relative py-32 px-4 md:px-8 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/actioncoach-growth-business-partners-networking-event-group.jpeg"
-            alt="ActionCOACH business owners at a past retreat"
-            fill
-            className="object-cover object-center opacity-30"
-          />
-          <div className="absolute inset-0 bg-[#1C1C1C]/70" />
-        </div>
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <p className="text-gold font-black uppercase tracking-widest text-xs mb-6">The People</p>
-          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6">
+      <section className="py-24 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-gold font-black uppercase tracking-widest text-xs mb-4">The People</p>
+          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-14">
             You&apos;ll be in good company.
           </h2>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src="/images/epic-retreat-group-aruba.jpg"
+                alt="ActionCOACH EPIC Retreat group — Aruba 2026"
+                fill
+                className="object-cover object-center"
+              />
+              <div className="absolute bottom-0 left-0 bg-black/70 px-4 py-2">
+                <p className="text-white/60 font-black uppercase tracking-widest text-[10px]">Aruba 2026</p>
+              </div>
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src="/images/epic-retreat-group-isle-of-palms.jpg"
+                alt="ActionCOACH EPIC Retreat group — Isle of Palms"
+                fill
+                className="object-cover object-center"
+              />
+              <div className="absolute bottom-0 left-0 bg-black/70 px-4 py-2">
+                <p className="text-white/60 font-black uppercase tracking-widest text-[10px]">Isle of Palms</p>
+              </div>
+            </div>
+          </div>
+          <p className="text-white/50 text-sm mt-8 max-w-2xl">
             This retreat is for EPIC Business owners — serious entrepreneurs building real companies. You&apos;ll grow with peers who get it, and your families will have a week they won&apos;t stop talking about.
           </p>
         </div>
@@ -454,10 +443,10 @@ export default function EPICRetreatPage() {
       <section className="relative py-32 px-4 md:px-8 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/epic-retreat-st-croix-hero.jpg"
-            alt="St. Croix coastline"
+            src="/images/epic-retreat-st-croix-golf.jpeg"
+            alt="Golf course at The Buccaneer Resort, St. Croix"
             fill
-            className="object-cover object-center opacity-15"
+            className="object-cover object-center opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C] to-[#1C1C1C]/80" />
         </div>
