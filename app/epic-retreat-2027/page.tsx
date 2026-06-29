@@ -19,21 +19,16 @@ const amenities = [
   { icon: 'spa', label: 'Full-service spa' },
   { icon: 'tennis', label: '8 tennis courts' },
   { icon: 'fitness', label: '24-hour fitness center' },
-  { icon: 'group', label: 'Group room block available' },
+  { icon: 'group', label: 'Discounted group room rate' },
 ];
 
-const workshopDays = [
-  'Full-day business growth sessions with Bill & Jason',
-  'Structured frameworks you can apply immediately',
-  'Small group environment — real feedback, real work',
-  'Peer time with fellow business owners',
-];
+const workshopDays = ['Mon 6/7/27', 'Tue 6/8/27'];
 
 const workshopIncludes = [
   'Dedicated meeting space',
   'All workshop materials',
   'Lunch & snacks on workshop days',
-  'Intimate group dinner for participants & immediate families',
+  'Intimate group dinner for participants and their families',
 ];
 
 const pastDestinations = ['Isle of Palms', 'Curaçao', 'Aruba'];
@@ -141,14 +136,17 @@ export default function EPICRetreatPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C] via-[#1C1C1C]/50 to-transparent" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-8 w-full">
+          <span className="inline-block bg-gold text-black text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 mb-6">
+            ★ Member-Voted Destination — June 2027
+          </span>
           <p className="text-gold font-black uppercase tracking-widest text-xs mb-4">
-            EPIC Travel Retreat · June 2–8, 2027
+            EPIC Travel Retreat · June 2027
           </p>
           <h1 className="text-5xl md:text-7xl font-black uppercase leading-none tracking-tighter mb-6 max-w-4xl">
-            St. Croix awaits — where the water meets the sky and your business grows.
+            St. Croix awaits — where the water meets the sky and your personal development grows your business.
           </h1>
           <p className="text-white/70 text-xl mb-10 max-w-2xl">
-            The Buccaneer Resort, St. Croix, U.S. Virgin Islands. Two days of business growth. A week your whole family will remember.
+            Join fellow business owners and their families for a week at The Buccaneer Resort: two days of our signature EPIC Retreat Workshop, and the rest is yours to enjoy.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -161,7 +159,7 @@ export default function EPICRetreatPage() {
               href="#pricing"
               className="inline-flex items-center border border-white/30 text-white px-8 py-4 font-black uppercase tracking-widest text-sm hover:bg-white/10 transition-colors"
             >
-              See Pricing
+              View Pricing
             </a>
           </div>
         </div>
@@ -173,10 +171,13 @@ export default function EPICRetreatPage() {
           <div>
             <p className="text-gold font-black uppercase tracking-widest text-xs mb-4">The EPIC Travel Retreat</p>
             <p className="text-white/80 text-lg leading-relaxed mb-6">
-              This is a week built for business owners who want to grow — and the families who deserve a real vacation. We bring our EPIC Business partners to one of the Caribbean&apos;s most beautiful destinations. Two signature workshop days led by coaches Bill Gilliland and Jason Berry. The rest of the week is yours.
+              This isn&apos;t a typical conference. It&apos;s a week built for business owners who want to grow — and the families who&apos;ve earned a break alongside them.
+            </p>
+            <p className="text-white/60 text-sm leading-relaxed mb-4">
+              We&apos;re bringing the EPIC Entrepreneurs community to The Buccaneer Resort, one of the Caribbean&apos;s premier properties, for a retreat that balances real strategy with real rest.
             </p>
             <p className="text-white/50 text-sm leading-relaxed">
-              The Buccaneer is one of St. Croix&apos;s most storied resorts — private beaches, three restaurants, a full spa, and 18 holes of golf on a hillside overlooking the Caribbean. Come for the business. Stay for everything else.
+              Two focused workshop days deliver the growth content you&apos;d expect from an EPIC event. The rest of the week — the beaches, the golf course, the pools, the dinners — is yours.
             </p>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden">
@@ -196,12 +197,12 @@ export default function EPICRetreatPage() {
       {/* Where is St. Croix? */}
       <section className="py-24 px-4 md:px-8 bg-[#141414]">
         <div className="max-w-6xl mx-auto">
-          <p className="text-gold font-black uppercase tracking-widest text-xs mb-4 text-center">Location</p>
+          <p className="text-gold font-black uppercase tracking-widest text-xs mb-4 text-center">Getting There</p>
           <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6 text-center">
             Where is St. Croix?
           </h2>
           <p className="text-white/60 text-center max-w-2xl mx-auto mb-14 text-sm">
-            St. Croix is the largest of the U.S. Virgin Islands, sitting 40 miles south of St. Thomas in the Caribbean Sea. No passport needed — just a direct flight from most East Coast hubs.
+            St. Croix is the largest of the U.S. Virgin Islands, tucked in the Caribbean — closer than you&apos;d think, and no passport required for U.S. citizens.
           </p>
           <div className="relative w-full aspect-[16/7] overflow-hidden">
             <Image
@@ -282,7 +283,7 @@ export default function EPICRetreatPage() {
             </div>
           </div>
           <p className="text-white/50 text-sm mt-8 max-w-2xl">
-            This retreat is for EPIC Business owners — serious entrepreneurs building real companies. You&apos;ll grow with peers who get it, and your families will have a week they won&apos;t stop talking about.
+            Owners, coaches, key team members, spouses, and kids already share this tradition — sunsets together, real conversations, and a group that feels like family. St. Croix is the next chapter.
           </p>
         </div>
       </section>
@@ -295,7 +296,7 @@ export default function EPICRetreatPage() {
             Everything for the family,<br />while you&apos;re here.
           </h2>
           <p className="text-white/50 text-sm mb-14 max-w-xl">
-            The Buccaneer has enough on property to keep every family member busy all week — from the youngest to the most adventurous.
+            Your coaching investment covers the Workshop — your stay is yours to book, with a discounted group rate at one of the Caribbean&apos;s premier resorts.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {amenities.map(({ icon, label }) => (
@@ -318,18 +319,20 @@ export default function EPICRetreatPage() {
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h3 className="text-gold font-black uppercase tracking-widest text-xs mb-8">
-                Workshop Days — Mon 6/7 &amp; Tue 6/8
+                Workshop Days
               </h3>
-              <ul className="space-y-4 mb-10">
-                {workshopDays.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-white/80 font-bold">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gold flex-shrink-0" />
-                    {item}
-                  </li>
+              <div className="flex gap-4 mb-8">
+                {workshopDays.map((day) => (
+                  <div key={day} className="bg-gold text-black px-6 py-4 font-black text-sm uppercase tracking-widest">
+                    {day}
+                  </div>
                 ))}
-              </ul>
+              </div>
+              <p className="text-white/70 text-sm leading-relaxed mb-6">
+                Most of the week is yours — relax, play, and connect with the group and your families. On two days during our stay, we come together for our signature EPIC Retreat Workshop.
+              </p>
               <p className="text-white/40 text-xs">
-                Dates are tentative (±). Participants are responsible for their own room reservations and airfare.
+                Participants are responsible for their own room reservations and airfare. Reach out to your coach for travel logistics and room booking links.
               </p>
             </div>
             <div>
@@ -353,12 +356,12 @@ export default function EPICRetreatPage() {
       </section>
 
       {/* Past Destinations Strip */}
-      <section className="bg-gold py-6 px-4">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-black/60 font-black uppercase tracking-widest text-xs">Past EPIC Retreats</p>
-          <div className="flex flex-wrap gap-6 items-center">
+      <section className="bg-gold py-12 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-black/60 font-black uppercase tracking-widest text-xs mb-4">Past EPIC Travel Retreats</p>
+          <div className="flex flex-wrap gap-6 items-center justify-center mb-6">
             {pastDestinations.map((dest) => (
-              <span key={dest} className="text-black/50 font-black uppercase tracking-widest text-xs line-through">
+              <span key={dest} className="text-black/50 font-black uppercase tracking-widest text-sm line-through">
                 {dest}
               </span>
             ))}
@@ -366,6 +369,9 @@ export default function EPICRetreatPage() {
               St. Croix is next.
             </span>
           </div>
+          <p className="text-black/70 text-sm max-w-xl mx-auto">
+            Each year, EPIC Entrepreneurs gather somewhere new — and each year, the memories outlast the workshop. Bring your family and be part of the next one.
+          </p>
         </div>
       </section>
 
@@ -412,27 +418,27 @@ export default function EPICRetreatPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-[#262626] border border-white/10 p-8">
-              <p className="text-gold font-black uppercase tracking-widest text-xs mb-4">Food &amp; Lodging</p>
+              <p className="text-gold font-black uppercase tracking-widest text-xs mb-4">Travel &amp; Lodging</p>
               <p className="text-white/70 text-sm leading-relaxed">
-                Participants book their own rooms at The Buccaneer using the group room block link your coach provides. Breakfast buffet is included at the resort each morning. Lunch and snacks are covered on both workshop days.
+                Participants are responsible for their own room reservations and airfare. A discounted group room rate is available — your coach has the booking link and discount code.
               </p>
             </div>
             <div className="bg-[#262626] border border-white/10 p-8">
               <p className="text-gold font-black uppercase tracking-widest text-xs mb-4">Bring the Family</p>
               <p className="text-white/70 text-sm leading-relaxed">
-                This retreat is built with families in mind. The resort has three private beaches, a full spa, pools, golf, and a watersports center. Your family will have a full week of their own while you&apos;re in the workshop — and everyone comes together for a private group dinner.
+                This retreat is built for families. The intimate group dinner on workshop days includes participants and their families.
               </p>
             </div>
             <div className="bg-[#262626] border border-white/10 p-8">
-              <p className="text-gold font-black uppercase tracking-widest text-xs mb-4">Bring Your Team</p>
+              <p className="text-gold font-black uppercase tracking-widest text-xs mb-4">Bring Your Key Team Members</p>
               <p className="text-white/70 text-sm leading-relaxed">
-                Bringing another owner from your company? Additional participants from the same business register at $750 per person. Contact your coach to add them after your initial registration.
+                Owners are encouraged to bring key team members along. Growth sticks when leadership and the people executing the vision are aligned — shared time away accelerates that alignment and fuels growth back home.
               </p>
             </div>
             <div className="bg-[#262626] border border-white/10 p-8">
-              <p className="text-gold font-black uppercase tracking-widest text-xs mb-4">Cancelation</p>
+              <p className="text-gold font-black uppercase tracking-widest text-xs mb-4">Questions?</p>
               <p className="text-white/70 text-sm leading-relaxed">
-                Life happens. Reach out to your coach as early as possible if your plans change. Cancelation terms will be outlined in your registration confirmation.
+                Reach out to your coach for travel logistics, room booking links, and the group discount code. We can&apos;t wait to grow together in St. Croix.
               </p>
             </div>
           </div>
@@ -456,13 +462,13 @@ export default function EPICRetreatPage() {
             Don&apos;t miss the tide on this one.
           </h2>
           <p className="text-white/60 mb-10 max-w-xl mx-auto">
-            Spots are limited. This is one week a year set aside for your growth and your family — the rest of the year takes care of itself.
+            Workshop pricing of $1,500 per person ($750 for additional team members from the same company) is open now. Secure your spot for the EPIC Travel Retreat today.
           </p>
           <a
             href="#register"
             className="inline-flex items-center bg-gold text-black px-10 py-5 font-black uppercase tracking-widest text-sm hover:bg-white transition-colors"
           >
-            Reserve Your Spot
+            Reserve Your Spot Now
           </a>
         </div>
       </section>
