@@ -336,6 +336,10 @@ export const PROGRAMS: Program[] = [
       },
     ],
     result: 'A business that runs with more structure, more leadership, and less dependence on the owner.',
+    introVideo: {
+      videoId: 'v3DeiyM5Rxk',
+      title: 'What Is Business Unlimited? Bill Gilliland Explains',
+    },
   },
   {
     id: 'one-to-one-freedom',
@@ -401,10 +405,6 @@ export const PROGRAMS: Program[] = [
       },
     ],
     result: 'Sharper execution, stronger profit, and a business that can grow without constant owner oversight.',
-    introVideo: {
-      videoId: 'ty519qMU7wM',
-      title: 'What Is Private Coaching? Bill Gilliland Explains',
-    },
     testimonialVideos: [
       {
         videoId: 'HVhs_6tyLak',
@@ -482,6 +482,10 @@ export const PROGRAMS: Program[] = [
       },
     ],
     result: 'A more profitable, better-systemized business built alongside peers who push you to execute.',
+    introVideo: {
+      videoId: 'VbEvP4QAAqM',
+      title: 'What Is ProfitClub? Bill Gilliland Explains',
+    },
   },
   {
     id: 'business-masterclass',
@@ -538,6 +542,10 @@ export const PROGRAMS: Program[] = [
       },
     ],
     result: 'A stronger operating foundation with more clarity, accountability, and forward motion.',
+    introVideo: {
+      videoId: '4J0Gy_F1_yc',
+      title: 'What Is Business Masterclass? Bill Gilliland Explains',
+    },
   },
   {
     id: 'planning-club',
@@ -594,6 +602,10 @@ export const PROGRAMS: Program[] = [
       },
     ],
     result: 'A clear 90-day plan tied to financial goals, priorities, and execution.',
+    introVideo: {
+      videoId: 'gjMWj5aoiNg',
+      title: 'What Is Business Planning? Bill Gilliland Explains',
+    },
     testimonialVideos: [
       {
         videoId: 'c_jMNtvlKZM',
@@ -662,6 +674,10 @@ export const PROGRAMS: Program[] = [
       },
     ],
     result: 'Immediate clarity on what to fix first, a 90-day plan in hand, and a clear answer on whether coaching is the right next step.',
+    introVideo: {
+      videoId: '2eS7valJtGk',
+      title: 'What Is 2 Weeks Free Coaching? Bill Gilliland Explains',
+    },
   },
   {
     id: 'growth-club',
