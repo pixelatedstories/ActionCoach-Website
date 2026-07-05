@@ -405,6 +405,10 @@ export const PROGRAMS: Program[] = [
       },
     ],
     result: 'Sharper execution, stronger profit, and a business that can grow without constant owner oversight.',
+    introVideo: {
+      videoId: 'ty519qMU7wM',
+      title: 'What Is Private Coaching? Bill Gilliland Explains',
+    },
     testimonialVideos: [
       {
         videoId: 'HVhs_6tyLak',
