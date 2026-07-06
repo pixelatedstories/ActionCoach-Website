@@ -31,7 +31,6 @@ const workshopIncludes = [
   'Intimate group dinner for participants and their families',
 ];
 
-const pastDestinations = ['Isle of Palms', 'Curaçao', 'Aruba'];
 
 const gallery = [
   {
@@ -130,7 +129,7 @@ export default function EPICRetreatPage() {
             src="/images/epic-retreat-st-croix-aerial.jpeg"
             alt="Aerial view of The Buccaneer Resort, St. Croix"
             fill
-            className="object-cover object-center"
+            className="object-cover object-top animate-hero-zoom"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C] via-[#1C1C1C]/50 to-transparent" />
@@ -139,9 +138,6 @@ export default function EPICRetreatPage() {
           <span className="inline-block bg-gold text-black text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 mb-6">
             ★ Member-Voted Destination — June 2027
           </span>
-          <p className="text-gold font-black uppercase tracking-widest text-xs mb-4">
-            EPIC Travel Retreat · June 2027
-          </p>
           <h1 className="text-5xl md:text-7xl font-black uppercase leading-none tracking-tighter mb-6 max-w-4xl">
             St. Croix awaits — where the water meets the sky and your personal development grows your business.
           </h1>
@@ -273,12 +269,12 @@ export default function EPICRetreatPage() {
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src="/images/epic-retreat-group-isle-of-palms.jpg"
-                alt="ActionCOACH EPIC Retreat group — Aruba 2026"
+                alt="ActionCOACH EPIC Retreat group — Curaçao 2025"
                 fill
                 className="object-cover object-center"
               />
               <div className="absolute bottom-0 left-0 bg-black/70 px-4 py-2">
-                <p className="text-white/60 font-black uppercase tracking-widest text-[10px]">Aruba 2026</p>
+                <p className="text-white/60 font-black uppercase tracking-widest text-[10px]">Curaçao 2025</p>
               </div>
             </div>
           </div>
@@ -356,21 +352,36 @@ export default function EPICRetreatPage() {
       </section>
 
       {/* Past Destinations Strip */}
-      <section className="bg-gold py-12 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-black/60 font-black uppercase tracking-widest text-xs mb-4">Past EPIC Travel Retreats</p>
-          <div className="flex flex-wrap gap-6 items-center justify-center mb-6">
-            {pastDestinations.map((dest) => (
-              <span key={dest} className="text-black/50 font-black uppercase tracking-widest text-sm line-through">
-                {dest}
-              </span>
-            ))}
-            <span className="text-black font-black uppercase tracking-widest text-sm">
-              St. Croix is next.
-            </span>
+      <section className="bg-gold py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-black/60 font-black uppercase tracking-widest text-xs mb-2 text-center">EPIC Travel Retreat</p>
+          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter text-black text-center mb-12">
+            Four years. Four destinations. One tradition.
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="bg-black/10 p-6 text-center">
+              <p className="text-black/40 font-black uppercase tracking-widest text-xs mb-2">2024</p>
+              <p className="text-black/60 font-black uppercase tracking-tight text-lg line-through">Isle of Palms</p>
+              <p className="text-black/40 text-xs uppercase tracking-wider mt-1">Charleston, SC</p>
+            </div>
+            <div className="bg-black/10 p-6 text-center">
+              <p className="text-black/40 font-black uppercase tracking-widest text-xs mb-2">2025</p>
+              <p className="text-black/60 font-black uppercase tracking-tight text-lg line-through">Curaçao</p>
+              <p className="text-black/40 text-xs uppercase tracking-wider mt-1">Dutch Caribbean</p>
+            </div>
+            <div className="bg-black/10 p-6 text-center">
+              <p className="text-black/40 font-black uppercase tracking-widest text-xs mb-2">2026</p>
+              <p className="text-black/60 font-black uppercase tracking-tight text-lg line-through">Aruba</p>
+              <p className="text-black/40 text-xs uppercase tracking-wider mt-1">One Happy Island</p>
+            </div>
+            <div className="bg-black p-6 text-center">
+              <p className="text-gold font-black uppercase tracking-widest text-xs mb-2">2027 — You Are Here</p>
+              <p className="text-white font-black uppercase tracking-tight text-lg">St. Croix</p>
+              <p className="text-white/60 text-xs uppercase tracking-wider mt-1">U.S. Virgin Islands</p>
+            </div>
           </div>
-          <p className="text-black/70 text-sm max-w-xl mx-auto">
-            Each year, EPIC Entrepreneurs gather somewhere new — and each year, the memories outlast the workshop. Bring your family and be part of the next one.
+          <p className="text-black/70 text-sm max-w-xl mx-auto mt-10 text-center">
+            Each year, EPIC Entrepreneurs gather somewhere new — and each year, the memories outlast the workshop. St. Croix is the next chapter.
           </p>
         </div>
       </section>

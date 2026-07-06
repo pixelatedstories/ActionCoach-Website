@@ -15,6 +15,15 @@ const config: Config = {
         sans: ['var(--font-inter)', 'sans-serif'],
         heading: ['var(--font-montserrat)', 'sans-serif'],
       },
+      keyframes: {
+        heroZoom: {
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.06)' },
+        },
+      },
+      animation: {
+        'hero-zoom': 'heroZoom 14s ease-out forwards',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],
