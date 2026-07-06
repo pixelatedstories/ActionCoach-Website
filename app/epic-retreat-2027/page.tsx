@@ -130,6 +130,7 @@ export default function EPICRetreatPage() {
             alt="Aerial view of The Buccaneer Resort, St. Croix"
             fill
             className="object-cover object-top animate-hero-zoom"
+            style={{ transformOrigin: 'top center' }}
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C] via-[#1C1C1C]/50 to-transparent" />
@@ -184,7 +185,7 @@ export default function EPICRetreatPage() {
               className="object-cover"
             />
             <div className="absolute bottom-0 right-0 bg-gold text-black px-5 py-3 font-black uppercase tracking-widest text-xs">
-              June 2–8, 2027
+              June 7–8, 2027
             </div>
           </div>
         </div>
@@ -200,14 +201,13 @@ export default function EPICRetreatPage() {
           <p className="text-white/60 text-center max-w-2xl mx-auto mb-14 text-sm">
             St. Croix is the largest of the U.S. Virgin Islands, tucked in the Caribbean — closer than you&apos;d think, and no passport required for U.S. citizens.
           </p>
-          <div className="relative w-full aspect-[16/7] overflow-hidden">
-            <Image
-              src="/images/epic-retreat-st-croix-map.png"
-              alt="Map showing St. Croix location in the Caribbean"
-              fill
-              className="object-cover object-center"
-            />
-          </div>
+          <Image
+            src="/images/epic-retreat-st-croix-map.png"
+            alt="Map showing St. Croix location in the Caribbean"
+            width={1192}
+            height={726}
+            className="w-full h-auto"
+          />
         </div>
       </section>
 
@@ -404,7 +404,7 @@ export default function EPICRetreatPage() {
             </div>
             <div className="border-t border-white/10 pt-8">
               <p className="text-white/60 text-sm font-bold uppercase tracking-wider mb-2">
-                Additional attendee from same company
+                Additional attendees from same company
               </p>
               <p className="text-4xl font-black">$750</p>
             </div>
