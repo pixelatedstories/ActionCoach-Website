@@ -29,6 +29,8 @@ interface ProgramLayoutProps {
 
 const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
   const isSpeaking = program.id === 'speaking';
+  const enrollHref = program.id === 'business-masterclass' ? '/enroll/business' : '/book';
+  const enrollLabel = program.id === 'business-masterclass' ? 'Enroll Now' : 'Book a Session';
   const problemBullets = program.problem ?? program.isForYou ?? [];
   const howItWorksBullets = program.howItWorks ?? program.journeyIncludes ?? [];
   const relatedStories = getCaseStudiesForProgram(program.id);
@@ -148,7 +150,7 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/book" className="inline-block bg-gold text-black px-8 py-5 md:px-12 md:py-6 text-sm font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white transition-all transform hover:-translate-y-1 shadow-xl max-w-sm md:max-w-none text-center">
+              <Link href={enrollHref} className="inline-block bg-gold text-black px-8 py-5 md:px-12 md:py-6 text-sm font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white transition-all transform hover:-translate-y-1 shadow-xl max-w-sm md:max-w-none text-center">
                 {program.cta}
               </Link>
               <Link href="/book" className="inline-block border-2 border-white text-white px-8 py-5 md:px-12 md:py-6 text-sm font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white hover:text-black transition-all max-w-sm md:max-w-none text-center">
@@ -345,8 +347,8 @@ const ProgramLayout: React.FC<ProgramLayoutProps> = ({ program }) => {
                       </li>
                     ))}
                   </ul>
-                  <Link href="/book" className={`block w-full text-center py-5 font-black uppercase tracking-widest transition-all ${i === 1 ? 'bg-gold text-black hover:bg-white' : 'border-2 border-white text-white hover:bg-white hover:text-black'}`}>
-                    Book a Session
+                  <Link href={enrollHref} className={`block w-full text-center py-5 font-black uppercase tracking-widest transition-all ${i === 1 ? 'bg-gold text-black hover:bg-white' : 'border-2 border-white text-white hover:bg-white hover:text-black'}`}>
+                    {enrollLabel}
                   </Link>
                 </div>
               ))}
