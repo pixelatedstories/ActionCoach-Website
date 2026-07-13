@@ -11,7 +11,7 @@ const masterclasses = [
   { id: 'management',  title: '12-Week Management Masterclass' },
   { id: 'sales',       title: '12-Week Sales Masterclass' },
   { id: 'leadership',  title: '12-Week Leadership Masterclass' },
-  { id: 'business',    title: '12-Week Business Masterclass' },
+  { id: 'business',    title: '12-Week Business Masterclass', href: 'https://billgilliland.biz/enroll/business' },
 ];
 
 export default function EnrollPage() {
@@ -32,7 +32,7 @@ export default function EnrollPage() {
           {masterclasses.map((mc) => (
             <Link
               key={mc.id}
-              href={`/enroll/${mc.id}`}
+              href={mc.href ?? `/enroll/${mc.id}`}
               className="group bg-[#262626] border border-white/5 p-8 hover:border-gold transition-all duration-300 flex flex-col"
             >
               <div className="h-1 w-10 bg-gold mb-5 group-hover:w-full transition-all duration-500" />
