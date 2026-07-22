@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/pricing`, priority: 0.7, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/contact`, priority: 0.8, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/events`, priority: 0.7, changeFrequency: 'weekly' },
+    { url: `${BASE_URL}/webinars/hiring-process`, priority: 0.8, changeFrequency: 'weekly' },
     { url: `${BASE_URL}/book`, priority: 0.9, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/client-stories`, priority: 0.7, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/coaching-videos`, priority: 0.7, changeFrequency: 'weekly' },

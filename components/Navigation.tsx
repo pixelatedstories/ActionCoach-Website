@@ -15,6 +15,7 @@ const Navigation = () => {
   const visiblePrograms = PROGRAMS.filter(p => !['growth-club', 'speaking'].includes(p.id));
   const resources = [
     { href: '/events', label: 'Events' },
+    { href: '/webinars/hiring-process', label: 'Webinars' },
     { href: '/resources/articles', label: 'Articles' },
     { href: '/resources/podcast', label: 'Podcast' },
     { href: '/coaching-videos', label: 'Coaching Videos' },
