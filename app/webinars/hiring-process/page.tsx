@@ -102,9 +102,12 @@ export default function HiringProcessWebinarPage() {
               priority
             />
             <div>
-              <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-4">
-                This is what happens when you install a real hiring system.
+              <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-3">
+                Real Results
               </p>
+              <h2 className="text-2xl md:text-3xl font-black uppercase leading-tight mb-5">
+                This is what happens when you install a real hiring system.
+              </h2>
               <p className="text-white/80 leading-relaxed mb-4">
                 Eric runs a trades business. He&apos;s good at the work, but he was stuck, no hiring philosophy, no
                 system, no one in charge of it but him, and he was already stretched too thin to make it work.
