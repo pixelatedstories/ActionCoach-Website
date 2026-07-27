@@ -76,6 +76,23 @@ export default function HiringProcessWebinarPage() {
           </p>
         </section>
 
+        {/* Intro Video */}
+        <section className="py-16 border-t border-white/5">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-[#262626] border border-white/5">
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://www.youtube.com/embed/OoPiwkYdGww"
+                  title="Bill Gilliland on The 4-Hour Hiring Process"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* The Problem */}
         <section className="py-16 border-t border-white/5">
           <div className="max-w-3xl mx-auto text-center">
