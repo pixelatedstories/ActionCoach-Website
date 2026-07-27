@@ -2,10 +2,7 @@
 
 import { useEffect } from 'react';
 
-// TODO(jay): Replace with the real GHL form id once the "Webinar - 4-Hour Hiring Process"
-// form is built in GHL (fields: First Name, Email, Phone; tag registrants
-// "Webinar - 4-Hour Hiring Process"). This is a placeholder id and will not submit.
-const GHL_FORM_ID = 'REPLACE_WITH_REAL_GHL_FORM_ID';
+const GHL_FORM_ID = 'RifKl2zvk2xP0oAwZ0mc';
 
 export default function WebinarRegisterForm() {
   useEffect(() => {
@@ -21,7 +18,7 @@ export default function WebinarRegisterForm() {
   return (
     <iframe
       src={`https://go.cfastr.com/widget/form/${GHL_FORM_ID}`}
-      style={{ width: '100%', height: '420px', border: 'none', display: 'block' }}
+      style={{ width: '100%', height: '525px', border: 'none', borderRadius: '8px', display: 'block' }}
       id={`inline-${GHL_FORM_ID}`}
       data-layout="{'id':'INLINE'}"
       data-trigger-type="alwaysShow"
@@ -31,7 +28,7 @@ export default function WebinarRegisterForm() {
       data-deactivation-type="neverDeactivate"
       data-deactivation-value=""
       data-form-name="Webinar - 4-Hour Hiring Process"
-      data-height="420"
+      data-height="525"
       data-layout-iframe-id={`inline-${GHL_FORM_ID}`}
       data-form-id={GHL_FORM_ID}
       title="Register for The 4-Hour Hiring Process webinar"
