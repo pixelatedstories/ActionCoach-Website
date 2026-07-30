@@ -5,7 +5,7 @@ import WebinarRegisterForm from '@/components/WebinarRegisterForm';
 export const metadata: Metadata = {
   title: 'The 4-Hour Hiring Process For Trades — Free Live Webinar',
   description:
-    'Free live webinar with Bill Gilliland: build your hiring philosophy, the A-grade attraction system, and a full deselection process. Thursday, August 6, 12:00-1:00 PM ET. Live only, no replay.',
+    'Free live webinar with Bill Gilliland: build your hiring philosophy, the A-grade attraction system, and a full deselection process. Thursday, August 20, 12:00-1:00 PM ET. Live only, no replay.',
 };
 
 const buildCards = [
@@ -63,7 +63,7 @@ export default function HiringProcessWebinarPage() {
             How one contractor grew from 8 employees to 70, without recruiters, job boards, or another bad hire.
           </p>
           <p className="text-white/60 font-bold uppercase tracking-widest text-sm mb-10">
-            Thursday, August 6 &middot; 12:00&ndash;1:00 PM ET &middot; Live and free
+            Thursday, August 20 &middot; 12:00&ndash;1:00 PM ET &middot; Live and free
           </p>
           <a
             href="#register"
@@ -183,7 +183,7 @@ export default function HiringProcessWebinarPage() {
               live on the call, so you leave with something usable, not just notes.
             </p>
             <p className="text-white/60 font-bold uppercase tracking-widest text-sm">
-              Thursday, August 6 &middot; 12:00&ndash;1:00 PM ET &middot; Live on Zoom &middot; Free
+              Thursday, August 20 &middot; 12:00&ndash;1:00 PM ET &middot; Live on Zoom &middot; Free
             </p>
           </div>
         </section>
@@ -210,7 +210,7 @@ export default function HiringProcessWebinarPage() {
               Build your hiring system in one hour.
             </h2>
             <p className="text-white/60 font-bold uppercase tracking-widest text-sm">
-              Thursday, August 6 &middot; 12:00&ndash;1:00 PM ET &middot; Free
+              Thursday, August 20 &middot; 12:00&ndash;1:00 PM ET &middot; Free
             </p>
           </div>
           <div className="max-w-xl mx-auto bg-[#111111] border border-white/10 shadow-2xl p-4 md:p-8">
