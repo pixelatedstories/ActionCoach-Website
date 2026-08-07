@@ -13,6 +13,16 @@ const nextConfig: NextConfig = {
         destination: '/coaching-videos',
         permanent: true,
       },
+      {
+        source: '/what-is-the-price-for-business-coaching',
+        destination: '/pricing',
+        permanent: true,
+      },
+      {
+        source: '/event/:slug*',
+        destination: '/events',
+        permanent: true,
+      },
     ];
   },
 };
