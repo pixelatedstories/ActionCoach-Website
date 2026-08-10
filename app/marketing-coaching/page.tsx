@@ -192,7 +192,7 @@ export default function MarketingCoachingPage() {
             <p className="text-xl text-black/70 leading-relaxed max-w-3xl mx-auto mb-10">Book a conversation with Bill Gilliland. We will look at what is creating the most friction and whether coaching is the right next move for your business.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/book" className="inline-block bg-gold text-black px-8 py-6 text-sm font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all">Book a Conversation</Link>
-              <Link href="/locations/raleigh-nc" className="inline-block border-2 border-black px-8 py-6 text-sm font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all">Raleigh &amp; Triangle Coaching</Link>
+              <Link href="/client-stories" className="inline-block border-2 border-black px-8 py-6 text-sm font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all">See Client Results</Link>
             </div>
           </div>
         </section>
