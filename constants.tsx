@@ -158,8 +158,59 @@ export const LOCATIONS: LocationData[] = [
     id: 'raleigh-nc',
     city: 'Raleigh',
     state: 'NC',
-    description: "Raleigh's growing tech and service sectors create strong demand for structured, scalable business coaching.",
+    description: "Raleigh's fast-growing technology, professional services, and home-service sectors create strong demand for structured, scalable business coaching.",
     image: '/images/actioncoach-growth-business-partners-business-summit-speaker.jpeg',
+    headline: 'Business Coaching for Raleigh, Wake Forest, and the Triangle',
+    intro: 'ActionCOACH Business Growth Partners works with business owners across Raleigh and the Triangle, including Wake Forest. We help capable owners turn fast growth into a business with stronger leadership, better systems, and more control over their time.',
+    marketDetail: 'The Triangle gives ambitious businesses room to grow, but growth creates pressure quickly. Technology companies, professional firms, home-service businesses, healthcare practices, and local operators compete for talent while managing rising costs and higher customer expectations. Many owners reach a point where they are still the person solving every problem, approving every decision, and pushing each initiative forward. Coaching gives that growth a practical operating rhythm: clear priorities, accountable leaders, dependable numbers, and systems the team can run.',
+    whoWeWork: [
+      'Professional Services',
+      'Technology & B2B Services',
+      'Contractors & Home Services',
+      'Healthcare & Wellness',
+      'Local Retail & Hospitality',
+      'Growing Family-Owned Businesses',
+    ],
+    localChallenges: [
+      {
+        title: 'Growth is outpacing the systems',
+        body: 'More customers, projects, and employees should make the business stronger. Without clear processes and ownership, they often create more work for the owner instead. We help turn growth into repeatable execution.',
+      },
+      {
+        title: 'Finding and keeping strong people',
+        body: 'Triangle businesses compete hard for capable team members. We help owners define roles, build accountability, and create a leadership structure that gives good people a reason to stay and perform.',
+      },
+      {
+        title: 'The owner is still the bottleneck',
+        body: 'When every important decision, client issue, and escalation lands with the owner, the company cannot scale cleanly. We build the delegation, scorecards, and meeting rhythm that move decisions closer to the work.',
+      },
+      {
+        title: 'Revenue is growing but profit feels unpredictable',
+        body: 'A full pipeline does not automatically create financial control. We work on pricing, cash flow, sales discipline, and the numbers owners need to make confident decisions before small problems become expensive ones.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Does ActionCOACH serve Raleigh and Wake Forest, NC?',
+        answer: 'Yes. ActionCOACH Business Growth Partners serves business owners throughout Raleigh and the Triangle, including Wake Forest. Start with a conversation with Bill to determine the right coaching format and next step for your business.',
+      },
+      {
+        question: 'What types of Raleigh businesses do you coach?',
+        answer: 'We work with professional service firms, technology and B2B service companies, contractors, home-service businesses, healthcare and wellness practices, retailers, hospitality businesses, and other established owner-led companies ready to grow with more structure.',
+      },
+      {
+        question: 'Can business coaching help me build a stronger management team?',
+        answer: 'Yes. A core part of coaching is helping owners clarify roles, set measurable expectations, run better meetings, and give managers the tools and accountability to lead without every decision returning to the owner.',
+      },
+      {
+        question: 'What if my Raleigh business is growing but I have less time than ever?',
+        answer: 'That is a common reason owners seek coaching. We identify the owner bottlenecks, install a weekly operating rhythm, and build the systems and leadership habits that let the business carry more of the load without depending on you for every detail.',
+      },
+      {
+        question: 'How do I get started with a business coach in the Triangle?',
+        answer: 'Book a conversation with Bill Gilliland. You will talk through the business, the biggest constraint holding it back, and whether an ActionCOACH program is a practical fit for the outcome you want.',
+      },
+    ],
   },
   {
     id: 'greenville-sc',
