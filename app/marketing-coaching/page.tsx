@@ -72,12 +72,12 @@ export default function MarketingCoachingPage() {
         <section className="pt-32 pb-24 md:pt-44 md:pb-32">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="max-w-4xl">
-              <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-5">Marketing coaching for established trades businesses</p>
+              <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-5">For established trades and field-service businesses</p>
               <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.95] mb-8">
-                Get more of the right jobs without becoming the marketing department.
+                Marketing coaching for trades &amp; service businesses.
               </h1>
               <p className="text-xl md:text-2xl text-white/75 font-medium leading-relaxed max-w-3xl mb-10">
-                ActionCOACH helps trades and field-service owners build a marketing and sales system that keeps crews working on profitable jobs—without putting every lead, estimate, and growth decision back on the owner.
+                Get more of the right jobs without becoming the marketing department. ActionCOACH helps trades and field-service owners build a marketing and sales system that keeps crews working on profitable jobs—without putting every lead, estimate, and growth decision back on the owner.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                 <Link href="/book" className="inline-block bg-gold text-black px-8 py-6 text-sm font-black uppercase tracking-widest hover:bg-white transition-all text-center">
@@ -87,7 +87,31 @@ export default function MarketingCoachingPage() {
                   See Coaching Options
                 </Link>
               </div>
-              <p className="mt-7 text-white/50 text-sm font-bold uppercase tracking-wide">Built for owner-led trades and service companies with crews, trucks, and $750K+ in annual revenue.</p>
+              <p className="mt-7 text-white/65 text-sm leading-relaxed max-w-2xl">In your free 15-minute call, we will identify where leads, estimates, follow-up, or capacity are breaking down—and map out the next practical step.</p>
+              <p className="mt-4 text-white/50 text-sm font-bold uppercase tracking-wide">Built for owner-led trades and service companies with crews, trucks, and $750K+ in annual revenue.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-gold text-black">
+          <div className="max-w-7xl mx-auto px-4 md:px-8 grid lg:grid-cols-[0.8fr_1.2fr] gap-12 items-center">
+            <div>
+              <p className="font-black uppercase tracking-[0.2em] text-xs mb-4">Proof from a service business</p>
+              <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-tight">Better marketing only matters when it improves the business.</h2>
+            </div>
+            <div className="bg-black text-white p-8 md:p-10">
+              <p className="text-white/75 text-lg leading-relaxed mb-8">Carolina Outdoor Lighting came to ActionCOACH with marketing that was not producing, owner overload, and no confident plan. Coaching improved its marketing strategy, lead quality, and average sale value—alongside stronger team accountability.</p>
+              <div className="grid sm:grid-cols-2 gap-6 border-y border-white/20 py-6 mb-7">
+                <div>
+                  <p className="text-gold text-3xl font-black">2.4x</p>
+                  <p className="text-white/60 text-sm font-black uppercase tracking-widest">Sales growth</p>
+                </div>
+                <div>
+                  <p className="text-gold text-3xl font-black">2.9x</p>
+                  <p className="text-white/60 text-sm font-black uppercase tracking-widest">Profit growth</p>
+                </div>
+              </div>
+              <Link href="/client-stories/carolina-outdoor-lighting" className="text-gold font-black uppercase tracking-widest text-sm hover:text-white transition-colors">Read the client story →</Link>
             </div>
           </div>
         </section>
