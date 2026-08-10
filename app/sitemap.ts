@@ -34,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/resources`, priority: 0.6, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/resources/articles`, priority: 0.6, changeFrequency: 'weekly' },
     { url: `${BASE_URL}/resources/podcast`, priority: 0.6, changeFrequency: 'weekly' },
+    { url: `${BASE_URL}/marketing-coaching`, priority: 0.8, changeFrequency: 'monthly' },
   ];
 
   const programRoutes: MetadataRoute.Sitemap = PROGRAMS
