@@ -8,6 +8,7 @@ import { BookFooterBar } from '@/components/BookFooterBar';
 import Link from 'next/link';
 import Image from 'next/image';
 import { CONTACT, LOCATIONS } from '@/constants';
+import { Analytics } from '@vercel/analytics/next';
 
 const GA_MEASUREMENT_ID = 'G-G35NCBL61G';
 const META_PIXEL_ID = '2470433556720287';
@@ -227,6 +228,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Footer />
           <MobileStickyBar />
         </div>
+        <Analytics />
       </body>
     </html>
   );
