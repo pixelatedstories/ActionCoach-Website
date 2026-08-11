@@ -1,12 +1,22 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import WebinarRegisterForm from '@/components/WebinarRegisterForm';
+import WebinarHeroTracking from '@/components/WebinarHeroTracking';
+import WebinarProof from '@/components/WebinarProof';
+import WebinarHost from '@/components/WebinarHost';
 
 export const metadata: Metadata = {
   title: 'The 4-Hour Hiring Process For Trades — Free Live Webinar',
   description:
-    'Free live webinar with Bill Gilliland: build your hiring philosophy, the A-grade attraction system, and a full deselection process. Thursday, August 20, 12:00-1:00 PM ET. Live only, no replay.',
+    'Free live webinar with Bill Gilliland: build your hiring philosophy, the A-grade attraction system, and a full deselection process. Thursday, August 20, 2026, 12:00-1:00 PM ET.',
 };
+
+const WEBINAR_DATE_LINE = 'Thursday, August 20, 2026 · 12:00–1:00 PM ET · Live on Zoom';
+
+const heroBullets = [
+  'One hour, live. We build it on the call, so you leave with something usable.',
+  'Built for trades, construction, and home service owners. Nobody else.',
+  'Live only, so plan to be on the call. Bring a notebook.',
+];
 
 const buildCards = [
   {
@@ -47,174 +57,153 @@ const faqs = [
   },
 ];
 
+const eventSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: 'The 4-Hour Hiring Process For Trades',
+  description:
+    'Free live webinar for trades and home service owners. Build your hiring philosophy, the A-grade attraction system, and a full deselection process.',
+  startDate: '2026-08-20T12:00:00-04:00',
+  endDate: '2026-08-20T13:00:00-04:00',
+  eventStatus: 'https://schema.org/EventScheduled',
+  eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
+  location: {
+    '@type': 'VirtualLocation',
+    url: 'https://billgilliland.biz/webinars/hiring-process',
+  },
+  organizer: {
+    '@type': 'Organization',
+    name: 'ActionCOACH Business Growth Partners',
+    url: 'https://billgilliland.biz',
+  },
+  performer: {
+    '@type': 'Person',
+    name: 'Bill Gilliland',
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+    url: 'https://billgilliland.biz/webinars/hiring-process',
+    validFrom: '2026-08-04T00:00:00-04:00',
+  },
+};
+
+function RegistrationCard({ instanceId }: { instanceId: string }) {
+  return (
+    <div className="bg-[#111111] border border-white/10 shadow-2xl rounded-2xl p-4 md:p-6">
+      <p className="text-lg md:text-xl font-black uppercase tracking-tight text-center mb-1">
+        Save your seat
+      </p>
+      <p className="text-white/50 text-[11px] font-bold uppercase tracking-[0.18em] text-center mb-4">
+        Free &middot; Live &middot; One hour
+      </p>
+      <WebinarRegisterForm instanceId={instanceId} />
+    </div>
+  );
+}
+
 export default function HiringProcessWebinarPage() {
   return (
-    <div className="pt-32 pb-24 bg-[#1C1C1C]">
-      <div className="max-w-5xl mx-auto px-4 md:px-8">
-        {/* Hero */}
-        <section className="text-center mb-20">
-          <p className="text-gold font-black uppercase tracking-[0.28em] text-xs mb-5">
-            Free Live Webinar — Trades &amp; Home Service Owners
-          </p>
-          <h1 className="text-4xl md:text-6xl font-black uppercase leading-[0.95] tracking-tighter mb-6">
-            The 4-Hour Hiring Process For Trades
-          </h1>
-          <p className="text-xl md:text-2xl font-bold text-white/80 max-w-3xl mx-auto mb-8 leading-snug">
-            How one contractor grew from 8 employees to 70, without recruiters, job boards, or another bad hire.
-          </p>
-          <p className="text-white/60 font-bold uppercase tracking-widest text-sm mb-10">
-            Thursday, August 20 &middot; 12:00&ndash;1:00 PM ET &middot; Live and free
-          </p>
-          <a
-            href="#register"
-            className="inline-block bg-gold text-black px-10 py-5 text-sm font-black uppercase tracking-widest hover:bg-white transition-all shadow-xl"
-          >
-            Save My Seat
-          </a>
-          <p className="text-white/45 text-xs uppercase tracking-widest mt-6">
-            Bill Gilliland &mdash; ActionCOACH Hall of Fame &middot; Trades &amp; home service coaching for 20+ years
-          </p>
-        </section>
+    <div className="pt-8 md:pt-12 pb-16 bg-[#1C1C1C]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }} />
+      <WebinarHeroTracking />
 
-        {/* Intro Video */}
-        <section className="py-16 border-t border-white/5">
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-[#262626] border border-white/5">
-              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                <iframe
-                  src="https://www.youtube.com/embed/OoPiwkYdGww"
-                  title="Bill Gilliland on The 4-Hour Hiring Process"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
-            </div>
+      <div className="max-w-6xl mx-auto px-4 md:px-8">
+        {/*
+          Hero. Mobile order is headline, then form, then the supporting detail, so the
+          first input is reachable in one short scroll. On lg the left column stacks
+          headline over detail and the form sits in a sticky right rail.
+        */}
+        <section className="grid lg:grid-cols-[minmax(0,1fr)_440px] lg:grid-rows-[auto_1fr] gap-x-12 items-start">
+          <div className="lg:col-start-1 lg:row-start-1">
+            <p className="text-gold font-black uppercase tracking-[0.24em] text-[11px] mb-4">
+              Free Live Webinar &middot; Trades &amp; Home Service Owners
+            </p>
+            <h1 className="text-3xl md:text-5xl font-black uppercase leading-[0.98] tracking-tighter mb-4">
+              The 4-Hour Hiring Process For Trades
+            </h1>
+            <p className="text-lg md:text-xl font-bold text-white/80 leading-snug mb-3">
+              You probably don&apos;t have a hiring problem. You have a system problem.
+            </p>
+            <p className="text-white/65 leading-relaxed mb-4">
+              How one contractor grew from 8 employees to 70, without recruiters, job boards, or another
+              bad hire.
+            </p>
+            <p className="text-white/55 font-bold uppercase tracking-[0.14em] text-xs mb-8 lg:mb-6">
+              {WEBINAR_DATE_LINE}
+            </p>
           </div>
-        </section>
 
-        {/* The Problem */}
-        <section className="py-16 border-t border-white/5">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-black uppercase mb-6 leading-tight">
-              You didn&apos;t start this business to run HR.
-            </h2>
-            <p className="text-white/70 text-lg leading-relaxed">
-              You got into this because you&apos;re good at the work. Somewhere along the way you became the hiring
-              manager too. Now growth is capped by how many good people you can find, train, and keep, and most days
-              there&apos;s no system behind any of it. Not gut feel. Not another job post. A system.
+          <div className="lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:sticky lg:top-8">
+            <RegistrationCard instanceId="hero" />
+          </div>
+
+          <div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-2">
+            <ul className="space-y-3 mb-6">
+              {heroBullets.map((bullet) => (
+                <li key={bullet} className="flex gap-3 text-white/70 leading-relaxed">
+                  <span className="text-gold font-black shrink-0" aria-hidden="true">
+                    &rarr;
+                  </span>
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-white/45 text-[11px] uppercase tracking-[0.18em] border-t border-white/10 pt-5">
+              Bill Gilliland &middot; ActionCOACH Hall of Fame &middot; Coaching trades &amp; home service
+              owners across the Carolinas for 20+ years
             </p>
           </div>
         </section>
 
         {/* Proof */}
-        <section className="py-16 border-t border-white/5">
-          <div className="grid lg:grid-cols-[220px_minmax(0,1fr)] gap-10 items-center bg-[#111111] border border-white/10 p-8 md:p-12">
-            <Image
-              src="/images/Bill-Gilliland.jpg"
-              alt="Bill Gilliland, ActionCOACH Hall of Fame"
-              width={220}
-              height={220}
-              className="rounded-full object-cover mx-auto shadow-2xl"
-              priority
-            />
-            <div>
-              <p className="text-gold font-black uppercase tracking-[0.2em] text-xs mb-3">
-                Real Results
-              </p>
-              <h2 className="text-2xl md:text-3xl font-black uppercase leading-tight mb-5">
-                This is what happens when you install a real hiring system.
-              </h2>
-              <p className="text-white/80 leading-relaxed mb-4">
-                Eric runs a trades business. He&apos;s good at the work, but he was stuck, no hiring philosophy, no
-                system, no one in charge of it but him, and he was already stretched too thin to make it work.
-              </p>
-              <p className="text-white/80 leading-relaxed mb-4">
-                We installed the 4-Hour Hiring Process: his philosophy, an attraction system that targets A-grade
-                people, and a full deselection process to filter them. A couple of years later, Eric had grown from 8
-                employees to 70, and someone else was running the day-to-day.
-              </p>
-              <p className="text-xl font-bold text-gold leading-snug">
-                &ldquo;So now whenever we need people, all we have to do is run our system, and it gets easy to
-                grow.&rdquo;
-              </p>
-              <p className="text-white/45 text-xs uppercase tracking-widest mt-3">Bill Gilliland</p>
-            </div>
-          </div>
-        </section>
+        <WebinarProof />
 
-        {/* What You'll Build */}
-        <section className="py-16 border-t border-white/5">
-          <h2 className="text-3xl md:text-4xl font-black uppercase mb-10 text-center leading-tight">
+        {/* What you'll build */}
+        <section className="py-14 border-t border-white/5">
+          <h2 className="text-2xl md:text-4xl font-black uppercase mb-8 text-center leading-tight">
             What You&apos;ll Build
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
             {buildCards.map((card) => (
-              <div key={card.title} className="bg-[#262626] p-6 border border-white/5 hover:border-gold/50 transition-colors">
-                <p className="text-lg font-black uppercase tracking-tight mb-2 text-gold">{card.title}</p>
+              <div
+                key={card.title}
+                className="bg-[#262626] p-6 border border-white/5 rounded-xl hover:border-gold/50 transition-colors"
+              >
+                <p className="text-base font-black uppercase tracking-tight mb-2 text-gold">{card.title}</p>
                 <p className="text-white/70 leading-relaxed">{card.body}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Who's Hosting */}
-        <section className="py-16 border-t border-white/5">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-black uppercase mb-4">
-              Bill Gilliland &mdash; ActionCOACH Hall of Fame
-            </h2>
-            <p className="text-white/70 leading-relaxed">
-              Bill has coached trades and home service business owners across the Carolinas for over two decades.
-              He&apos;s a Hall of Fame ActionCOACH, one of the highest designations in the global franchise, and has
-              helped owners fix broken teams, escape the day-to-day, and grow past what they could do alone.
-            </p>
-          </div>
-        </section>
+        {/* Who's leading this */}
+        <WebinarHost />
 
-        {/* How It Works */}
-        <section className="py-16 border-t border-white/5">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-black uppercase mb-4">
-              One hour. Live. We do the work together.
-            </h2>
-            <p className="text-white/70 leading-relaxed mb-4">
-              This isn&apos;t a lecture. Bring a notebook. We build your hiring philosophy and deselection process
-              live on the call, so you leave with something usable, not just notes.
-            </p>
-            <p className="text-white/60 font-bold uppercase tracking-widest text-sm">
-              Thursday, August 20 &middot; 12:00&ndash;1:00 PM ET &middot; Live on Zoom &middot; Free
-            </p>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="py-16 border-t border-white/5">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-black uppercase mb-10 text-center">Frequently Asked Questions</h2>
-            <div className="space-y-6">
-              {faqs.map((faq) => (
-                <div key={faq.question} className="border-b border-white/10 pb-6">
-                  <p className="text-lg font-bold mb-2">{faq.question}</p>
-                  <p className="text-white/70 leading-relaxed">{faq.answer}</p>
-                </div>
-              ))}
+        {/* FAQ + final registration */}
+        <section id="register" className="py-14 border-t border-white/5">
+          <div className="grid lg:grid-cols-[minmax(0,1fr)_460px] gap-8 lg:gap-12 items-start">
+            <div>
+              <h2 className="text-2xl md:text-4xl font-black uppercase mb-7 leading-tight">
+                Questions
+              </h2>
+              <div className="space-y-5">
+                {faqs.map((faq) => (
+                  <div key={faq.question} className="border-b border-white/10 pb-5">
+                    <p className="text-base font-bold mb-2">{faq.question}</p>
+                    <p className="text-white/70 leading-relaxed">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-
-        {/* Register */}
-        <section id="register" className="py-16 border-t border-white/5">
-          <div className="max-w-2xl mx-auto text-center mb-10">
-            <h2 className="text-3xl md:text-5xl font-black uppercase mb-4 leading-tight">
-              Build your hiring system in one hour.
-            </h2>
-            <p className="text-white/60 font-bold uppercase tracking-widest text-sm">
-              Thursday, August 20 &middot; 12:00&ndash;1:00 PM ET &middot; Free
-            </p>
-          </div>
-          <div className="max-w-xl mx-auto bg-[#111111] border border-white/10 shadow-2xl p-4 md:p-8">
-            <WebinarRegisterForm />
+            <div>
+              <p className="text-2xl md:text-3xl font-black uppercase leading-tight mb-4 text-center lg:text-left">
+                Build your hiring system in one hour.
+              </p>
+              <RegistrationCard instanceId="footer" />
+            </div>
           </div>
         </section>
       </div>

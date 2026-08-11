@@ -1,25 +1,15 @@
 'use client';
 
 import { useEffect } from 'react';
-import Link from 'next/link';
-
-declare global {
-  interface Window {
-    fbq?: (...args: unknown[]) => void;
-  }
-}
+import { trackWebinarLead } from '@/lib/webinarTracking';
 
 export default function HiringProcessThankYouPage() {
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.fbq) {
-      window.fbq('track', 'Lead', {
-        content_name: 'Webinar - 4-Hour Hiring Process',
-      });
-    }
+    trackWebinarLead();
   }, []);
 
   return (
-    <div className="pt-32 pb-24 bg-[#1C1C1C]">
+    <div className="pt-20 pb-24 bg-[#1C1C1C]">
       <div className="max-w-2xl mx-auto px-4 md:px-8 text-center">
         <p className="text-gold font-black uppercase tracking-[0.28em] text-xs mb-5">
           You&apos;re Registered
@@ -28,14 +18,17 @@ export default function HiringProcessThankYouPage() {
           See you Thursday, August 20 at noon ET.
         </h1>
         <p className="text-white/70 text-lg leading-relaxed mb-8">
-          Watch your email and phone for the details. This one is live only, no replay, so mark your calendar now.
+          Watch your email for the Zoom link. Put it on your calendar now, and bring a notebook. We build
+          your hiring philosophy and deselection process live on the call.
         </p>
-        <Link
-          href="/"
+        <a
+          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The+4-Hour+Hiring+Process+For+Trades&dates=20260820T160000Z/20260820T170000Z&details=Free+live+webinar+with+Bill+Gilliland.+Zoom+link+arrives+by+email.&location=Zoom"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block bg-gold text-black px-10 py-5 text-sm font-black uppercase tracking-widest hover:bg-white transition-all shadow-xl"
         >
-          Back to billgilliland.biz
-        </Link>
+          Add To Calendar
+        </a>
       </div>
     </div>
   );

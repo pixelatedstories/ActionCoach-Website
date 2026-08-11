@@ -5,6 +5,8 @@ import Script from 'next/script';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import { BookFooterBar } from '@/components/BookFooterBar';
+import { SiteChrome, LandingChrome } from '@/components/SiteChrome';
+import { LandingHeader, LandingFooter } from '@/components/LandingChromeBars';
 import Link from 'next/link';
 import Image from 'next/image';
 import { CONTACT, LOCATIONS } from '@/constants';
@@ -221,11 +223,21 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <div className="min-h-screen flex flex-col">
-          <Navigation />
+          <SiteChrome>
+            <Navigation />
+          </SiteChrome>
+          <LandingChrome>
+            <LandingHeader />
+          </LandingChrome>
           <main className="flex-grow">{children}</main>
-          <BookFooterBar />
-          <Footer />
-          <MobileStickyBar />
+          <SiteChrome>
+            <BookFooterBar />
+            <Footer />
+            <MobileStickyBar />
+          </SiteChrome>
+          <LandingChrome>
+            <LandingFooter />
+          </LandingChrome>
         </div>
       </body>
     </html>
