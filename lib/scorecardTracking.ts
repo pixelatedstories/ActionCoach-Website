@@ -9,7 +9,7 @@
  */
 const LEAD_FIRED_KEY = 'scorecard-lead-fired';
 
-export const SCORECARD_CONTENT_NAME = 'Business Scorecard';
+export const SCORECARD_CONTENT_NAME = 'Business Independence Score';
 
 declare global {
   interface Window {
