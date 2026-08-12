@@ -53,11 +53,8 @@ export default function Home() {
               ActionCOACH Business Growth Partners helps service business owners get clear on what is broken, build stronger teams, and install a system that creates more control, more profit, and more breathing room.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-              <Link href="/programs" className="inline-block bg-gold text-black px-6 py-5 md:px-8 md:py-6 text-sm font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white transition-all transform hover:scale-105 text-center">
-                See Coaching Options
-              </Link>
-              <Link href="/book" className="inline-block border-2 border-white text-white px-6 py-5 md:px-8 md:py-6 text-sm font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white hover:text-black transition-all text-center">
-                Book a Session
+              <Link href="/scorecard" className="inline-block bg-gold text-black px-6 py-5 md:px-8 md:py-6 text-sm font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white transition-all transform hover:scale-105 text-center">
+                Take the Scorecard
               </Link>
             </div>
           </div>
@@ -123,11 +120,8 @@ export default function Home() {
                 <AbosStep number="3" title="More predictable growth" description="Turn growth into a clearer operating rhythm instead of constant improvising." />
               </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-10">
-                <Link href="/programs" className="inline-block bg-gold text-black px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-white transition-all text-center">
-                  See Coaching Options
-                </Link>
-                <Link href="/book" className="inline-block border-2 border-white text-white px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all text-center">
-                  Book a Session
+                <Link href="/scorecard" className="inline-block bg-gold text-black px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-white transition-all text-center">
+                  Take the Scorecard
                 </Link>
               </div>
             </div>
@@ -244,11 +238,8 @@ export default function Home() {
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/programs" className="inline-block bg-gold text-black px-8 py-5 md:px-12 md:py-6 text-base md:text-lg font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white transition-all shadow-xl">
-              See Coaching Options
-            </Link>
-            <Link href="/book" className="inline-block border-2 border-white text-white px-8 py-5 md:px-12 md:py-6 text-base md:text-lg font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white hover:text-black transition-all shadow-xl">
-              Book a Session
+            <Link href="/scorecard" className="inline-block bg-gold text-black px-8 py-5 md:px-12 md:py-6 text-base md:text-lg font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white transition-all shadow-xl">
+              Take the Scorecard
             </Link>
           </div>
         </div>

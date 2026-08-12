@@ -37,11 +37,8 @@ export default function ProgramsHub() {
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="#program-options" className="inline-flex items-center justify-center bg-gold text-black px-8 py-5 text-sm font-black uppercase tracking-widest hover:bg-white transition-all">
-              See Coaching Options
-            </Link>
-            <Link href="/book" className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-5 text-sm font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">
-              Book a Session
+            <Link href="/scorecard" className="inline-flex items-center justify-center bg-gold text-black px-8 py-5 text-sm font-black uppercase tracking-widest hover:bg-white transition-all">
+              Take the Scorecard
             </Link>
           </div>
         </div>
@@ -140,9 +137,6 @@ export default function ProgramsHub() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#program-options" className="inline-block bg-black text-white px-8 py-5 md:px-12 md:py-6 text-base md:text-lg font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-white hover:text-black transition-all shadow-2xl">
               View Program Options
-            </Link>
-            <Link href="/book" className="inline-block border-2 border-black text-black px-8 py-5 md:px-12 md:py-6 text-base md:text-lg font-black uppercase tracking-wider md:tracking-widest leading-tight hover:bg-black hover:text-white transition-all shadow-2xl">
-              Book a Session
             </Link>
           </div>
         </div>

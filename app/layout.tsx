@@ -64,11 +64,8 @@ function Footer() {
             ActionCOACH Business Growth Partners helps small business owners across the Carolinas build profitable, self-managing businesses. Led by Master Coach Bill Gilliland.
           </p>
           <div className="flex flex-wrap gap-3 mb-6">
-            <Link href="/programs" className="inline-flex items-center justify-center bg-gold text-black px-5 py-3 text-xs font-black uppercase tracking-widest hover:bg-white transition-all">
-              See Coaching Options
-            </Link>
-            <Link href="/book" className="inline-flex items-center justify-center border border-white/20 text-white px-5 py-3 text-xs font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">
-              Book a Session
+            <Link href="/scorecard" className="inline-flex items-center justify-center bg-gold text-black px-5 py-3 text-xs font-black uppercase tracking-widest hover:bg-white transition-all">
+              Take the Scorecard
             </Link>
           </div>
           <div className="text-white/60 text-xs space-y-2 uppercase tracking-widest font-bold mb-6">
@@ -99,8 +96,7 @@ function Footer() {
             <li><Link href="/events" className="hover:text-gold transition-colors">Events</Link></li>
             <li><Link href="/client-stories" className="hover:text-gold transition-colors">Client Stories</Link></li>
             <li><Link href="/contact" className="hover:text-gold transition-colors">Contact</Link></li>
-            <li><Link href="/programs" className="hover:text-gold transition-colors">See Coaching Options</Link></li>
-            <li><Link href="/book" className="hover:text-gold transition-colors">Book a Session</Link></li>
+            <li><Link href="/scorecard" className="hover:text-gold transition-colors">Take the Scorecard</Link></li>
             <li><Link href="/pricing" className="hover:text-gold transition-colors">Get Instant Estimate</Link></li>
             <li><Link href="/epic-retreat-2027" className="hover:text-gold transition-colors">EPIC Retreat 2027</Link></li>
           </ul>
@@ -139,11 +135,11 @@ function MobileStickyBar() {
       >
         Call
       </a>
-      <Link href="/programs" className="bg-gold text-black flex items-center justify-center font-black uppercase text-[10px] tracking-[0.18em] border-r border-black/10">
+      <Link href="/programs" className="bg-[#262626] text-white flex items-center justify-center font-black uppercase text-[10px] tracking-[0.18em] border-r border-white/5">
         Programs
       </Link>
-      <Link href="/book" className="bg-white text-black flex items-center justify-center font-black uppercase text-[10px] tracking-[0.18em]">
-        Book a Session
+      <Link href="/scorecard" className="bg-gold text-black flex items-center justify-center font-black uppercase text-[10px] tracking-[0.18em]">
+        Take the Scorecard
       </Link>
     </div>
   );

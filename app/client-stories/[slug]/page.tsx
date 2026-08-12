@@ -39,9 +39,6 @@ export default async function ClientStoryPage({ params }: { params: Promise<{ sl
               <a href={study.pdf} className="inline-flex justify-center bg-gold text-black px-6 py-4 text-xs font-black uppercase tracking-widest hover:bg-white transition-all">
                 Download PDF
               </a>
-              <Link href="/book" className="inline-flex justify-center border border-white/20 text-white px-6 py-4 text-xs font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">
-                Book a Session
-              </Link>
             </div>
           </div>
           <div className="bg-black border border-white/5 overflow-hidden">
@@ -120,10 +117,10 @@ export default async function ClientStoryPage({ params }: { params: Promise<{ sl
         <section className="mt-24 bg-gold text-black p-10 md:p-16 text-center">
           <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight mb-6">Want results like this?</h2>
           <p className="text-lg md:text-xl font-bold opacity-80 max-w-3xl mx-auto mb-10">
-            Start with a conversation about where the business is stuck, what needs structure, and what path gives you the fastest practical win.
+            Start with the free Business Scorecard and find out where the business is stuck, what needs structure, and what path gives you the fastest practical win.
           </p>
-          <Link href="/book" className="inline-flex justify-center bg-black text-white px-8 py-5 text-sm font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">
-            Book a Session
+          <Link href="/scorecard" className="inline-flex justify-center bg-black text-white px-8 py-5 text-sm font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+            Take the Scorecard
           </Link>
         </section>
       </div>

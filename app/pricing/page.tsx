@@ -123,16 +123,10 @@ export default function Pricing() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/programs"
+                href="/scorecard"
                 className="inline-block bg-black text-white px-10 py-5 text-sm font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all shadow-xl"
               >
-                See Coaching Options
-              </Link>
-              <Link
-                href="/book"
-                className="inline-block border-2 border-black text-black px-10 py-5 text-sm font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all shadow-xl"
-              >
-                Book a Session
+                Take the Scorecard
               </Link>
             </div>
           </div>

@@ -94,8 +94,8 @@ export default function CoachingVideosPage() {
 
         <div className="mt-24 p-12 bg-white text-black text-center">
           <h2 className="text-3xl font-black uppercase mb-4 leading-tight">Want coaching like this for your business?</h2>
-          <Link href="/book" className="inline-block bg-black text-white px-10 py-5 text-sm font-black uppercase tracking-widest hover:bg-[#FFD100] hover:text-black transition-all shadow-xl">
-            Book a Free Session
+          <Link href="/scorecard" className="inline-block bg-black text-white px-10 py-5 text-sm font-black uppercase tracking-widest hover:bg-[#FFD100] hover:text-black transition-all shadow-xl">
+            Take the Scorecard
           </Link>
         </div>
       </div>
