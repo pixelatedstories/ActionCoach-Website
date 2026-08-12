@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-const SCOREAPP_URL = 'https://edb50a0d-a524-4270-95ea-00237d485eb3.scoreapp.com/?sa_target=_top';
+const SCOREAPP_URL = 'https://edb50a0d-a524-4270-95ea-00237d485eb3.scoreapp.com/?sa_hide_header=1&sa_hide_footer=1';
 const EMBED_SCRIPT = 'https://static.scoreapp.com/js/integration/v1/embedding.js';
 
 export default function ScoreAppEmbed() {
