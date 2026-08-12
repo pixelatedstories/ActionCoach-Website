@@ -112,17 +112,10 @@ const Navigation = () => {
           </a>
 
           <Link
-            href="/book"
-            className="text-xs font-black uppercase tracking-widest hover:text-gold transition-colors"
-          >
-            Book a Session
-          </Link>
-
-          <Link
-            href="/programs"
+            href="/scorecard"
             className="bg-gold text-black px-6 py-3 text-xs font-black uppercase tracking-[0.15em] hover:bg-white transition-all transform hover:-translate-y-1 shadow-lg"
           >
-            See Coaching Options
+            Take the Scorecard
           </Link>
         </div>
 
@@ -186,11 +179,8 @@ const Navigation = () => {
                 <a href={`tel:${CONTACT.PHONE.replace(/\D/g, '')}`} className="block text-3xl font-black text-gold">{CONTACT.PHONE}</a>
               </div>
               <div className="space-y-3">
-                <Link href="/programs" className="block bg-gold text-black text-center py-5 font-black uppercase tracking-widest text-sm shadow-xl">
-                  See Coaching Options
-                </Link>
-                <Link href="/book" className="block border-2 border-white/20 text-white text-center py-5 font-black uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all">
-                  Book a Session
+                <Link href="/scorecard" className="block bg-gold text-black text-center py-5 font-black uppercase tracking-widest text-sm shadow-xl">
+                  Take the Scorecard
                 </Link>
               </div>
             </div>

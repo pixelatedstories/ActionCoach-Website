@@ -98,15 +98,15 @@ export default async function LocationPage({ params }: { params: Promise<{ id: s
                 )}
               </div>
               <div className="bg-[#262626] p-10 flex flex-col justify-center">
-                <h3 className="text-xl font-black mb-6 uppercase">Ready to talk through where the business is stuck?</h3>
+                <h3 className="text-xl font-black mb-6 uppercase">Ready to see where the business is stuck?</h3>
                 <p className="mb-8 text-white/70 leading-relaxed">
-                  Book a session with Bill and get a clear read on what is holding the business back and what to do next.
+                  Take the free Business Scorecard and get a clear read on what is holding the business back and what to do next.
                 </p>
                 <Link
-                  href="/book"
+                  href="/scorecard"
                   className="inline-block bg-gold text-black px-8 py-5 font-black uppercase tracking-widest hover:bg-white transition-all text-center text-sm"
                 >
-                  Book a Session
+                  Take the Scorecard
                 </Link>
                 <p className="mt-6 font-bold text-sm text-white/60">Or call: {CONTACT.PHONE}</p>
               </div>
@@ -125,13 +125,13 @@ export default async function LocationPage({ params }: { params: Promise<{ id: s
               <div className="bg-[#262626] p-10 flex flex-col justify-center text-center">
                 <h3 className="text-xl font-black mb-6 uppercase">Scale your {location.city} business today</h3>
                 <p className="mb-8 text-white/70">
-                  Book a session and get a clear picture of what is holding the business back.
+                  Take the free Business Scorecard and get a clear picture of what is holding the business back.
                 </p>
                 <Link
-                  href="/book"
+                  href="/scorecard"
                   className="inline-block bg-gold text-black px-8 py-5 font-black uppercase tracking-widest hover:bg-white transition-all text-sm"
                 >
-                  Book a Session
+                  Take the Scorecard
                 </Link>
                 <p className="mt-6 font-bold text-sm text-white/60">Or call: {CONTACT.PHONE}</p>
               </div>
@@ -269,20 +269,14 @@ export default async function LocationPage({ params }: { params: Promise<{ id: s
               Ready to get started in {location.city}?
             </h2>
             <p className="text-xl font-bold mb-10 opacity-75 max-w-2xl mx-auto leading-relaxed">
-              Book a session with Bill Gilliland and get a clear picture of what the business needs to move forward.
+              Take the free Business Scorecard and get a clear picture of what the business needs to move forward.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/book"
+                href="/scorecard"
                 className="inline-block bg-black text-white px-10 py-5 text-sm font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all shadow-xl"
               >
-                Book a Session
-              </Link>
-              <Link
-                href="/programs"
-                className="inline-block border-2 border-black text-black px-10 py-5 text-sm font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all shadow-xl"
-              >
-                See Coaching Options
+                Take the Scorecard
               </Link>
             </div>
           </div>

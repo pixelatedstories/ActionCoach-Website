@@ -83,8 +83,8 @@ export default function MarketingCoachingPage() {
                 <Link href="/book" className="inline-block bg-gold text-black px-8 py-6 text-sm font-black uppercase tracking-widest hover:bg-white transition-all text-center">
                   Book a Marketing Growth Conversation
                 </Link>
-                <Link href="/programs" className="inline-block border-2 border-white text-white px-8 py-6 text-sm font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all text-center">
-                  See Coaching Options
+                <Link href="/scorecard" className="inline-block border-2 border-white text-white px-8 py-6 text-sm font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all text-center">
+                  Take the Scorecard
                 </Link>
               </div>
               <p className="mt-7 text-white/65 text-sm leading-relaxed max-w-2xl">In your free 15-minute call, we will identify where leads, estimates, follow-up, or capacity are breaking down—and map out the next practical step.</p>

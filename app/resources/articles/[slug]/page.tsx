@@ -130,8 +130,8 @@ export default async function ArticlePage({ params }: Props) {
 
         <div className="mt-24 p-12 bg-white text-black text-center max-w-3xl">
           <h2 className="text-3xl font-black uppercase mb-4 leading-tight">Ready to build a business that works without you?</h2>
-          <Link href="/book" className="inline-block bg-black text-white px-10 py-5 text-sm font-black uppercase tracking-widest hover:bg-[#FFD100] hover:text-black transition-all shadow-xl">
-            Book a Free Session
+          <Link href="/scorecard" className="inline-block bg-black text-white px-10 py-5 text-sm font-black uppercase tracking-widest hover:bg-[#FFD100] hover:text-black transition-all shadow-xl">
+            Take the Scorecard
           </Link>
         </div>
       </div>
