@@ -23,6 +23,11 @@ const nextConfig: NextConfig = {
         destination: '/events',
         permanent: true,
       },
+      {
+        source: '/epicworkbook',
+        destination: '/downloads/epic-workbook.pdf',
+        permanent: true,
+      },
     ];
   },
 };
