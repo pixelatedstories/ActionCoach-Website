@@ -7,15 +7,15 @@ import WebinarHost from '@/components/WebinarHost';
 export const metadata: Metadata = {
   title: 'The 4-Hour Hiring Process For Trades — Free Live Webinar',
   description:
-    'Free live webinar with Bill Gilliland: build your hiring philosophy, the A-grade attraction system, and a full deselection process. Thursday, August 20, 2026, 12:00-1:00 PM ET.',
+    'Free live webinar with Bill Gilliland: build your hiring philosophy, the A-grade attraction system, and a full deselection process. Tuesday, September 22, 2026, 11:45 AM-12:45 PM ET.',
 };
 
-const WEBINAR_DATE_LINE = 'Thursday, August 20, 2026 · 12:00–1:00 PM ET · Live on Zoom';
+const WEBINAR_DATE_LINE = 'Tuesday, September 22, 2026 · 11:45 AM–12:45 PM ET · Live on Zoom';
 
 const heroBullets = [
   'One hour, live. We build it on the call, so you leave with something usable.',
   'Built for trades, construction, and home service owners. Nobody else.',
-  'Live only, so plan to be on the call. Bring a notebook.',
+  'Everyone who registers gets the recording. Questions only get answered live, so bring one.',
 ];
 
 const buildCards = [
@@ -49,7 +49,8 @@ const faqs = [
   },
   {
     question: 'Will there be a replay?',
-    answer: 'No. This is a live-only session, there is no replay, so plan to be on the call.',
+    answer:
+      'Yes. Everyone who registers gets the recording afterward, so you are covered if the day goes sideways. The one thing the recording cannot do is answer a question about your crew, so be on the call live if you can.',
   },
   {
     question: 'Is there a cost?',
@@ -63,8 +64,8 @@ const eventSchema = {
   name: 'The 4-Hour Hiring Process For Trades',
   description:
     'Free live webinar for trades and home service owners. Build your hiring philosophy, the A-grade attraction system, and a full deselection process.',
-  startDate: '2026-08-20T12:00:00-04:00',
-  endDate: '2026-08-20T13:00:00-04:00',
+  startDate: '2026-09-22T11:45:00-04:00',
+  endDate: '2026-09-22T12:45:00-04:00',
   eventStatus: 'https://schema.org/EventScheduled',
   eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
   location: {
@@ -86,7 +87,7 @@ const eventSchema = {
     priceCurrency: 'USD',
     availability: 'https://schema.org/InStock',
     url: 'https://billgilliland.biz/webinars/hiring-process',
-    validFrom: '2026-08-04T00:00:00-04:00',
+    validFrom: '2026-09-01T00:00:00-04:00',
   },
 };
 
