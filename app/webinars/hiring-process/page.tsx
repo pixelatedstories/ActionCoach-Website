@@ -10,10 +10,11 @@ export const metadata: Metadata = {
     'Free live webinar with Bill Gilliland: build your hiring philosophy, the A-grade attraction system, and a full deselection process. Tuesday, September 22, 2026, 11:45 AM-12:45 PM ET.',
 };
 
-const WEBINAR_DATE_LINE = 'Tuesday, September 22, 2026 · 11:45 AM–12:45 PM ET · Live on Zoom';
+const WEBINAR_DATE_HEADLINE = 'Tuesday, September 22, 2026';
+const WEBINAR_DATE_DETAIL = '11:45 AM–12:45 PM ET · Live on Zoom';
 
 const heroBullets = [
-  'One hour, live. We build it on the call, so you leave with something usable.',
+  'You leave with your hiring system written down, not notes about one.',
   'Built for trades, construction, and home service owners. Nobody else.',
   'Everyone who registers gets the recording. Questions only get answered live, so bring one.',
 ];
@@ -119,22 +120,37 @@ export default function HiringProcessWebinarPage() {
         */}
         <section className="grid lg:grid-cols-[minmax(0,1fr)_440px] lg:grid-rows-[auto_1fr] gap-x-12 items-start">
           <div className="lg:col-start-1 lg:row-start-1">
-            <p className="text-gold font-black uppercase tracking-[0.24em] text-[11px] mb-4">
+            <p className="text-gold font-black uppercase tracking-[0.24em] text-[11px] mb-5">
               Free Live Webinar &middot; Trades &amp; Home Service Owners
             </p>
-            <h1 className="text-3xl md:text-5xl font-black uppercase leading-[0.98] tracking-tighter mb-4">
-              The 4-Hour Hiring Process For Trades
+            <h1 className="text-4xl md:text-6xl font-black uppercase leading-[0.94] tracking-tighter mb-5">
+              You don&apos;t have a hiring problem.
+              <br />
+              <span className="text-gold">You have a system problem.</span>
             </h1>
-            <p className="text-lg md:text-xl font-bold text-white/80 leading-snug mb-3">
-              You probably don&apos;t have a hiring problem. You have a system problem.
+            <p className="text-lg md:text-xl font-bold text-white/85 leading-snug mb-8">
+              The 4-Hour Hiring Process. We build yours live, on the call, in one hour.
             </p>
-            <p className="text-white/65 leading-relaxed mb-4">
-              How one contractor grew from 8 employees to 70, without recruiters, job boards, or another
-              bad hire.
-            </p>
-            <p className="text-white/55 font-bold uppercase tracking-[0.14em] text-xs mb-8 lg:mb-6">
-              {WEBINAR_DATE_LINE}
-            </p>
+
+            {/* Proof. The single most persuasive fact on the page, sized like it. */}
+            <div className="flex items-center gap-5 border-y border-white/10 py-5 mb-8">
+              <p className="text-gold text-5xl md:text-6xl font-black tracking-tighter leading-none shrink-0 tabular-nums">
+                8&nbsp;&rarr;&nbsp;70
+              </p>
+              <p className="text-white/70 leading-snug">
+                <span className="font-bold text-white">Employees, in a couple of years.</span> One
+                contractor, one hiring system. No recruiters, no job boards, no more bad hires.
+              </p>
+            </div>
+
+            <div className="border-l-4 border-gold pl-4 mb-8 lg:mb-6">
+              <p className="text-white font-black uppercase tracking-[0.1em] text-sm md:text-base leading-tight">
+                {WEBINAR_DATE_HEADLINE}
+              </p>
+              <p className="text-white/55 font-bold uppercase tracking-[0.14em] text-[11px] mt-1">
+                {WEBINAR_DATE_DETAIL}
+              </p>
+            </div>
           </div>
 
           <div className="lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:sticky lg:top-8">
