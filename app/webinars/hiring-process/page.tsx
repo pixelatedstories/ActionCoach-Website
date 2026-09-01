@@ -10,8 +10,9 @@ export const metadata: Metadata = {
     'Free live webinar with Bill Gilliland: build your hiring philosophy, the A-grade attraction system, and a full deselection process. Tuesday, September 22, 2026, 11:45 AM-12:45 PM ET.',
 };
 
-const WEBINAR_DATE_HEADLINE = 'Tuesday, September 22, 2026';
-const WEBINAR_DATE_DETAIL = '11:45 AM–12:45 PM ET · Live on Zoom';
+const WEBINAR_DAY = 'Tuesday, September 22';
+const WEBINAR_TIME = '11:45 AM – 12:45 PM ET';
+const WEBINAR_PLATFORM = 'Live on Zoom · Free · One hour';
 
 const heroBullets = [
   'You leave with your hiring system written down, not notes about one.',
@@ -132,23 +133,19 @@ export default function HiringProcessWebinarPage() {
               The 4-Hour Hiring Process. We build yours live, on the call, in one hour.
             </p>
 
-            {/* Proof. The single most persuasive fact on the page, sized like it. */}
-            <div className="flex items-center gap-5 border-y border-white/10 py-5 mb-8">
-              <p className="text-gold text-5xl md:text-6xl font-black tracking-tighter leading-none shrink-0 tabular-nums">
-                8&nbsp;&rarr;&nbsp;70
+            {/* When it happens. The fact that decides whether someone can actually be there. */}
+            <div className="border border-gold/40 bg-white/[0.03] rounded-xl px-5 py-5 md:px-6 md:py-6 mb-8 lg:mb-6">
+              <p className="text-gold font-black uppercase tracking-[0.22em] text-[10px] mb-3">
+                Mark your calendar
               </p>
-              <p className="text-white/70 leading-snug">
-                <span className="font-bold text-white">Employees, in a couple of years.</span> One
-                contractor, one hiring system. No recruiters, no job boards, no more bad hires.
+              <p className="text-2xl md:text-4xl font-black uppercase leading-[0.95] tracking-tighter text-white">
+                {WEBINAR_DAY}
               </p>
-            </div>
-
-            <div className="border-l-4 border-gold pl-4 mb-8 lg:mb-6">
-              <p className="text-white font-black uppercase tracking-[0.1em] text-sm md:text-base leading-tight">
-                {WEBINAR_DATE_HEADLINE}
+              <p className="text-lg md:text-2xl font-black uppercase leading-tight tracking-tight text-gold mt-1 tabular-nums">
+                {WEBINAR_TIME}
               </p>
-              <p className="text-white/55 font-bold uppercase tracking-[0.14em] text-[11px] mt-1">
-                {WEBINAR_DATE_DETAIL}
+              <p className="text-white/55 font-bold uppercase tracking-[0.16em] text-[11px] mt-3 pt-3 border-t border-white/10">
+                {WEBINAR_PLATFORM}
               </p>
             </div>
           </div>
