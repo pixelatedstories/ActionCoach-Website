@@ -7,10 +7,10 @@ import WebinarHost from '@/components/WebinarHost';
 export const metadata: Metadata = {
   title: 'The 4-Hour Hiring Process For Trades — Free Live Webinar',
   description:
-    'Free live webinar with Bill Gilliland: build your hiring philosophy, the A-grade attraction system, and a full deselection process. Tuesday, September 22, 2026, 11:45 AM-12:45 PM ET.',
+    'Free live webinar with Bill Gilliland: build your hiring philosophy, the A-grade attraction system, and a full deselection process. Wednesday, September 23, 2026, 11:45 AM-12:45 PM ET.',
 };
 
-const WEBINAR_DAY = 'Tuesday, September 22';
+const WEBINAR_DAY = 'Wednesday, September 23';
 const WEBINAR_TIME = '11:45 AM – 12:45 PM ET';
 const WEBINAR_PLATFORM = 'Live on Zoom · Free · One hour';
 
@@ -66,8 +66,8 @@ const eventSchema = {
   name: 'The 4-Hour Hiring Process For Trades',
   description:
     'Free live webinar for trades and home service owners. Build your hiring philosophy, the A-grade attraction system, and a full deselection process.',
-  startDate: '2026-09-22T11:45:00-04:00',
-  endDate: '2026-09-22T12:45:00-04:00',
+  startDate: '2026-09-23T11:45:00-04:00',
+  endDate: '2026-09-23T12:45:00-04:00',
   eventStatus: 'https://schema.org/EventScheduled',
   eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
   location: {

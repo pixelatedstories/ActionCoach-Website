@@ -15,7 +15,7 @@ export default function HiringProcessThankYouPage() {
           You&apos;re Registered
         </p>
         <h1 className="text-3xl md:text-5xl font-black uppercase leading-tight mb-6">
-          See you Tuesday, September 22 at 11:45 AM ET.
+          See you Wednesday, September 23 at 11:45 AM ET.
         </h1>
         <p className="text-white/70 text-lg leading-relaxed mb-8">
           Watch your email for the Zoom link. Put it on your calendar now, and bring a notebook. We build
@@ -26,7 +26,7 @@ export default function HiringProcessThankYouPage() {
           about your crew, so come with one if you can make it live.
         </p>
         <a
-          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The+4-Hour+Hiring+Process+For+Trades&dates=20260922T154500Z/20260922T164500Z&details=Free+live+webinar+with+Bill+Gilliland.+Zoom+link+arrives+by+email.&location=Zoom"
+          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The+4-Hour+Hiring+Process+For+Trades&dates=20260923T154500Z/20260923T164500Z&details=Free+live+webinar+with+Bill+Gilliland.+Zoom+link+arrives+by+email.&location=Zoom"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-gold text-black px-10 py-5 text-sm font-black uppercase tracking-widest hover:bg-white transition-all shadow-xl"
