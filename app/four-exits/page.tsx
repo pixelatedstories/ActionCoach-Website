@@ -102,12 +102,9 @@ export default function FourExitsPage() {
             <h1 className="text-4xl md:text-6xl font-black uppercase leading-[0.94] tracking-tighter mb-5">
               Could your business run for two weeks without you?
             </h1>
-            <p className="text-lg md:text-xl font-bold text-white/85 leading-snug mb-6">
+            <p className="text-lg md:text-xl font-bold text-white/85 leading-snug mb-8">
               Sixteen yes-or-no questions show which of the four exits you are working on right now, and what to
               fix first.
-            </p>
-            <p className="text-white/55 text-[11px] font-bold uppercase tracking-[0.18em] mb-8 lg:mb-0">
-              Someone who knows your business sent you this.
             </p>
           </div>
 

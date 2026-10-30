@@ -24,7 +24,7 @@ export default function FourExitsSurvey() {
   return (
     <iframe
       src={`${GHL_ORIGIN}/widget/survey/${SURVEY_ID}${query}`}
-      style={{ width: '100%', minHeight: '640px', border: 'none', borderRadius: '6px', display: 'block' }}
+      style={{ width: '100%', minHeight: '400px', border: 'none', borderRadius: '6px', display: 'block' }}
       scrolling="no"
       id={SURVEY_ID}
       title="Four Exits Self-Check"

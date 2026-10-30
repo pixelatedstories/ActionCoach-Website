@@ -1,20 +1,25 @@
+'use client';
+
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { CONTACT } from '@/constants';
 
 /** Logo-only header for landing pages. Deliberately has no links out. */
 export function LandingHeader() {
+  // The webinar form carries its own logo, so its header stays small to keep the first
+  // input high on a phone screen. The Four Exits survey has no logo, so this one is larger.
+  const largeLogo = usePathname().startsWith('/four-exits');
+
   return (
     <header className="w-full bg-[#1C1C1C] border-b border-white/5">
-      {/* Kept small on purpose. The GHL form carries its own logo, so a full-size
-          one here just pushes the first input further down the phone screen. */}
-      <div className="max-w-6xl mx-auto px-4 md:px-8 py-3">
+      <div className={`max-w-6xl mx-auto px-4 md:px-8 ${largeLogo ? 'py-4' : 'py-3'}`}>
         <Image
           src="/images/actioncoach-logo-transparent.png"
           alt="ActionCOACH Business Growth Partners"
           width={132}
           height={40}
-          className="object-contain h-9 w-auto"
+          className={`object-contain w-auto ${largeLogo ? 'h-14 md:h-[72px]' : 'h-9'}`}
           priority
         />
       </div>
