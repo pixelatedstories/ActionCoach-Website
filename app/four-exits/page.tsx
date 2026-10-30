@@ -126,7 +126,7 @@ export default function FourExitsPage() {
           <div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-2">
             <ul className="space-y-3 mb-6">
               {heroBullets.map((bullet) => (
-                <li key={bullet} className="flex gap-3 text-white/70 leading-relaxed">
+                <li key={bullet} className="flex gap-3 text-white/75 text-lg leading-relaxed">
                   <span className="text-gold font-black shrink-0" aria-hidden="true">
                     &rarr;
                   </span>
@@ -145,7 +145,7 @@ export default function FourExitsPage() {
           <h2 className="text-2xl md:text-4xl font-black uppercase mb-4 text-center leading-tight">
             Four exits. Every owner is working toward one.
           </h2>
-          <p className="text-white/70 leading-relaxed text-center max-w-2xl mx-auto mb-10">
+          <p className="text-white/75 text-lg md:text-xl leading-relaxed text-center max-w-2xl mx-auto mb-10">
             An exit here is a job you hand off because the business no longer needs you for it. Most owners climb
             them in order. The self-check shows you which one is yours today.
           </p>
@@ -157,31 +157,31 @@ export default function FourExitsPage() {
               >
                 <div className="flex items-center gap-4 mb-4">
                   <span
-                    className="shrink-0 w-12 h-12 bg-gold text-black font-black text-2xl flex items-center justify-center rounded-md"
+                    className="shrink-0 w-14 h-14 bg-gold text-black font-black text-3xl flex items-center justify-center rounded-md"
                     aria-hidden="true"
                   >
                     {exit.n}
                   </span>
                   <div>
-                    <p className="text-base font-black uppercase tracking-tight text-gold leading-tight">
+                    <p className="text-xl md:text-2xl font-black uppercase tracking-tight text-gold leading-tight">
                       Exit {exit.n}: {exit.name}
                     </p>
-                    <p className="text-white/50 text-sm">{exit.short}</p>
+                    <p className="text-white/60 text-base md:text-lg">{exit.short}</p>
                   </div>
                 </div>
-                <p className="text-white/80 italic leading-relaxed mb-4">&ldquo;{exit.sounds}&rdquo;</p>
-                <dl className="text-sm border-t border-white/10 pt-4 space-y-2">
+                <p className="text-white/85 text-lg md:text-xl italic leading-relaxed mb-5">&ldquo;{exit.sounds}&rdquo;</p>
+                <dl className="text-base md:text-lg border-t border-white/10 pt-5 space-y-3">
                   <div className="flex gap-3">
-                    <dt className="text-white/40 font-black uppercase tracking-[0.14em] text-[10px] w-14 shrink-0 pt-0.5">
+                    <dt className="text-white/50 font-black uppercase tracking-[0.14em] text-xs w-16 shrink-0 pt-1.5">
                       Stop
                     </dt>
-                    <dd className="text-white/75">{exit.stop}</dd>
+                    <dd className="text-white/85">{exit.stop}</dd>
                   </div>
                   <div className="flex gap-3">
-                    <dt className="text-gold font-black uppercase tracking-[0.14em] text-[10px] w-14 shrink-0 pt-0.5">
+                    <dt className="text-gold font-black uppercase tracking-[0.14em] text-xs w-16 shrink-0 pt-1.5">
                       Start
                     </dt>
-                    <dd className="text-white/75">{exit.start}</dd>
+                    <dd className="text-white/85">{exit.start}</dd>
                   </div>
                 </dl>
               </div>
@@ -198,16 +198,16 @@ export default function FourExitsPage() {
             <h2 className="text-2xl md:text-4xl font-black uppercase mb-5 leading-tight">
               Different work. More of your time back.
             </h2>
-            <p className="text-white/75 leading-relaxed mb-6">
+            <p className="text-white/75 text-lg md:text-xl leading-relaxed mb-6">
               You are already putting in long days, and nobody is asking you to add more to them. Owners Jason
               coaches invest about 4 to 5 hours a week, and most of that replaces time they already lose to putting
               out fires.
             </p>
             <blockquote className="border-l-4 border-gold pl-5 text-left max-w-xl mx-auto">
-              <p className="text-lg font-bold text-white/90">
+              <p className="text-xl md:text-2xl font-bold text-white/90">
                 &ldquo;The biggest risk you can take is to do nothing.&rdquo;
               </p>
-              <footer className="text-white/45 text-[11px] uppercase tracking-[0.16em] mt-2">
+              <footer className="text-white/55 text-xs uppercase tracking-[0.16em] mt-2">
                 Brad Sugars, founder of ActionCOACH
               </footer>
             </blockquote>
@@ -235,7 +235,7 @@ export default function FourExitsPage() {
                 <p className="text-gold font-bold uppercase tracking-[0.14em] text-[11px] mb-5">
                   Business Coach &middot; ActionCOACH Business Growth Partners
                 </p>
-                <p className="text-white/75 leading-relaxed mb-6">
+                <p className="text-white/75 text-lg leading-relaxed mb-6">
                   Jason has 25 years of small business experience. He coaches trades and construction owners across
                   North Carolina, South Carolina, Virginia, Tennessee, Georgia and Ohio, with a focus on management
                   systems, team alignment and getting the operation to run without the owner holding it together.
@@ -243,16 +243,16 @@ export default function FourExitsPage() {
                 <dl className="flex flex-col gap-2 sm:grid sm:grid-cols-2 sm:gap-4 border-t border-white/10 pt-5 mb-5">
                   {credentials.map(({ stat, label }) => (
                     <div key={stat} className="flex items-baseline gap-2 sm:block">
-                      <dt className="text-gold font-black uppercase tracking-tight text-sm leading-tight whitespace-nowrap">
+                      <dt className="text-gold font-black uppercase tracking-tight text-lg leading-tight whitespace-nowrap">
                         {stat}
                       </dt>
-                      <dd className="text-white/45 text-[10px] uppercase tracking-[0.12em] leading-snug sm:mt-1">
+                      <dd className="text-white/55 text-xs uppercase tracking-[0.12em] leading-snug sm:mt-1">
                         {label}
                       </dd>
                     </div>
                   ))}
                 </dl>
-                <p className="text-white/60 text-sm leading-relaxed">
+                <p className="text-white/70 text-base leading-relaxed">
                   <a href="tel:+18282348848" className="hover:text-gold transition-colors">828-234-8848</a>
                   {' '}&middot;{' '}
                   <a href="mailto:jasonberry@actioncoach.com" className="hover:text-gold transition-colors">
@@ -270,11 +270,11 @@ export default function FourExitsPage() {
             <p className="text-gold font-black uppercase tracking-[0.22em] text-[11px] mb-3">
               The 17-week guarantee
             </p>
-            <p className="text-lg md:text-xl font-bold leading-snug mb-3">
+            <p className="text-xl md:text-2xl font-bold leading-snug mb-3">
               If you can&apos;t find our fee in your business within 17 weeks, in more time, a better team or more
               money, we keep coaching you free until you do.
             </p>
-            <p className="text-white/50 text-sm">Conditions apply. Jason walks you through them on the call.</p>
+            <p className="text-white/60 text-base">Conditions apply. Jason walks you through them on the call.</p>
           </div>
         </section>
 
@@ -286,8 +286,8 @@ export default function FourExitsPage() {
               <div className="space-y-5">
                 {faqs.map((faq) => (
                   <div key={faq.question} className="border-b border-white/10 pb-5">
-                    <p className="text-base font-bold mb-2">{faq.question}</p>
-                    <p className="text-white/70 leading-relaxed">{faq.answer}</p>
+                    <p className="text-lg md:text-xl font-bold mb-2">{faq.question}</p>
+                    <p className="text-white/75 text-base md:text-lg leading-relaxed">{faq.answer}</p>
                   </div>
                 ))}
               </div>
