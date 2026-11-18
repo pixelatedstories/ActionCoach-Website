@@ -4,7 +4,7 @@ import CalendlyEmbed from '@/components/CalendlyEmbed';
 
 export const metadata: Metadata = {
   title: 'Book a Session',
-  description: 'Schedule a free 15-minute strategy session with ActionCOACH Business Growth Partners. Identify your biggest business roadblocks and map out a practical path forward.',
+  description: 'Schedule a free 60-minute strategy session with ActionCOACH Business Growth Partners. Identify your biggest business roadblocks and map out a practical path forward.',
 };
 
 export default function Booking() {
@@ -14,7 +14,7 @@ export default function Booking() {
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-black mb-6 uppercase">Book a Session</h1>
           <p className="text-xl text-white/70">
-            Select a time that works for you. In this 15-minute call, we will identify your biggest roadblocks and map out the next practical step.
+            Select a time that works for you. In this 60-minute session, we will identify your biggest roadblocks and map out the next practical step.
           </p>
         </div>
 
