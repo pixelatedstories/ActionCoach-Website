@@ -51,7 +51,7 @@ export const CONTACT = {
   BUSINESS: 'ActionCOACH Business Growth Partners',
   ADDRESS: 'P. O. Box 238, Montreat, NC 28757',
   PHONE: '(828) 348-1787',
-  CALENDLY: 'https://calendly.com/billgilliland/15min',
+  CALENDLY: 'https://calendly.com/coachjasonberry/60-minute-strategy-session',
   WEBSITE: 'billgilliland.biz',
 };
 
